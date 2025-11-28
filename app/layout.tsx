@@ -4,6 +4,7 @@ import { Header } from "@/components/common/Header";
 import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import "./globals.css";
+import Navbar from "@/components/common/Header/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Header />
+        {/* <Header /> */}
+        <Navbar />
         {/* Join Banner - Mobile Only */}
         <div className="w-full bg-[#F0BA43] py-3 lg:hidden">
           <div className="max-w-[1440px] mx-auto px-4">
