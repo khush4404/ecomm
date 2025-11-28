@@ -59,7 +59,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         const rootClass = merge("w-full overflow-hidden flex flex-col items-start", containerClassName);
 
         // mobile-first: requested mobile size & desktop overrides
-        const mobileControl = "w-[323px] h-[52px] text-[12px] leading-[24px]";
+        const mobileControl = "w-full h-[52px] text-[12px] leading-[24px]";
         const desktopControl = "md:w-full md:text-[16px] md:leading-[36px]";
 
         const controlBase = merge(

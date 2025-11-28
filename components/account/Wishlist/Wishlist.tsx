@@ -82,17 +82,17 @@ export function Wishlist() {
 	}, [query, view]);
 
 	return (
-		<div className="flex flex-col gap-6">
-			<div className="flex flex-col md:flex-row items-center justify-between">
-				<h2 className="text-base md:text-2xl font-bold">My Wishlist</h2>
+		<div className="flex flex-col gap-6 pt-10 sm:pt-0">
+			<div className="flex flex-col md:flex-row items-center justify-between gap-2">
+				<h2 className="text-base md:text-2xl font-semibold">My Wishlist</h2>
 				<div className="flex items-center gap-4">
-					<label className="text-[12px] md:text-sm text-gray-600">
+					<label className="text-[12px] md:text-sm text-gray-600 font-semibold">
 						View:
 					</label>
 					<select
 						value={view}
 						onChange={(e) => setView(e.target.value)}
-						className="rounded border border-gray-300 md:px-3 md:py-2 p-1 pt-2 md:pt-0 text-[12px] md:text-sm"
+						className=" md:px-3 md:py-2 p-1 pt-2 md:pt-0 text-[12px] md:text-sm text-text-gray"
 					>
 						<option value="All">All</option>
 						<option value="InStock">In Stock</option>
@@ -101,14 +101,14 @@ export function Wishlist() {
 				</div>
 			</div>
 
-			<div className="flex  items-center md:py-6 md:px-4 py-4 px-3">
+			<div className="flex items-center md:py-6 md:px-4 sm:py-4 sm:px-3">
 				<Input
 					placeholder="Search for your save items"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
-					className=""
+					className="rounded-r-none "
 				/>
-				<button className="bg-[#F0BA43] text-[#FFFFFF] font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 transition-colors">
+				<button className="bg-[#F0BA43] text-[#FFFFFF] font-semibold px-4 py-2 rounded-r-[10px] hover:bg-yellow-500 transition-colors self-stretch">
 					Search
 				</button>
 			</div>
