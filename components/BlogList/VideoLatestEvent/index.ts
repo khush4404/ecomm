@@ -1,0 +1,1 @@
+export { VideoLatestEvent } from './VideoLatestEvent';

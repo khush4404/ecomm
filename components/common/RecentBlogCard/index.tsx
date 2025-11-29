@@ -1,0 +1,1 @@
+export { RecentBlogCard } from './RecentBlogCard';

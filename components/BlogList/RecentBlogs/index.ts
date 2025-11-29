@@ -1,0 +1,1 @@
+export { RecentBlogs } from './RecentBlogs';
