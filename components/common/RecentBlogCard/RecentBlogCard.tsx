@@ -23,7 +23,7 @@ export const RecentBlogCard: React.FC<{ item: BlogItem }> = ({ item }) => {
 			</div>
 
 			<div className="flex flex-col grow">
-				<h3 className="text-xl font-semibold text-text-dark mb-2 leading-6">
+				<h3 className="md:text-xl text-base font-semibold text-text-dark mb-2 leading-6">
 					{item.title}
 				</h3>
 
@@ -31,7 +31,7 @@ export const RecentBlogCard: React.FC<{ item: BlogItem }> = ({ item }) => {
 					{item.text}
 				</p>
 
-				<div className="flex items-center gap-2 text-text-gray text-[13px]">
+				<div className="flex items-center gap-2 text-text-gray text-sm">
 					{/* optional avatar placeholder */}
 					<div className="w-6 h-6 bg-gray-200 rounded-full overflow-hidden">
 						{/* empty by design or could accept avatar */}
