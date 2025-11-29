@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Heart, Minus, Plus, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Heart, Minus, Plus, MapPin } from "lucide-react";
+import { SocialIcons } from "@/components/common/SocialIcons";
 
 const images = [
 	"/images/categories/bigflower.png",
@@ -349,13 +350,7 @@ export const Pdetails: React.FC = () => {
 										</button>
 									</div>
 								</div>
-								<div className="flex justify-center items-center gap-5 leading-[50px] mt-5">
-									<span>Share:</span>
-									<Facebook className="size-4 fill-black" />
-									<Twitter className="size-4 fill-black" />
-									<Linkedin className="size-4 bg-black text-white p-0.5 rounded-sm stroke-3" />
-									<Instagram className="size-4 bg-black text-white p-0.5 rounded-sm stroke-3" />
-								</div>
+								<SocialIcons />
 							</div>
 						</div>
 					</div>

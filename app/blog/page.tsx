@@ -7,6 +7,7 @@ import Support from "@/components/common/Support";
 export default function BlogListPage() {
   return (
     <div className="container mx-auto px-4 py-8">
+      <h1 className="text-center py-5">Passion Farms Blog</h1>
       <BlogHero />
       <BlogCategories />
       <VideoLatestEvent />
