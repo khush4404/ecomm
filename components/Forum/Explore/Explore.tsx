@@ -207,36 +207,6 @@ const PostSection: React.FC<PostSectionProps> = ({
 }) => {
 	return (
 		<section>
-			<div className="flex flex-col items-center md:items-start gap-3 mt-4 pb-3">
-				{/* Row 1 (Desktop: all 3 in one row — Mobile: only active tab) */}
-				<div className="flex items-center gap-3 flex-wrap sm:flex-nowrap">
-					<button className="px-6 py-2 bg-yellow-400 text-white font-medium rounded-full flex items-center gap-2">
-						Categories
-						<span className="text-white text-sm">▼</span>
-					</button>
-
-					{/* Hide these two on small screens */}
-					<button className="hidden sm:flex px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
-						Topics
-					</button>
-
-					<button className="hidden sm:flex px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
-						Top
-					</button>
-				</div>
-
-				{/* Row 2 – show on mobile only */}
-				<div className="flex sm:hidden items-center gap-3">
-					<button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
-						Topics
-					</button>
-
-					<button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
-						Top
-					</button>
-				</div>
-			</div>
-
 			<div className="flex items-center justify-between mb-4">
 				<h2 className="text-xl font-bold text-gray-900">{title}</h2>
 				<button
@@ -313,6 +283,35 @@ export const Explore: React.FC = () => {
 
 	return (
 		<div className="space-y-8">
+			<div className="flex flex-col items-center md:items-start gap-3 mt-4 pb-3">
+				{/* Row 1 (Desktop: all 3 in one row — Mobile: only active tab) */}
+				<div className="flex items-center gap-3 flex-wrap sm:flex-nowrap">
+					<button className="px-6 py-2 bg-yellow-400 text-white font-medium rounded-full flex items-center gap-2">
+						Categories
+						<span className="text-white text-sm">▼</span>
+					</button>
+
+					{/* Hide these two on small screens */}
+					<button className="hidden sm:flex px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+						Topics
+					</button>
+
+					<button className="hidden sm:flex px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+						Top
+					</button>
+				</div>
+
+				{/* Row 2 – show on mobile only */}
+				<div className="flex sm:hidden items-center gap-3">
+					<button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+						Topics
+					</button>
+
+					<button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+						Top
+					</button>
+				</div>
+			</div>
 			<PostSection
 				title={"What's New"}
 				posts={whatNewData}

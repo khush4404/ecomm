@@ -3,9 +3,10 @@ import React from "react";
 type Props = {
     activeTab: string;
     onTabChange: (tab: string) => void;
+    onCreateGroup: () => void;
 };
 
-export const Categories: React.FC<Props> = ({ activeTab, onTabChange }) => {
+export const Categories: React.FC<Props> = ({ activeTab, onTabChange, onCreateGroup }) => {
     const tabs: { key: string; label: string; icon?: string }[] = [
         { key: "explore", label: "Explore", icon: "🔎" },
         { key: "feed", label: "Feed", icon: "📰" },
@@ -39,7 +40,7 @@ export const Categories: React.FC<Props> = ({ activeTab, onTabChange }) => {
 
             <div className="mt-3">
                 <button
-                    onClick={() => onTabChange("createGroup")}
+                    onClick={onCreateGroup}
                     className="w-full flex items-center justify-between gap-3 px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50"
                 >
                     <div className="flex items-center gap-3">
