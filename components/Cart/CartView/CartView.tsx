@@ -256,7 +256,11 @@ export const CartView: React.FC<ProductCartProps> = ({
 								onClick={() => onContinueShopping?.()}
 								className="md:px-4 px-2 py-2 md:w-auto w-[196px] bg-[#F0BA43] text-white font-medium rounded-lg hover:bg-[#E8B140] flex gap-3"
 							>
-								<img src='/images/categories/arrow-back.svg' className="size-6" />Continue Shopping
+								<img
+									src="/images/categories/arrow-back.svg"
+									className="size-6"
+								/>
+								Continue Shopping
 							</button>
 							<button
 								onClick={() => onUpdateCart?.()}
@@ -303,7 +307,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 								<h3 className="text-base leading-9 font-semibold">
 									Apply Coupon
 								</h3>
-								<p className="text-base font-regular leading-9 text-[#878787] mt-0 md:mt-2.5">
+								<p className="text-base font-regular leading-9 text-text-gray mt-0 md:mt-2.5">
 									Using a Promo Code?
 								</p>
 
@@ -333,7 +337,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 						<div className="sticky top-8 p-6 bg-[#F9F9F9] rounded-lg border border-[#E8E8E8]">
 							<div className="space-y-4 mb-6">
 								<div className="flex justify-between text-sm md:text-base font-semibold">
-									<span className="text-[#878787]">
+									<span className="text-text-gray">
 										Subtotal
 									</span>
 									<span className="font-medium">
@@ -342,7 +346,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 								</div>
 
 								<div className="flex justify-between text-sm md:text-base font-semibold ">
-									<span className="text-[#878787]">
+									<span className="text-text-gray">
 										Shipping
 									</span>
 									<span className="font-medium">
@@ -353,7 +357,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 								</div>
 
 								<div className="flex justify-between text-sm md:text-base ">
-									<span className="text-[#878787]">
+									<span className="text-text-gray">
 										Estimate for
 									</span>
 									<span className="font-medium text-[#1D1D1D]">
@@ -361,7 +365,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 									</span>
 								</div>
 								<div className="flex justify-between text-sm md:text-base ">
-									<span className="text-[#878787]">
+									<span className="text-text-gray">
 										Total
 									</span>
 									<span className="font-medium text-[#1D1D1D]">

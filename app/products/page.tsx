@@ -521,7 +521,7 @@ export default function ProductListPage() {
 							<div className="flex flex-col md:flex-row flex-wrap items-center  gap-4 text-sm w-full md:w-auto">
 								<div className="flex items-center gap-2  md:w-auto">
 									<span
-										className="text-[#878787] text-center whitespace-nowrap"
+										className="text-text-gray text-center whitespace-nowrap"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										Showing 1-18 of 22 results
@@ -534,7 +534,7 @@ export default function ProductListPage() {
 
 								<div className="flex justify-between items-center gap-2 w-full md:w-auto">
 									<span
-										className="text-[#878787] whitespace-nowrap"
+										className="text-text-gray whitespace-nowrap"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										Sort by:
@@ -544,7 +544,7 @@ export default function ProductListPage() {
 										onChange={(e) =>
 											setSortBy(e.target.value)
 										}
-										className="px-3 py-2 text-[#878787] bg-white cursor-pointer  focus:outline-none"
+										className="px-3 py-2 text-text-gray bg-white cursor-pointer  focus:outline-none"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										<option value="latest">
@@ -571,7 +571,7 @@ export default function ProductListPage() {
 
 								<div className="hidden md:flex items-center gap-2 w-full md:w-auto">
 									<span
-										className="text-[#878787] whitespace-nowrap"
+										className="text-text-gray whitespace-nowrap"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										Show items:
@@ -581,7 +581,7 @@ export default function ProductListPage() {
 										onChange={(e) =>
 											setItemsPerPage(e.target.value)
 										}
-										className="px-3 py-2 text-[#878787] cursor-pointer focus:outline-none"
+										className="px-3 py-2 text-text-gray cursor-pointer focus:outline-none"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										<option value="10">10 items</option>

@@ -160,7 +160,7 @@ export const VideoLatestEvent: React.FC = () => {
 									<h3 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-2">
 										{v.title}
 									</h3>
-									<p className="text-base text-[#878787]">
+									<p className="text-base text-text-gray">
 										{v.excerpt}
 									</p>
 								</div>
