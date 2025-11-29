@@ -111,77 +111,72 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
         <>
             {/* Modal Backdrop */}
             <div
-                className="fixed inset-0 bg-black bg-opacity-50 z-40"
+                className="fixed inset-0 bg-black/30 bg-opacity-50 z-40"
                 onClick={onClose}
             />
 
             {/* Modal */}
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-auto z-50 bg-white rounded-lg shadow-xl p-8">
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl mx-auto z-50 bg-white rounded-lg shadow-xl p-8">
                 {/* Header */}
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-6">Create a group</h2>
 
                     {/* Progress Steps */}
-                    <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center justify-between mb-8 relative">
+                        {/* Background Line */}
+                        <div className="absolute top-4 left-0 right-0 h-1 bg-gray-300 -z-10" />
+                        <div
+                            className="absolute top-4 left-0 h-1 bg-yellow-400 -z-10 transition-all duration-300"
+                            style={{
+                                width: currentStep === 'details' ? '0%' : currentStep === 'people' ? '50%' : '100%'
+                            }}
+                        />
+
                         {/* Step 1 */}
-                        <div className="flex flex-col items-center flex-1">
+                        <div className="flex flex-col items-center z-10">
                             <div
-                                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 ${currentStep === 'details' || (currentStep === 'people' || currentStep === 'info')
+                                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 transition-all duration-300 ${currentStep === 'details' || currentStep === 'people' || currentStep === 'info'
                                         ? 'bg-yellow-400 text-white'
                                         : 'bg-gray-300 text-white'
                                     }`}
                             >
                                 1
                             </div>
-                            <span className={`text-xs font-medium ${currentStep === 'details' ? 'text-yellow-400' : 'text-gray-500'
+                            <span className={`text-xs font-medium transition-colors duration-300 ${currentStep === 'details' ? 'text-yellow-400' : 'text-gray-500'
                                 }`}>
                                 Group details
                             </span>
                             <span className="text-xs text-gray-400">Basic information</span>
                         </div>
 
-                        {/* Line */}
-                        <div
-                            className={`flex-1 h-1 mx-2 mb-4 rounded ${currentStep === 'people' || currentStep === 'info'
-                                    ? 'bg-yellow-400'
-                                    : 'bg-gray-300'
-                                }`}
-                        />
-
                         {/* Step 2 */}
-                        <div className="flex flex-col items-center flex-1">
+                        <div className="flex flex-col items-center z-10">
                             <div
-                                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 ${currentStep === 'people' || currentStep === 'info'
+                                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 transition-all duration-300 ${currentStep === 'people' || currentStep === 'info'
                                         ? 'bg-yellow-400 text-white'
                                         : 'bg-gray-300 text-white'
                                     }`}
                             >
                                 2
                             </div>
-                            <span className={`text-xs font-medium ${currentStep === 'people' ? 'text-yellow-400' : 'text-gray-500'
+                            <span className={`text-xs font-medium transition-colors duration-300 ${currentStep === 'people' ? 'text-yellow-400' : 'text-gray-500'
                                 }`}>
                                 People
                             </span>
                             <span className="text-xs text-gray-400">Add people to the group</span>
                         </div>
 
-                        {/* Line */}
-                        <div
-                            className={`flex-1 h-1 mx-2 mb-4 rounded ${currentStep === 'info' ? 'bg-yellow-400' : 'bg-gray-300'
-                                }`}
-                        />
-
                         {/* Step 3 */}
-                        <div className="flex flex-col items-center flex-1">
+                        <div className="flex flex-col items-center z-10">
                             <div
-                                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 ${currentStep === 'info'
+                                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 transition-all duration-300 ${currentStep === 'info'
                                         ? 'bg-yellow-400 text-white'
                                         : 'bg-gray-300 text-white'
                                     }`}
                             >
                                 3
                             </div>
-                            <span className={`text-xs font-medium ${currentStep === 'info' ? 'text-yellow-400' : 'text-gray-500'
+                            <span className={`text-xs font-medium transition-colors duration-300 ${currentStep === 'info' ? 'text-yellow-400' : 'text-gray-500'
                                 }`}>
                                 Group info
                             </span>

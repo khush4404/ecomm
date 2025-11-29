@@ -7,11 +7,13 @@ import { Feed } from "@/components/Forum/Feed/Feed";
 import { Events } from "@/components/Forum/Events/Events";
 import { Favorites } from "@/components/Forum/Favorites/Favorites";
 import { CreateGroup } from "@/components/Forum/CreateGroup/CreateGroup";
+import { CreatePost } from "@/components/Forum/CreatePost/CreatePost";
 import { FollowedList } from "@/components/Forum/FollowedList/FollowedList";
 
 export default function ForumPage() {
   const [activeTab, setActiveTab] = useState<string>("explore");
   const [isCreateGroupOpen, setIsCreateGroupOpen] = useState<boolean>(false);
+  const [isCreatePostOpen, setIsCreatePostOpen] = useState<boolean>(false);
 
   const contentComponents: Record<string, React.ReactNode> = {
     explore: <Explore />,
@@ -36,10 +38,15 @@ export default function ForumPage() {
             <input
               type="text"
               placeholder="Write a post"
-              className="flex-1 border border-gray-200 rounded-l-full px-4 py-2 outline-none"
+              className="flex-1 border border-gray-200 rounded-l-full px-4 py-2 outline-none cursor-pointer hover:bg-gray-50"
+              onClick={() => setIsCreatePostOpen(true)}
+              readOnly
             />
 
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-6 py-2 rounded-r-full">
+            <button
+              onClick={() => setIsCreatePostOpen(true)}
+              className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-6 py-2 rounded-r-full"
+            >
               Post
             </button>
           </div>
@@ -69,6 +76,12 @@ export default function ForumPage() {
       <CreateGroup
         isOpen={isCreateGroupOpen}
         onClose={() => setIsCreateGroupOpen(false)}
+      />
+
+      {/* Create Post Modal */}
+      <CreatePost
+        isOpen={isCreatePostOpen}
+        onClose={() => setIsCreatePostOpen(false)}
       />
     </main>
   );
