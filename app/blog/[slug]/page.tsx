@@ -12,10 +12,10 @@ type BlogPostContent = {
   introductionPara: string;
   featuredImage: string;
   img_1: string;
+  img_2: string;
   bodyParagraphs: {
     text: string;
   }[];
-  img_2?: string;
   footerText: string;
   footerAuthor: string;
 };
@@ -28,15 +28,14 @@ const blogPost: BlogPostContent = {
   source: "Rhodes Island Currant",
   introductionPara:
     "Only 38 percent of pre-applicants for a cannabis retail license reserved for those adversely affected by the war on drugs have qualified to submit a formal application, the Cannabis Control Commission announced Friday afternoon.",
-  img_1: "/images/blogs/blogdetail.png",
+  img_1: "/images/blogs/blogdetail-1.png",
+  img_2: "/images/blogs/blogdetail-2.png",
   bodyParagraphs: [
     {
       text: "Of 94 requests to be considered for a social equity license, 36 met eligibility criteria after being screened. They were certified by the commission in a 2-0 vote Friday and now have until December 29 to submit their applications to go into a lottery. The commission will award six social equity licenses through that lottery.",
     },
     {
       text: "The vote was the first taken since the departure of Chairperson Kimberly Ahern, who stepped down from her $204,069-a-year post on October 21 to make a run for state attorney general in 2026.",
-    }, {
-      img_2: "/images/blogs/blogdetail-2.png",
     },
     {
       text: "Ahern's usual seat between commissioners Layi Oduyingbo and Robert Jacquard sat empty as the two remaining members conducted business. In addition to voting to certify social equity applicants who passed the eligibility screening, the board formally adopted hemp regulations previously handled by another agency.",
@@ -81,7 +80,7 @@ export default function BlogDetailsPage() {
   return (
     <div className="container mx-auto px-4 py-8 flex flex-col gap-14">
       <div className="bg-gray-200 h-[438px] w-full rounded-[10px]">
-        <img src={blogPost.featuredImage} alt={blogPost.title} className="w-full h-full object-cover rounded-[10px]" />
+        <Image src={blogPost.featuredImage} alt={blogPost.title} width={1200} height={438} className="w-full h-full object-cover rounded-[10px]" />
       </div>
       <div className="max-w-4xl mx-auto">
         <article>
@@ -106,7 +105,7 @@ export default function BlogDetailsPage() {
           {/* Featured Image */}
           <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mb-8">
             <Image
-              src={blogPost.featuredImage}
+              src={blogPost.img_1}
               alt={blogPost.title}
               fill
               className="object-cover"
@@ -122,20 +121,18 @@ export default function BlogDetailsPage() {
                   {para.text}
                 </p>
 
-                {/* Inline gallery after paragraph */}
-
-
-                <div
-                  className="relative h-40 md:h-48 rounded-lg overflow-hidden"
-                >
-                  <Image
-                    src={para.img_2}
-                    alt="image-2"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform"
-                    sizes="(min-width: 1024px) 400px, 50vw"
-                  />
-                </div>
+                {/* Show img_2 after 2nd paragraph (idx === 1) */}
+                {idx === 1 && (
+                  <div className="relative h-40 md:h-48 rounded-lg overflow-hidden mt-6">
+                    <Image
+                      src={blogPost.img_2}
+                      alt="inline-image"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform"
+                      sizes="(min-width: 1024px) 900px, 100vw"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
