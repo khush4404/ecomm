@@ -458,7 +458,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                 <div className="mb-6 bg-gray-50 rounded-lg p-4 space-y-4">
                     {/* Step 1: Group Details */}
                     {currentStep === 'details' && (
-                            <div className="space-y-4">
+                        <div className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                     Group Name
@@ -473,7 +473,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                                             groupName: e.target.value
                                         }))
                                     }
-                                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
+                                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
                                 />
                             </div>
 
@@ -490,12 +490,12 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                                             description: e.target.value
                                         }))
                                     }
-                                        rows={3}
-                                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none bg-white"
+                                    rows={3}
+                                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none bg-white"
                                 />
                             </div>
 
-                                <div className="flex items-center gap-3 pt-2">
+                            <div className="flex items-center gap-3 pt-2">
                                 <button
                                     onClick={() =>
                                         setFormData(prev => ({
@@ -503,16 +503,16 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                                             isPublic: !prev.isPublic
                                         }))
                                     }
-                                        className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${formData.isPublic ? 'bg-yellow-400' : 'bg-gray-300'
+                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${formData.isPublic ? 'bg-yellow-400' : 'bg-gray-300'
                                         }`}
                                 >
                                     <span
-                                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${formData.isPublic ? 'translate-x-5' : 'translate-x-1'
+                                        className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${formData.isPublic ? 'translate-x-5' : 'translate-x-1'
                                             }`}
                                     />
                                 </button>
                                 <div>
-                                        <p className="text-sm font-medium text-gray-900">Public</p>
+                                    <p className="text-sm font-medium text-gray-900">Public</p>
                                     <p className="text-xs text-gray-500">
                                         Select if you want to make this group public
                                     </p>
@@ -530,7 +530,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                                     placeholder="Search people to add group"
                                     value={searchPeople}
                                     onChange={(e) => setSearchPeople(e.target.value)}
-                                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
+                                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
                                 />
                                 <svg
                                     className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -548,20 +548,20 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                             </div>
 
                             <div>
-                                    <p className="text-sm font-medium text-gray-900 mb-2">
+                                <p className="text-sm font-medium text-gray-900 mb-2">
                                     People add ({formData.selectedPeople.length})
                                 </p>
-                                    <div className="bg-white rounded-lg p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
+                                <div className="bg-white rounded-lg p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
                                     <p className="text-xs text-gray-500 mb-2">{filteredPeople.length} people found</p>
                                     {filteredPeople.map(person => (
                                         <div
                                             key={person.id}
-                                                className="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer"
+                                            className="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer"
                                             onClick={() => handlePeopleSelect(person.id)}
                                         >
                                             <div className="flex items-center gap-3">
-                                                    <span className="text-lg">{person.avatar}</span>
-                                                    <span className="text-sm font-medium text-gray-900">{person.name}</span>
+                                                <span className="text-lg">{person.avatar}</span>
+                                                <span className="text-sm font-medium text-gray-900">{person.name}</span>
                                             </div>
                                             {formData.selectedPeople.includes(person.id) && (
                                                 <span className="text-yellow-400 text-lg">✓</span>
@@ -582,7 +582,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                                     placeholder="Search Topic"
                                     value={searchTopics}
                                     onChange={(e) => setSearchTopics(e.target.value)}
-                                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
+                                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
                                 />
                                 <svg
                                     className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -600,18 +600,18 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                             </div>
 
                             <div>
-                                    <p className="text-sm font-medium text-gray-900 mb-2">
+                                <p className="text-sm font-medium text-gray-900 mb-2">
                                     Topics selected ({formData.selectedTopics.length})
                                 </p>
-                                    <div className="bg-white rounded-lg p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
+                                <div className="bg-white rounded-lg p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
                                     <p className="text-xs text-gray-500 mb-2">{filteredTopics.length} Topics found</p>
                                     {filteredTopics.map(topic => (
                                         <div
                                             key={topic}
-                                                className="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer"
+                                            className="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer"
                                             onClick={() => handleTopicSelect(topic)}
                                         >
-                                                <span className="text-sm font-medium text-gray-900">{topic}</span>
+                                            <span className="text-sm font-medium text-gray-900">{topic}</span>
                                             {formData.selectedTopics.includes(topic) && (
                                                 <span className="text-yellow-400 text-lg">✓</span>
                                             )}
@@ -624,11 +624,11 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                 </div>
 
                 {/* Mobile Footer Buttons */}
-                    <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2">
                     {currentStep !== 'details' && (
                         <button
                             onClick={handleBack}
-                                className="w-full px-6 py-2.5 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm"
+                            className="w-full px-6 py-2.5 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm"
                         >
                             Back
                         </button>
@@ -638,7 +638,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                         <button
                             onClick={handleNext}
                             disabled={currentStep === 'details' && !formData.groupName}
-                                className="w-full px-8 py-2.5 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                            className="w-full px-8 py-2.5 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                         >
                             Next
                         </button>
@@ -647,7 +647,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({ isOpen, onClose }
                     {currentStep === 'info' && (
                         <button
                             onClick={handleSubmit}
-                                className="w-full px-8 py-2.5 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-colors text-sm"
+                            className="w-full px-8 py-2.5 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-colors text-sm"
                         >
                             Create group
                         </button>
