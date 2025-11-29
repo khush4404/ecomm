@@ -12,7 +12,6 @@ import { FollowedList } from "@/components/Forum/FollowedList/FollowedList";
 
 export default function ForumPage() {
   const [activeTab, setActiveTab] = useState<string>("explore");
-  const [isCreateGroupOpen, setIsCreateGroupOpen] = useState<boolean>(false);
   const [isCreatePostOpen, setIsCreatePostOpen] = useState<boolean>(false);
 
   const contentComponents: Record<string, React.ReactNode> = {
@@ -20,6 +19,7 @@ export default function ForumPage() {
     feed: <Feed />,
     events: <Events />,
     favorites: <Favorites />,
+    createGroup: <CreateGroup isOpen={true} onClose={() => setActiveTab("explore")} />,
   };
 
   return (
@@ -58,7 +58,7 @@ export default function ForumPage() {
             <Categories
               activeTab={activeTab}
               onTabChange={setActiveTab}
-              onCreateGroup={() => setIsCreateGroupOpen(true)}
+              onCreateGroup={() => setActiveTab("createGroup")}
             />
             <div className="mt-4">
               <FollowedList />
@@ -71,12 +71,6 @@ export default function ForumPage() {
           </section>
         </div>
       </div>
-
-      {/* Create Group Modal */}
-      <CreateGroup
-        isOpen={isCreateGroupOpen}
-        onClose={() => setIsCreateGroupOpen(false)}
-      />
 
       {/* Create Post Modal */}
       <CreatePost
