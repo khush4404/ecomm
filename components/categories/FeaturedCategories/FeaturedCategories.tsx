@@ -84,7 +84,7 @@ const rightArrowImages = [
 export default function FeaturedCategories() {
 	return (
 		<section className="py-4.5 sm:py-8">
-			<div className="max-w-6xl mx-auto md:px-4 px-0">
+			<div className="max-w-[1440px] mx-auto px-0 sm:px-6 lg:px-[35px]">
 				<div className="md:mb-8 mb-4">
 					<h2 className="font-semibold  text-base md:text-[32px] leading-4 md:leading-9 pb-2.5 md:pb-4 text-[#1D1D1D]">
 						Featured Categories
@@ -122,7 +122,7 @@ export default function FeaturedCategories() {
 													<img
 														src={
 															rightArrowImages[
-																idx
+															idx
 															]
 														}
 														alt="arrow"

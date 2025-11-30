@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { ProductCard } from "@/components/common/Card";
 // Reusable dual-thumb range slider (visual single control)
 function RangeSlider({
@@ -723,7 +723,7 @@ export default function ProductListPage() {
 					{/* Pagination */}
 					<div className="flex items-center justify-center gap-2 mt-12">
 						<button className="px-2 py-1 text-gray-600 hover:text-[#1D1D1D]">
-							←
+							<ChevronLeft size={30} />
 						</button>
 						{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((page) => (
 							<button
@@ -737,7 +737,8 @@ export default function ProductListPage() {
 							</button>
 						))}
 						<button className="px-2 py-1 text-gray-600 hover:text-[#1D1D1D]">
-							→
+							<ChevronRight size={30} />
+
 						</button>
 					</div>
 				</div>

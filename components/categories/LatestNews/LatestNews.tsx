@@ -24,7 +24,7 @@ export default function LatestNews() {
 		},
 	];
 	return (
-		<section className="md:py-8 pt-4.5 flex flex-col gap-2.5">
+		<section className="md:py-8 pt-4.5 flex flex-col gap-2.5 ">
 			<div className="flex flex-row justify-between ">
 				<div className="flex flex-col gap-2.5">
 					<h2 className="font-semibold text-base sm:text-[32px] tracking-tight text-text-dark leading-4 sm:leading-9">

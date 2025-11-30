@@ -33,30 +33,30 @@ const relatedTopics = [
 export const RelatedTopics = () => {
 	return (
 		<div className="bg-white">
-			<div className="md:p-6 p-0 md:border-b border-0 border-[#BBBBBB]">
+			<div className="md:py-6 p-0 md:border-b border-0 border-[#BBBBBB]">
 				<h3 className="font-semibold text-xl text-[#1D1D1D] mb-6">
 					Related Topics
 				</h3>
 
 				{/* Table Header */}
-				<div className="grid md:grid-cols-12 gap-4 pb-4 md:border-b border-0 border-[#BBBBBB]">
-					<div className="col-span-6">
-						<p className="text-xl font-semibold text-text-gray uppercase tracking-wider">
+				<div className="grid md:grid-cols-12 gap-4 pb-4">
+					<div className="col-span-9">
+						<p className="text-xl font-semibold text-text-dark uppercase tracking-wider">
 							Topics
 						</p>
 					</div>
-					<div className="col-span-2 md:block hidden">
-						<p className="text-xs font-semibold text-text-gray uppercase tracking-wider text-center">
+					<div className="col-span-1 md:block hidden">
+						<p className="text-xs font-semibold text-text-dark uppercase tracking-wider text-center">
 							Reply
 						</p>
 					</div>
-					<div className="col-span-2 md:block hidden">
-						<p className="text-xs font-semibold text-text-gray uppercase tracking-wider text-center">
+					<div className="col-span-1 md:block hidden">
+						<p className="text-xs font-semibold text-text-dark uppercase tracking-wider text-center">
 							View
 						</p>
 					</div>
-					<div className="col-span-2 md:block hidden">
-						<p className="text-xs font-semibold text-gray-700 uppercase tracking-wider text-center">
+					<div className="col-span-1 md:block hidden">
+						<p className="text-xs font-semibold text-text-dark uppercase tracking-wider text-center">
 							Activity
 						</p>
 					</div>
@@ -68,10 +68,10 @@ export const RelatedTopics = () => {
 				{relatedTopics.map((topic) => (
 					<div
 						key={topic.id}
-						className="md:p-6 p-0 hover:bg-gray-50 transition-colors"
+						className="md:py-6 p-0 hover:bg-gray-50 transition-colors"
 					>
-						<div className="grid md:grid-cols-12 grid-cols-2 gap-4 items-start">
-							<div className="col-span-6">
+						<div className="grid md:grid-cols-12 grid-cols-3 md:gap-4 items-start">
+							<div className="col-span-9 sm:mt-0 mt-6">
 								<p className="text-base font-semibold text-[#1D1D1D] mb-2 leading-relaxed cursor-pointer hover:text-yellow-600 transition-colors">
 									{topic.title}
 								</p>
@@ -79,24 +79,24 @@ export const RelatedTopics = () => {
 									{topic.description}
 								</p>
 							</div>
-							<div className="md;col-span-2 grid-start">
-								<p className="text-sm  text-[#1D1D1D] text-center">
+							<div className="col-span-1 grid-start sm:my-0 my-6">
+								<p className="text-sm  text-[#1D1D1D]  text-start sm:text-center">
 									<p className="md:hidden block text-base text-[#1D1D1D]">
 										replay
 									</p>
 									{topic.replies}
 								</p>
 							</div>
-							<div className="col-span-2">
-								<p className="text-sm  text-[#1D1D1D] text-center">
+							<div className="col-span-1 sm:my-0 my-6">
+								<p className="text-sm  text-[#1D1D1D] text-start sm:text-center">
 									<p className="md:hidden block text-base text-[#1D1D1D]">
 										view
 									</p>
 									{topic.views}
 								</p>
 							</div>
-							<div className="col-span-2">
-								<p className="text-xs text-[#1D1D1D] text-center">
+							<div className="col-span-1 sm:my-0 my-6">
+								<p className="text-sm text-[#1D1D1D] text-start sm:text-center">
 									<p className="md:hidden block text-base text-[#1D1D1D]">
 										activity
 									</p>
