@@ -58,7 +58,7 @@ export const Pdetails: React.FC = () => {
 	return (
 		<>
 			<section className="w-full bg-white py-8 lg:py-16">
-				<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[35px]">
+				<div className="max-w-[1440px] mx-auto px-0 sm:px-6 lg:px-[35px]">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-[19px]">
 						{/* Left: Image Gallery */}
 						<div className="lg:col-span-5">
@@ -253,7 +253,7 @@ export const Pdetails: React.FC = () => {
 													</button>
 												</div>
 												<div className="grid grid-cols-2 gap-3 flex-1 items-end">
-													<button className="border  border-[#BBBBBB]text-gray-700 font-semibold rounded-[10px] py-3 px-4 hover:bg-gray-50 transition-colors">
+													<button className="border  border-[#BBBBBB] text-gray-700 font-semibold rounded-[10px] py-3 px-4 hover:bg-gray-50 transition-colors">
 														Add to cart
 													</button>
 													<button className="bg-[#F0BA43] text-white font-semibold rounded-[10px] py-3 px-4 hover:bg-yellow-500 transition-colors">
@@ -324,7 +324,7 @@ export const Pdetails: React.FC = () => {
 										<div className="">Add To wishlist</div>
 									</div>
 									{/* Offers Box */}
-									<div className="bg-gray-50 border  border-[#BBBBBB]rounded-[10px] p-4">
+									<div className=" border  border-[#BBBBBB] rounded-[10px] p-4">
 										<p className="text-sm text-gray-600 mb-2">
 											{productDetails.offers}
 										</p>
@@ -335,19 +335,19 @@ export const Pdetails: React.FC = () => {
 
 									{/* Delivery & Buttons */}
 									<div className="space-y-3">
-										<button className="w-full flex items-center justify-center gap-2 border  border-[#BBBBBB]rounded-[10px] py-2 px-4 hover:bg-gray-50">
+										<button className="w-full flex items-center justify-center gap-2 border  border-[#BBBBBB] rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											<MapPin className="w-5 h-5" />
-											<span className="text-sm">
+											<span className="text-sm ">
 												Deliver to Canada
 											</span>
 										</button>
 										<button className="w-full bg-[#F0BA43] text-[#FFFFFF] font-semibold rounded-[10px] py-2 px-4 hover:bg-yellow-500 transition-colors">
 											See Similar Items
 										</button>
-										<button className="w-full border  border-[#BBBBBB]text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
+										<button className="w-full border  border-[#BBBBBB] text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											See all Buying Options
 										</button>
-										<button className="w-full border  border-[#BBBBBB]text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
+										<button className="w-full border  border-[#BBBBBB] text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											Add to List
 										</button>
 									</div>

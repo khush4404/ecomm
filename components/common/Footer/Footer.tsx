@@ -362,7 +362,6 @@ export const Footer = () => {
 					</div>
 				</div>
 			</footer>
-			{/* Mobile Bottom Icons (replaced images with lucide icons) */}
 			<div className="sm:hidden flex flex-row items-center justify-between p-8">
 				<button aria-label="Home" className="p-2">
 					<Home className="w-6 h-6 text-[#1D1D1D]" />
