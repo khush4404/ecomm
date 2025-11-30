@@ -1,11 +1,7 @@
-import { Coffee } from "@/components/categories/Coffee";
 import { Crafted } from "@/components/categories/Crafted";
 import FeaturedCategories from "@/components/categories/FeaturedCategories/FeaturedCategories";
 import { Hero } from "@/components/categories/Hero";
 import LatestNews from "@/components/categories/LatestNews";
-import { Pdetails } from "@/components/categories/Pdetails";
-import { SimilarItems } from "@/components/categories/SimilarItems";
-import { SingleProductTab } from "@/components/categories/SingleProductTab";
 import { TopSelling } from "@/components/categories/TopSelling";
 import { CategoriesSection } from "@/components/common/CategoriesSection";
 import Support from "@/components/common/Support";
@@ -86,18 +82,7 @@ export default function CategoriesPage() {
       <TopSelling />
       <LatestNews />
       <Support />
-      <Pdetails />
-      <SingleProductTab />
-      <SimilarItems
-        title="Similar items Viewed products"
-        gridColumns={{ mobile: 2, tablet: 2, desktop: 4 }}
-      />
-      <SimilarItems
-        title="You may also like"
-        gridColumns={{ mobile: 2, tablet: 2, desktop: 4 }}
-      />
 
-      <Coffee />
     </div>
   );
 }

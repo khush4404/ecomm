@@ -1,7 +1,126 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronDown, X } from "lucide-react";
 import { ProductCard } from "@/components/common/Card";
+// Reusable dual-thumb range slider (visual single control)
+function RangeSlider({
+	value,
+	onChange,
+	min = 0,
+	max = 100,
+}: {
+	value: number[];
+	onChange: (v: number[]) => void;
+	min?: number;
+	max?: number;
+}) {
+	const containerRef = React.useRef<HTMLDivElement | null>(null);
+
+	const percent = (v: number) => ((v - min) / (max - min)) * 100;
+
+	const handleLow = (val: number) => {
+		const newLow = Math.min(val, value[1] - 1);
+		onChange([newLow, value[1]]);
+	};
+
+	const handleHigh = (val: number) => {
+		const newHigh = Math.max(val, value[0] + 1);
+		onChange([value[0], newHigh]);
+	};
+
+	// hide native thumbs via CSS
+	useEffect(() => {
+		const style = document.createElement("style");
+		style.innerHTML = `
+		input[type=range].range-input { -webkit-appearance: none; appearance: none; background: transparent; }
+		input[type=range].range-input:focus { outline: none; }
+		input[type=range].range-input::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: transparent; border: none; }
+		input[type=range].range-input::-moz-range-thumb { width: 0; height: 0; background: transparent; border: none; }
+		`;
+		document.head.appendChild(style);
+		return () => { document.head.removeChild(style); };
+	}, []);
+
+	const valueFromClientX = (clientX: number) => {
+		const el = containerRef.current;
+		if (!el) return min;
+		const rect = el.getBoundingClientRect();
+		const pct = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+		return Math.round(min + pct * (max - min));
+	};
+
+	const onPointerDown = (e: React.PointerEvent) => {
+		e.preventDefault();
+		const clientX = e.clientX;
+		const clickedValue = valueFromClientX(clientX);
+		const distLow = Math.abs(clickedValue - value[0]);
+		const distHigh = Math.abs(clickedValue - value[1]);
+		const pick: "low" | "high" = distLow <= distHigh ? "low" : "high";
+		// start dragging picked thumb
+
+		const onPointerMove = (ev: PointerEvent) => {
+			const v = valueFromClientX(ev.clientX);
+			if (pick === "low") {
+				handleLow(v);
+			} else {
+				handleHigh(v);
+			}
+		};
+
+		const onPointerUp = () => {
+			window.removeEventListener("pointermove", onPointerMove);
+			window.removeEventListener("pointerup", onPointerUp);
+		};
+
+		window.addEventListener("pointermove", onPointerMove);
+		window.addEventListener("pointerup", onPointerUp);
+	};
+
+	const left = percent(value[0]);
+	const right = percent(value[1]);
+
+	return (
+		<div ref={containerRef} onPointerDown={onPointerDown} className="w-full relative h-6">
+			{/* Track */}
+			<div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-1 bg-gray-300 rounded-full" />
+			{/* Filled range */}
+			<div
+				className="absolute top-1/2 transform -translate-y-1/2 h-1 bg-[#F0BA43] rounded-full"
+				style={{ left: `${left}%`, width: `${Math.max(right - left, 0)}%` }}
+			/>
+
+			{/* Invisible native sliders (kept for keyboard accessibility) - pointer-events disabled, we handle dragging manually */}
+			<input
+				type="range"
+				min={min}
+				max={max}
+				value={value[0]}
+				onChange={(e) => handleLow(Number(e.target.value))}
+				className="range-input absolute left-0 right-0 top-0 w-full h-10 appearance-none bg-transparent pointer-events-none"
+				style={{ zIndex: 1 }}
+			/>
+			<input
+				type="range"
+				min={min}
+				max={max}
+				value={value[1]}
+				onChange={(e) => handleHigh(Number(e.target.value))}
+				className="range-input absolute left-0 right-0 top-0 w-full h-10 appearance-none bg-transparent pointer-events-none"
+				style={{ zIndex: 1 }}
+			/>
+
+			{/* Visible thumbs (custom) */}
+			<div
+				className="absolute w-4 h-4 rounded-full bg-[#F0BA43] -translate-y-1/2 top-1/2 shadow-md pointer-events-none"
+				style={{ left: `calc(${left}% - 8px)` }}
+			/>
+			<div
+				className="absolute w-4 h-4 rounded-full bg-[#F0BA43] -translate-y-1/2 top-1/2 shadow-md pointer-events-none"
+				style={{ left: `calc(${right}% - 8px)` }}
+			/>
+		</div>
+	);
+}
 
 interface FilterSidebarProps {
 	showCategoryMore: boolean;
@@ -88,31 +207,12 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 			{/* Price Range Slider */}
 			<div className="mb-6">
 				<div className="flex items-center gap-4 mb-3">
-					<input
-						type="range"
-						min="0"
-						max="200"
-						value={priceRange[0]}
-						onChange={(e) =>
-							setPriceRange([
-								parseInt(e.target.value),
-								priceRange[1],
-							])
-						}
-						className="flex-1 h-1 bg-gray-300 rounded-full accent-yellow-400"
-					/>
-					<input
-						type="range"
-						min="0"
-						max="200"
-						value={priceRange[1]}
-						onChange={(e) =>
-							setPriceRange([
-								priceRange[0],
-								parseInt(e.target.value),
-							])
-						}
-						className="flex-1 h-1 bg-gray-300 rounded-full accent-yellow-400"
+					{/* Single visual range slider with two thumbs */}
+					<RangeSlider
+						value={priceRange}
+						onChange={setPriceRange}
+						min={0}
+						max={200}
 					/>
 				</div>
 				<p className="text-xs md:text-sm text-[#1D1D1D]">
