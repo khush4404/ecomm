@@ -170,12 +170,12 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 					.map((category, idx) => (
 						<label
 							key={idx}
-							className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-1 rounded leading-9"
+							className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-1 rounded sm:leading-9"
 						>
-							<span className="text-[#1D1D1d] md:text-base text-sm leading-9">
+							<span className="text-[#1D1D1d] md:text-base text-sm sm:leading-9">
 								{category.name}
 							</span>
-							<span className="px-2 py-0.5 bg-[#f2f2f2] rounded text-xs text-[#1D1D1D] w-[34px] inline-flex itmes-center justify-center leading-[26px]">
+							<span className="px-2 py-0.5 bg-[#f2f2f2] rounded text-xs text-[#1D1D1D] w-[34px] inline-flex itmes-center justify-center sm:leading-[26px]">
 								{category.count}
 							</span>
 						</label>
