@@ -49,7 +49,7 @@ export const BlogCategories: React.FC = () => {
 		<section className="py-6 lg:py-12">
 			<div className="container mx-auto md:px-4 px-0">
 				{/* Pills */}
-				<div className="flex flex-wrap flex-col sm:flex-row w-auto  md:gap-10 gap-2.5  justify-center mb-8">
+				<div className="flex flex-wrap flex-col sm:flex-row w-auto  md:gap-11 gap-2.5  justify-center mb-8">
 					{categories.map((c) => (
 						<button
 							key={c.id}

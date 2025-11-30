@@ -78,16 +78,18 @@ export const FaqForm = () => {
 					/>
 
 					{/* Question Textarea */}
-					<Input
+					<label htmlFor="question" className="leading-9">
+						Write your Question
+					</label>
+					<textarea
 						id="question"
 						name="question"
-						label="Write your Question"
 						placeholder="Enter here..."
 						value={formData.question}
 						onChange={handleChange}
-						textarea
 						rows={6}
 						required
+						className="border w-full rounded-[10px] border-[#BBBBBB] px-4 py-3 "
 					/>
 
 					{/* Submit Button */}
