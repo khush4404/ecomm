@@ -70,7 +70,7 @@ export const Favorites: React.FC<{ topics?: Topic[] }> = ({
 						</div>
 
 						<div className="flex-1">
-							<h4 className="text-sm md:text-base font-medium text-gray-900 mb-2.5 md:mb-1">
+							<h4 className="text-sm md:text-base font-medium text-[#1D1D1D] mb-2.5 md:mb-1">
 								{t.title}
 							</h4>
 							<p className="text-sm md:text-base text-text-gray">

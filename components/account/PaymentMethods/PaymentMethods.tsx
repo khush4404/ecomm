@@ -44,7 +44,7 @@ export function PaymentMethods() {
 						<h4 className="font-semibold mb-2 md:text-base text-[12px]">
 							UPI
 						</h4>
-						<div className="border border-gray-200 rounded-[10px] p-4 ">
+						<div className="border border-[#BBBBBB] rounded-[10px] p-4 ">
 							<div className="flex flex-col gap-3 ">
 								<div className="flex border-b border-[#BBBBBB] md:pb-4 pb-3 w-full items-center gap-3 ">
 									<input
@@ -100,7 +100,7 @@ export function PaymentMethods() {
 						<h4 className="font-semibold mb-2 md:text-base text-[12px]">
 							Credit / Debit / ATM Card
 						</h4>
-						<div className="border border-gray-200 rounded-[10px] p-4">
+						<div className="border border-[#BBBBBB] rounded-[10px] p-4">
 							<div className="flex flex-col gap-3">
 								<Input
 									placeholder="Card Number"
@@ -129,7 +129,7 @@ export function PaymentMethods() {
 					{/* Net Banking */}
 					<div className="md:block hidden">
 						<h4 className="font-semibold mb-2">Net Banking</h4>
-						<div className="border border-gray-200 rounded-[10px] p-4">
+						<div className="border border-[#BBBBBB] rounded-[10px] p-4">
 							<div className="flex flex-col gap-3">
 								<label className="flex items-center gap-3">
 									<input type="radio" name="bank" />
@@ -158,7 +158,7 @@ export function PaymentMethods() {
 						<h4 className="font-semibold mb-2 md:text-base text-[12px]">
 							Add Gift Card or Promo Code
 						</h4>
-						<div className="border border-gray-200 rounded-[10px] p-4">
+						<div className="border border-[#BBBBBB] rounded-[10px] p-4">
 							<div className="flex gap-3 text-base">
 								<Input
 									placeholder="Card Number"
@@ -181,7 +181,7 @@ export function PaymentMethods() {
 
 				{/* Right: order summary */}
 				<aside className="lg:col-span-1 mt-8">
-					<div className="border border-gray-200 rounded-[10px] p-4 flex flex-col justify-between h-fit">
+					<div className="border border-[#BBBBBB] rounded-[10px] p-4 flex flex-col justify-between h-fit">
 						<p className="text-sm text-gray-600">Price (3 items)</p>
 						<div className="flex items-center justify-between mt-2">
 							<span className="text-sm">Product Promise Fee</span>

@@ -71,14 +71,14 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 	const hasMoreImages = (post.images?.length || 0) > 1;
 
 	return (
-		<div className="bg-white rounded-[10px] shadow-sm border border-gray-200 overflow-hidden mb-4">
+		<div className="bg-white rounded-[10px]  border border-[#BBBBBB] overflow-hidden mb-4">
 			{/* Post Header */}
-			<div className="p-4 border-b border-gray-200">
+			<div className="p-4 border-b border-[#BBBBBB]">
 				<div className="flex items-start justify-between mb-2">
 					<div className="flex items-center gap-3">
 						<span className="text-2xl">{post.author.avatar}</span>
 						<div>
-							<p className="font-medium text-gray-900">
+							<p className="font-medium text-[#1D1D1D]">
 								{post.author.name}
 							</p>
 							<p className="text-xs text-gray-500">
@@ -150,7 +150,7 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 			)}
 
 			{/* Post Stats */}
-			<div className="px-4  py-3 border-b border-gray-200 flex items-center gap-4 text-xs text-gray-600">
+			<div className="px-4  py-3 border-b border-[#BBBBBB] flex items-center gap-4 text-xs text-gray-600">
 				<span className="flex gap-2 items-center">
 					<Heart /> {post.likes}
 				</span>
@@ -196,13 +196,13 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 			</div>
 
 			{/* Comment Input */}
-			<div className="px-4 py-3 border-t border-gray-200">
+			<div className="px-4 py-3 border-t border-[#BBBBBB]">
 				<div className="flex items-center gap-2">
 					<span className="text-xl">👤</span>
 					<input
 						type="text"
 						placeholder="What are your thoughts?"
-						className="flex-1 bg-[#BBBBBB] placeholder:text-text-gray rounded-[10px] px-4 py-4 text-sm outline-none focus:ring-1 focus:ring-yellow-400"
+						className="flex-1 bg-[#F5F5F5] placeholder:text-text-gray rounded-[10px] px-4 py-4 text-sm outline-none focus:ring-1 focus:ring-yellow-400"
 						onClick={(e) => e.stopPropagation()}
 					/>
 				</div>

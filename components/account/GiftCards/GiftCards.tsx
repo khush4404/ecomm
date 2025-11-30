@@ -94,7 +94,7 @@ export function GiftCards() {
 					{coupons.map((coupon) => (
 						<div
 							key={coupon.id}
-							className="rounded-[10px] p-3 md:p-6 flex flex-col sm:flex-row items-start justify-between gap-6 border border-gray-200"
+							className="rounded-[10px] p-3 md:p-6 flex flex-col sm:flex-row items-start justify-between gap-6 border border-[#BBBBBB]"
 						>
 							{/* Left content */}
 							<div className="flex-1 flex flex-col gap-3 min-w-0">

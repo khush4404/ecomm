@@ -31,7 +31,7 @@ const sizeClasses: Record<NonNullable<BaseProps["size"]>, string> = {
 
 const variantClasses: Record<NonNullable<BaseProps["variant"]>, string> = {
 	default:
-		"border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300",
+		"border border-[#BBBBBB] bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300",
 	outline:
 		"border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300",
 	ghost: "bg-transparent border border-transparent focus:outline-none",

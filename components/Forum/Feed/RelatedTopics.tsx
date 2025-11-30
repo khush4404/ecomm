@@ -33,8 +33,8 @@ const relatedTopics = [
 export const RelatedTopics = () => {
 	return (
 		<div className="bg-white">
-			<div className="md:p-6 p-0 md:border-b border-0 border-gray-200">
-				<h3 className="font-semibold text-xl text-gray-900 mb-6">
+			<div className="md:p-6 p-0 md:border-b border-0 border-[#BBBBBB]">
+				<h3 className="font-semibold text-xl text-[#1D1D1D] mb-6">
 					Related Topics
 				</h3>
 

@@ -130,7 +130,7 @@ export function Wishlist() {
 					{filtered.map((item) => (
 						<div
 							key={item.id}
-							className="rounded-[10px] border border-gray-200 overflow-hidden bg-[#F2F2F2]"
+							className="rounded-[10px] border border-[#BBBBBB] overflow-hidden bg-[#F2F2F2]"
 						>
 							<div className="p-4 flex items-center justify-center h-40">
 								<img

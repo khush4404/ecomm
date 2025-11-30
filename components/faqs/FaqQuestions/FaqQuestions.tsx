@@ -96,7 +96,7 @@ export const FaqQuestions: React.FC = () => {
 				{faqData.map((category) => (
 					<div key={category.category}>
 						{/* Category Heading */}
-						<h2 className="text-base md:text-2xl font-semibold text-gray-900 md:mb-5 mb-2.5">
+						<h2 className="text-base md:text-2xl font-semibold text-[#1D1D1D] md:mb-5 mb-2.5">
 							{category.category}
 						</h2>
 
@@ -118,12 +118,12 @@ export const FaqQuestions: React.FC = () => {
 											{expandedItem === item.id ? (
 												<Minus
 													size={16}
-													className="text-gray-900"
+													className="text-[#1D1D1D]"
 												/>
 											) : (
 												<Plus
 													size={16}
-													className="text-gray-900"
+													className="text-[#1D1D1D]"
 												/>
 											)}
 										</div>
@@ -131,7 +131,7 @@ export const FaqQuestions: React.FC = () => {
 
 									{/* Expandable Answer */}
 									{expandedItem === item.id && (
-										<div className="px-4 md:px-6 py-4 bg-white border-t border-gray-200">
+										<div className="px-4 md:px-6 py-4 bg-white border-t border-[#BBBBBB]">
 											<p className="text-sm md:text-xl text-text-gray leading-relaxed">
 												{item.answer}
 											</p>

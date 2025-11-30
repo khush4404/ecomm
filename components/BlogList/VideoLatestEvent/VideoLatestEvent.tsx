@@ -157,7 +157,7 @@ export const VideoLatestEvent: React.FC = () => {
 										</div>
 									</div>
 
-									<h3 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-2">
+									<h3 className="text-xl md:text-xl font-semibold text-[#1D1D1D] mb-3 md:mb-2">
 										{v.title}
 									</h3>
 									<p className="text-base text-text-gray">
@@ -203,7 +203,7 @@ export const VideoLatestEvent: React.FC = () => {
 												{n.date}
 											</div>
 										</div>
-										<h5 className="text-base  font-medium text-gray-900">
+										<h5 className="text-base  font-medium text-[#1D1D1D]">
 											{n.title}
 										</h5>
 										<div className="border-b border-[#BBBBBB] md:pt-8 pt-4"></div>
@@ -241,7 +241,7 @@ export const VideoLatestEvent: React.FC = () => {
 										</div>
 									</div>
 									<div className="flex-1">
-										<div className="text-sm font-medium text-gray-900">
+										<div className="text-sm font-medium text-[#1D1D1D]">
 											{ev.title}
 										</div>
 										{ev.location && (

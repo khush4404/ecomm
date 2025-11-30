@@ -155,7 +155,7 @@ const videosData: VideoPost[] = [
 // Post Card Component
 const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 	return (
-		<div className="bg-white rounded-[10px] shadow-sm p-4 hover:shadow-md transition">
+		<div className="bg-white rounded-[10px] border border-[#BBBBBB] p-4  transition">
 			<div className="flex items-start gap-3 mb-2.5 md:mb-1">
 				<Image
 					src={post.author.avatar}
@@ -208,7 +208,7 @@ const PostSection: React.FC<PostSectionProps> = ({
 	return (
 		<section>
 			<div className="flex items-center justify-between mb-4">
-				<h2 className="text-xl font-bold text-gray-900">{title}</h2>
+				<h2 className="text-xl font-bold text-[#1D1D1D]">{title}</h2>
 				<button
 					onClick={onViewAll}
 					className="text-yellow-400 hover:text-yellow-500 font-semibold text-sm"
@@ -234,7 +234,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({
 	return (
 		<section>
 			<div className="flex items-center justify-between mb-4">
-				<h2 className="text-xl font-bold text-gray-900">{title}</h2>
+				<h2 className="text-xl font-bold text-[#1D1D1D]">{title}</h2>
 				<button
 					onClick={onViewAll}
 					className="text-yellow-400 hover:text-yellow-500 font-semibold text-sm"
@@ -253,7 +253,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({
 
 const VideoCard: React.FC<{ video: VideoPost }> = ({ video }) => {
 	return (
-		<div className="bg-white rounded-[10px] shadow-sm overflow-hidden hover:shadow-md transition">
+		<div className="bg-white rounded-[10px] border border-[#BBBBBB] transition">
 			<div className="relative w-full h-48 bg-gray-200">
 				<Image
 					src={video.thumbnail}

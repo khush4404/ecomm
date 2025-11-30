@@ -669,7 +669,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 									People add ({formData.selectedPeople.length}
 									)
 								</p>
-								<div className="bg-white rounded-[10px] p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
+								<div className="bg-white rounded-[10px] p-3 max-h-[250px] overflow-y-auto space-y-2 border border-[#BBBBBB]">
 									<p className="text-xs text-gray-500 mb-2">
 										{filteredPeople.length} people found
 									</p>

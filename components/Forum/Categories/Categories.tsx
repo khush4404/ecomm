@@ -48,7 +48,7 @@ export const Categories: React.FC<Props> = ({
 			<div className="mt-3">
 				<button
 					onClick={onCreateGroup}
-					className="w-full flex items-center justify-between gap-3 px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50"
+					className="w-full flex items-center justify-between gap-3 px-3 py-2 rounded-md bg-white border border-[#BBBBBB] hover:bg-gray-50"
 				>
 					<div className="flex items-center gap-3">
 						<span className="text-xl">➕</span>

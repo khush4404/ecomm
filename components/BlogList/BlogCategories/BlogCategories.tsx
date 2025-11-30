@@ -56,7 +56,7 @@ export const BlogCategories: React.FC = () => {
 							className={`px-4 py-2 rounded-full border text-sm md:text-base transition-all whitespace-nowrap ${
 								c.active
 									? "bg-[#F0BA43] text-white border-yellow-400"
-									: "bg-white text-gray-800 border-gray-200 hover:bg-gray-50"
+									: "bg-white text-gray-800 border-[#BBBBBB] hover:bg-gray-50"
 							}`}
 						>
 							{c.name}
@@ -98,7 +98,7 @@ export const BlogCategories: React.FC = () => {
 							</div>
 
 							<div className="flex-1">
-								<div className="text-sm md:text-base font-medium text-gray-900">
+								<div className="text-sm md:text-base font-medium text-[#1D1D1D]">
 									{card.title}
 								</div>
 								<div className="text-sm text-gray-500">

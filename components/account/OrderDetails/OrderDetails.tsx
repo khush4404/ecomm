@@ -92,7 +92,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 					{order.items.map((item, idx) => (
 						<div
 							key={idx}
-							className="flex flex-col gap-4 p-4 border border-gray-200 rounded-[10px] w-full"
+							className="flex flex-col gap-4 p-4 border border-[#BBBBBB] rounded-[10px] w-full"
 						>
 							{/* TOP SECTION */}
 							<div className="flex sm:flex-row  sm:items-start items-start gap-4 w-full">
@@ -177,7 +177,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 
 			{/* Empty State if no items */}
 			{order.items.length === 0 && (
-				<div className="bg-white rounded-[10px] border border-gray-200 p-8 text-center">
+				<div className="bg-white rounded-[10px] border border-[#BBBBBB] p-8 text-center">
 					<p className="text-gray-500 font-semibold">
 						No more results to display
 					</p>

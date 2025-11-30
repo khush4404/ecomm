@@ -45,7 +45,7 @@ export const FeedDetail: React.FC<FeedDetailProps> = ({ post, onBack }) => {
 			<div className="flex items-center gap-2 mb-4">
 				<button
 					onClick={onBack}
-					className="flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors"
+					className="flex items-center gap-1 text-gray-600 hover:text-[#1D1D1D] transition-colors"
 				>
 					<svg
 						className="w-5 h-5"
@@ -72,7 +72,7 @@ export const FeedDetail: React.FC<FeedDetailProps> = ({ post, onBack }) => {
 						{/* Comments Section (full) */}
 						{post.comments && post.comments.length > 0 && (
 							<div className="px-4 py-4 ">
-								<p className="text-sm font-semibold text-gray-900 mb-3">
+								<p className="text-sm font-semibold text-[#1D1D1D] mb-3">
 									Comments
 								</p>
 								<div className="space-y-4">
@@ -130,8 +130,8 @@ export const FeedDetail: React.FC<FeedDetailProps> = ({ post, onBack }) => {
 
 				{/* Sidebar - Right */}
 				<div className="lg:col-span-1">
-					<div className="bg-white rounded-[10px] shadow-sm border border-gray-200 p-5 sticky top-4">
-						<h3 className="font-semibold text-gray-900 mb-4">
+					<div className="bg-white rounded-[10px]  border border-[#BBBBBB] p-5 sticky top-4">
+						<h3 className="font-semibold text-[#1D1D1D] mb-4">
 							Related Topics
 						</h3>
 						<div className="space-y-3">
@@ -154,9 +154,9 @@ export const FeedDetail: React.FC<FeedDetailProps> = ({ post, onBack }) => {
 							].map((topic, idx) => (
 								<div
 									key={idx}
-									className="pb-3 border-b border-gray-200 last:border-b-0 last:pb-0 cursor-pointer hover:text-yellow-600 transition-colors"
+									className="pb-3 border-b border-[#BBBBBB] last:border-b-0 last:pb-0 cursor-pointer hover:text-yellow-600 transition-colors"
 								>
-									<p className="text-xs font-medium text-gray-900 leading-relaxed hover:text-yellow-600">
+									<p className="text-xs font-medium text-[#1D1D1D] leading-relaxed hover:text-yellow-600">
 										{topic.title}
 									</p>
 									<div className="flex gap-2 mt-2 text-xs text-gray-500">

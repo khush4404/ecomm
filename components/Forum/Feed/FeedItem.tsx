@@ -52,8 +52,8 @@ export const FeedItem: React.FC<FeedItemProps> = ({
 			imageHeightClass="h-64"
 		>
 			{showComments && post.comments && post.comments.length > 0 && (
-				<div className="px-4 py-4 border-t border-gray-200">
-					<p className="text-sm font-semibold text-gray-900 mb-3">
+				<div className="px-4 py-4 border-t border-[#BBBBBB]">
+					<p className="text-sm font-semibold text-[#1D1D1D] mb-3">
 						Comments
 					</p>
 					<div className="space-y-4">
@@ -64,7 +64,7 @@ export const FeedItem: React.FC<FeedItemProps> = ({
 								</span>
 								<div className="flex-1">
 									<div className="bg-gray-100 rounded-[10px] p-3">
-										<p className="font-medium text-sm text-gray-900">
+										<p className="font-medium text-sm text-[#1D1D1D]">
 											{comment.author.name}
 										</p>
 										<p className="text-sm text-gray-700 mt-1">

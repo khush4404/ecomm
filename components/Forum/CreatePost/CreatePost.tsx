@@ -170,7 +170,7 @@ export const CreatePostBox: React.FC<{
 					value={postContent}
 					onChange={(e) => setPostContent(e.target.value)}
 					rows={4}
-					className="w-full border border-gray-200 rounded-[10px] px-4 py-3 outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none text-gray-700"
+					className="w-full border border-[#BBBBBB] rounded-[10px] px-4 py-3 outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none text-gray-700"
 				/>
 			</div>
 

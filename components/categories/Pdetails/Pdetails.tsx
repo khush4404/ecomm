@@ -328,7 +328,7 @@ export const Pdetails: React.FC = () => {
 										<p className="text-sm text-gray-600 mb-2">
 											{productDetails.offers}
 										</p>
-										<button className="text-sm font-semibold text-gray-700 hover:text-gray-900">
+										<button className="text-sm font-semibold text-gray-700 hover:text-[#1D1D1D]">
 											Learn more ▼
 										</button>
 									</div>

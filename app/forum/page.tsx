@@ -43,7 +43,7 @@ export default function ForumPage() {
 						<input
 							type="text"
 							placeholder="Write a post"
-							className="flex-1 border border-gray-200 rounded-l-full px-4 py-2 outline-none cursor-pointer hover:bg-gray-50"
+							className="flex-1 border border-[#BBBBBB] rounded-l-full px-4 py-2 outline-none cursor-pointer hover:bg-gray-50"
 							onClick={() => setIsCreatePostOpen(true)}
 							readOnly
 						/>

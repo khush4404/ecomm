@@ -48,7 +48,7 @@ export const RecentBlogs: React.FC = () => {
 				</div>
 
 				<div className="flex justify-center mt-8">
-					<button className="px-10 md:py-3.5 py-2 rounded-[10px] border border-gray-200 text-base bg-white hover:bg-gray-50">
+					<button className="px-10 md:py-3.5 py-2 rounded-[10px] border border-[#BBBBBB] text-base bg-white hover:bg-gray-50">
 						Load more
 					</button>
 				</div>
