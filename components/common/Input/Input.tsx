@@ -31,9 +31,9 @@ const sizeClasses: Record<NonNullable<BaseProps["size"]>, string> = {
 
 const variantClasses: Record<NonNullable<BaseProps["variant"]>, string> = {
 	default:
-		"border border-[#BBBBBB] bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300",
+		"border border-[#BBBBBB] bg-white focus:outline-none focus-border-none",
 	outline:
-		"border  border-[#BBBBBB]bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300",
+		"border  border-[#BBBBBB] bg-white ",
 	ghost: "bg-transparent border border-transparent focus:outline-none",
 };
 
@@ -122,7 +122,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 								controlBase,
 								prefix ? "pl-9" : "",
 								suffix ? "pr-9" : "",
-								error ? "border-red-500 focus:ring-red-200" : ""
+								error ? "border-red-500" : ""
 							)}
 							aria-invalid={!!error}
 							disabled={disabled}
@@ -136,7 +136,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 								controlBase,
 								prefix ? "pl-9" : "",
 								suffix ? "pr-9" : "",
-								error ? "border-red-500 focus:ring-red-200" : ""
+								error ? "border-red-500" : ""
 							)}
 							aria-invalid={!!error}
 							disabled={disabled}

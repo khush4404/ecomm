@@ -4,6 +4,7 @@ import React from "react";
 import Input from "@/components/common/Input";
 import Select from "@/components/common/Select";
 import Support from "@/components/common/Support";
+import { ArrowDown, ArrowLeft } from "lucide-react";
 
 export default function CheckoutPage() {
 	const countryOptions = [
@@ -28,13 +29,13 @@ export default function CheckoutPage() {
 						<div className="md:pb-6 pb-4 ">
 							{/* Top banner / photo area */}
 							<div className="w-full  rounded-[10px] overflow-hidden  flex items-center justify-center">
-								<div className="w-full max-w-4xl md:px-4">
-									<div className="flex  md:gap-5 gap-[5px] items-center">
+								<div className="w-full max-w-4xl">
+									<div className="flex md:gap-4.5 gap-[5px] items-center">
 										<div className="flex-1 flex items-center justify-center border border-[#BBBBBB] rounded-[10px] p-3 bg-white">
 											<img
 												src="/images/categories/googlepay.png"
 												alt="G Pay"
-												className="h-8 md:h-8.5 size-22 object-contain"
+												className="h-4 md:h-4 size-22 object-contain"
 											/>
 										</div>
 
@@ -42,7 +43,7 @@ export default function CheckoutPage() {
 											<img
 												src="/images/categories/paypal.png"
 												alt="PayPal"
-												className="h-8 md:h-8.5 size-22 object-contain"
+												className="h-4 md:h-4 size-22 object-contain"
 											/>
 										</div>
 
@@ -50,7 +51,7 @@ export default function CheckoutPage() {
 											<img
 												src="/images/categories/amazonpay.png"
 												alt="Amazon Pay"
-												className="h-8 md:h-8.5 size-22 object-contain"
+												className="h-4 md:h-4 size-22 object-contain"
 											/>
 										</div>
 									</div>
@@ -178,7 +179,7 @@ export default function CheckoutPage() {
 							<textarea
 								placeholder="Additional information"
 								rows={5}
-								className="border rounded-[10px] border-[#BBBBBB]"
+								className="border rounded-[10px] border-[#BBBBBB] p-4"
 							/>
 						</div>
 					</div>
@@ -186,9 +187,10 @@ export default function CheckoutPage() {
 					<div className="flex items-center gap-4 justify-between">
 						<a
 							href="/cart"
-							className="inline-flex items-center border border-[#BBBBBB] rounded-md md:border-0 px-4 py-2 gap-2 text-sm text-gray-700"
+							className="inline-flex items-center border border-[#BBBBBB] rounded-md md:border-0 md:px-0 px-4 py-2 gap-2 text-base text-text-dark"
 						>
-							← Return to Cart
+							<ArrowLeft className="text-text-dark size-4" />
+							Return to Cart
 						</a>
 
 						<button className="bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded-md flex items-center gap-2 font-semibold">
@@ -224,21 +226,21 @@ export default function CheckoutPage() {
 							))}
 						</div>
 
-						<div className="flex gap-2">
-							<Input placeholder="Enter coupon code" />
-							<button className="px-4 bg-amber-400 text-white rounded-md hover:bg-amber-500">
+						<div className="flex">
+							<Input placeholder="Enter coupon code" className="rounded-r-none" />
+							<button className="px-4 bg-amber-400 text-white rounded-md hover:bg-amber-500 rounded-l-none">
 								Apply
 							</button>
 						</div>
 
 						<div className="mt-4  pt-4">
-							<div className="flex justify-between border-b border-[#F2F2F2] pb-2 text-sm text-gray-600">
+							<div className="flex justify-between pb-2 text-sm text-text-gray">
 								<div>Subtotal</div>
-								<div>$3,225.00</div>
+								<div className="text-text-dark text-base font-semibold">$3,225.00</div>
 							</div>
-							<div className="flex justify-between border-b border-[#F2F2F2] pb-2 text-sm text-gray-600 mt-2">
+							<div className="flex justify-between border-b border-[#F2F2F2] pb-2 text-sm  mt-2 text-text-gray">
 								<div>Shipping</div>
-								<div>—</div>
+								<div className="text-text-dark text-base font-semibold">-</div>
 							</div>
 							<div className="flex justify-between font-semibold text-lg mt-3">
 								<div>Total</div>
