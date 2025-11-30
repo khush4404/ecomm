@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 interface TrendingPost {
 	id: string;
 	author: {
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	views: number;
 }
@@ -61,7 +62,11 @@ export const FeedSidebar: React.FC<FeedSidebarProps> = ({
 						>
 							<div className="flex items-center gap-2 flex-1 min-w-0">
 								<span className="text-xl shrink-0">
-									{post.author.avatar}
+									<img
+										src={post.author.image || "/images/placeholder-man.jpg"}
+										alt={post.author.name}
+										className="rounded-full object-contain h-10 w-10"
+									/>
 								</span>
 								<p className="text-base font-medium text-[#1D1D1D] truncate">
 									{post.author.name}

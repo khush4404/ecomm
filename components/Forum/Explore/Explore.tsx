@@ -7,7 +7,7 @@ type Post = {
 	id: string;
 	author: {
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	time: string;
 	title: string;
@@ -43,7 +43,6 @@ const whatNewData: Post[] = [
 		id: "wn1",
 		author: {
 			name: "John Wilson",
-			avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
 		},
 		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
@@ -56,7 +55,6 @@ const whatNewData: Post[] = [
 		id: "wn2",
 		author: {
 			name: "Sarah Mitchell",
-			avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
 		},
 		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
@@ -69,7 +67,6 @@ const whatNewData: Post[] = [
 		id: "wn3",
 		author: {
 			name: "Mike Johnson",
-			avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
 		},
 		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
@@ -85,7 +82,6 @@ const yourFeedData: Post[] = [
 		id: "yf1",
 		author: {
 			name: "Emma Davis",
-			avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
 		},
 		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
@@ -98,7 +94,6 @@ const yourFeedData: Post[] = [
 		id: "yf2",
 		author: {
 			name: "Alex Chen",
-			avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
 		},
 		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
@@ -111,7 +106,6 @@ const yourFeedData: Post[] = [
 		id: "yf3",
 		author: {
 			name: "Lisa Park",
-			avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
 		},
 		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
@@ -129,7 +123,7 @@ const videosData: VideoPost[] = [
 		description:
 			"We need a gamification mechanism inside the community to increase user engagement. Simple gamification, like what Circle recently launched, is sufficient for us, and from a business perspective, it can be another key feature. As I checked, the.....",
 		thumbnail:
-			"https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+			"/images/forum/card-banner-1.png",
 		views: 5234,
 	},
 	{
@@ -138,7 +132,7 @@ const videosData: VideoPost[] = [
 		description:
 			"We need a gamification mechanism inside the community to increase user engagement. Simple gamification, like what Circle recently launched, is sufficient for us, and from a business perspective, it can be another key feature. As I checked, the.....",
 		thumbnail:
-			"https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=300&fit=crop",
+			"/images/forum/card-banner-2.png",
 		views: 3456,
 	},
 	{
@@ -147,7 +141,7 @@ const videosData: VideoPost[] = [
 		description:
 			"We need a gamification mechanism inside the community to increase user engagement. Simple gamification, like what Circle recently launched, is sufficient for us, and from a business perspective, it can be another key feature. As I checked, the.....",
 		thumbnail:
-			"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop",
+			"/images/forum/card-banner-3.png",
 		views: 4123,
 	},
 ];
@@ -158,7 +152,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 		<div className="bg-white rounded-[10px] border border-[#BBBBBB] p-4  transition">
 			<div className="flex items-start gap-3 mb-2.5 md:mb-1">
 				<Image
-					src={post.author.avatar}
+					src={post.author.image || "/images/placeholder-man.jpg"}
 					alt={post.author.name}
 					width={32}
 					height={32}
@@ -182,7 +176,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 			</h3>
 
 			<p className="text-sm md:text-base text-text-gray mb-3 line-clamp-3">
-				{post.time}
+				{post.description}
 			</p>
 
 			<div className="flex float-right items-center gap-3 text-xs text-gray-500 pt-3 border-t border-gray-100">
@@ -254,12 +248,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({
 const VideoCard: React.FC<{ video: VideoPost }> = ({ video }) => {
 	return (
 		<div className="bg-white rounded-[10px] border border-[#BBBBBB] transition">
-			<div className="relative w-full h-48 bg-gray-200">
+			<div className="relative w-full h-[191px] bg-gray-200 rounded-[10px]">
 				<Image
 					src={video.thumbnail}
 					alt={video.title}
 					fill
-					className="object-cover"
+					className="object-cover h-full w-full roundede-[10px] overflow-hidden"
 					placeholder="empty"
 				/>
 			</div>

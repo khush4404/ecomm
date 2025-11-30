@@ -1,4 +1,5 @@
-import { ArrowUpRight, BellRing, Calendar1, Search } from "lucide-react";
+import { ArrowUpRight, BellRing, Calendar, Calendar1, Search } from "lucide-react";
+import Image from "next/image";
 import React, { useState } from "react";
 
 type EventItem = {
@@ -17,7 +18,7 @@ const MOCK_EVENTS: EventItem[] = [
 		time: "8:30pm",
 		description:
 			"Closing the Year Strong: Top 5 Community Action Items for You",
-		image: "/images/events/event1.jpg",
+		image: "/images/forum/event-banner-1.jpg",
 		isPast: false,
 	},
 	{
@@ -26,7 +27,7 @@ const MOCK_EVENTS: EventItem[] = [
 		time: "7:30pm",
 		description:
 			"Workshop Series | Engage, Enhance, your dream business market with innovation.",
-		image: "/images/events/event2.jpg",
+		image: "/images/forum/event-banner-2.jpg",
 		isPast: true,
 	},
 	{
@@ -35,7 +36,7 @@ const MOCK_EVENTS: EventItem[] = [
 		time: "10:00pm",
 		description:
 			"Crafting Exceptional Community Experience: Structuring, Branding, and Launching",
-		image: "/images/events/event3.jpg",
+		image: "/images/forum/event-banner-3.jpg",
 		isPast: false,
 	},
 	{
@@ -44,7 +45,7 @@ const MOCK_EVENTS: EventItem[] = [
 		time: "8:30pm",
 		description:
 			"Closing the Year Strong: Top 5 Community Action Items for You",
-		image: "/images/events/event1.jpg",
+		image: "/images/forum/event-banner-4.jpg",
 		isPast: false,
 	},
 	{
@@ -53,7 +54,7 @@ const MOCK_EVENTS: EventItem[] = [
 		time: "7:30pm",
 		description:
 			"Workshop Series | Engage, Enhance, your dream business market with innovation.",
-		image: "/images/events/event2.jpg",
+		image: "/images/forum/event-banner-5.jpg",
 		isPast: true,
 	},
 	{
@@ -62,7 +63,7 @@ const MOCK_EVENTS: EventItem[] = [
 		time: "10:00pm",
 		description:
 			"Crafting Exceptional Community Experience: Structuring, Branding, and Launching",
-		image: "/images/events/event3.jpg",
+		image: "/images/forum/event-banner-6.jpg",
 		isPast: false,
 	},
 ];
@@ -100,22 +101,34 @@ export const Events: React.FC = () => {
 	return (
 		<div className="w-full">
 			{/* Hero */}
-			<div className="rounded-[10px] overflow-hidden mb-6">
-				<div className="h-40 bg-linear-to-r from-purple-800 via-indigo-700 to-purple-600 flex md:gap-12 gap-9 flex-col p-6 text-white">
+			<div className="rounded-[10px] overflow-hidden mb-6 relative h-40 sm:h-[274px]">
+				{/* Background Image */}
+				<Image
+					src={"/images/forum/event-banner.jpg"}
+					alt="Events hero"
+					fill
+					className="object-cover"
+					priority
+				/>
+				{/* Overlay for readability */}
+				<div className="absolute inset-0 bg-black/40" />
+				{/* Content */}
+				<div className="absolute inset-0 flex md:gap-32 gap-9 flex-col p-6 text-white">
 					<div>
-						<h2 className="text-xl md:text-4xl font-semibold">
+						<h2 className="text-xl md:text-4xl inline-flex items-center gap-3">
+							<Calendar />
 							Events
 						</h2>
 					</div>
 
-					<div className=" flex gap-3">
-						<button className="w-10 h-10 text-[#1D1D1D] rounded-full bg-white flex items-center justify-center">
+					<div className="flex gap-3">
+						<button className="w-10 h-10 text-[#1D1D1D] rounded-full bg-white flex items-center justify-center hover:bg-white/90 transition-colors">
 							<BellRing />
 						</button>
-						<button className="w-10 h-10 rounded-full text-[#1D1D1D] bg-white flex items-center justify-center">
+						<button className="w-10 h-10 rounded-full text-[#1D1D1D] bg-white flex items-center justify-center hover:bg-white/90 transition-colors">
 							<ArrowUpRight />
 						</button>
-						<button className="w-10 h-10 rounded-full text-[#1D1D1D] bg-white flex items-center justify-center">
+						<button className="w-10 h-10 rounded-full text-[#1D1D1D] bg-white flex items-center justify-center hover:bg-white/90 transition-colors">
 							<Search />
 						</button>
 					</div>
@@ -126,21 +139,19 @@ export const Events: React.FC = () => {
 			<div className="flex flex-col md:flex-row  items-center gap-3 mb-4">
 				<button
 					onClick={() => setView("past")}
-					className={`px-4 py-2   w-[343px] md:w-[301px] text-sm ${
-						view === "past"
-							? "bg-yellow-300 text-black"
-							: "bg-white border md:border-0 text-text-gray rounded-full"
-					}`}
+					className={`px-4 py-2   w-[343px] md:w-[301px] text-sm rounded-full ${view === "past"
+						? "bg-yellow-btn text-white"
+						: "bg-white border md:border-0 text-text-gray rounded-full"
+						}`}
 				>
 					Upcoming Events
 				</button>
 				<button
 					onClick={() => setView("upcoming")}
-					className={`px-4 py-2 rounded-full w-[343px] md:w-[301px] text-sm ${
-						view === "upcoming"
-							? "bg-yellow-300 text-black"
-							: "bg-white border text-gray-700"
-					}`}
+					className={`px-4 py-2 rounded-full w-[343px] md:w-[301px] text-sm ${view === "upcoming"
+						? "bg-yellow-btn text-white"
+						: "bg-white border text-gray-700"
+						}`}
 				>
 					Past Events (Recordings)
 				</button>
@@ -151,14 +162,13 @@ export const Events: React.FC = () => {
 				{items.map((ev) => (
 					<article
 						key={ev.id}
-						className="bg-white rounded-[10px] shadow-sm overflow-hidden"
+						className="bg-white rounded-[10px] border border-[#bbb] overflow-hidden"
 					>
 						<div
 							className="h-36 bg-gray-200 bg-cover bg-center"
 							style={{
-								backgroundImage: `url(${
-									ev.image ?? "/images/events/placeholder.jpg"
-								})`,
+								backgroundImage: `url(${ev.image ?? "/images/events/placeholder.jpg"
+									})`,
 							}}
 						/>
 
@@ -174,7 +184,7 @@ export const Events: React.FC = () => {
 								</div>
 							</div>
 
-							<p className="text-base md:text-xl text-gray-600 mb-4">
+							<p className="text-base md:text-xl text-text-gray mb-4">
 								{ev.description}
 							</p>
 						</div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Input from "@/components/common/Input/Input";
+import Image from "next/image";
 
 const paymentMethods = [
 	{
@@ -55,6 +56,7 @@ export function PaymentMethods() {
 									<label className="text-sm  text-text-gray">
 										Phone pay
 									</label>
+									<Image src="/images/account/phonepe.png" alt="phone pay" width={24} height={24} className="ml-auto mr-4" />
 								</div>
 
 								<div className="flex items-center gap-3 border-b border-[#BBBBBB] md:pb-4 pb-3">
@@ -66,6 +68,7 @@ export function PaymentMethods() {
 									<label className="text-sm text-text-gray">
 										Google pay
 									</label>
+									<Image src="/images/account/google-pay.png" alt="phone pay" width={24} height={24} className="ml-auto mr-4" />
 								</div>
 
 								<div className="flex items-center gap-3">
@@ -77,6 +80,7 @@ export function PaymentMethods() {
 									<label className="text-sm text-text-gray">
 										UPI ID
 									</label>
+									<Image src="/images/account/upi-payment.png" alt="phone pay" width={24} height={24} className="ml-auto mr-4" />
 								</div>
 
 								<div className="flex  items-center">

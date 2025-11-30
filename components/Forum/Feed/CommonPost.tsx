@@ -7,7 +7,7 @@ interface FeedComment {
 	id: string;
 	author: {
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	content: string;
 	likes: number;
@@ -19,7 +19,7 @@ interface FeedPost {
 	author: {
 		id: string;
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	title: string;
 	content: string;
@@ -76,7 +76,12 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 			<div className="p-4">
 				<div className="flex items-start justify-between mb-2">
 					<div className="flex items-center gap-3">
-						<span className="text-2xl">{post.author.avatar}</span>
+						<span className="text-2xl">
+							<img
+								src={post.author.image || "/images/placeholder-man.jpg"}
+								alt={post.author.name}
+								className="rounded-full object-contain h-10 w-10"
+							/></span>
 						<div>
 							<p className="font-medium text-[#1D1D1D]">
 								{post.author.name}
@@ -114,6 +119,7 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 								alt={`Post image ${index + 1}`}
 								className={`w-full object-cover ${imageHeightClass}`}
 							/>
+
 						</div>
 					))}
 
@@ -197,7 +203,12 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 			{/* Comment Input */}
 			<div className="px-4 py-3 border-t border-[#BBBBBB]">
 				<div className="flex items-center gap-2">
-					<span className="text-xl">👤</span>
+					<span className="text-xl">
+						<img
+							src={post.author.image || "/images/placeholder-man.jpg"}
+							alt={post.author.name}
+							className="rounded-full object-contain h-10 w-10"
+						/></span>
 					<input
 						type="text"
 						placeholder="What are your thoughts?"

@@ -2,13 +2,14 @@
 
 import React from "react";
 import CommonPost from "./CommonPost";
+import Image from "next/image";
 
 interface FeedPost {
 	id: string;
 	author: {
 		id: string;
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	title: string;
 	content: string;
@@ -24,7 +25,7 @@ interface FeedComment {
 	id: string;
 	author: {
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	content: string;
 	likes: number;
@@ -60,7 +61,12 @@ export const FeedItem: React.FC<FeedItemProps> = ({
 						{post.comments.slice(0, 2).map((comment) => (
 							<div key={comment.id} className="flex gap-3">
 								<span className="text-lg">
-									{comment.author.avatar}
+									<Image
+										src={comment.author.image || "/images/placeholder-man.jpg"}
+										alt={comment.author.name}
+										fill
+										className="rounded-[10px] object-contain"
+									/>
 								</span>
 								<div className="flex-1">
 									<div className="bg-gray-100 rounded-[10px] p-3">

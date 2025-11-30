@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
 
 interface OrderItem {
 	name: string;
 	qty: number;
 	price: string;
+	image?: string;
 }
 
 interface Order {
@@ -97,7 +98,14 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 							{/* TOP SECTION */}
 							<div className="flex sm:flex-row  sm:items-start items-start gap-4 w-full">
 								{/* Image */}
-								<div className="w-20 h-20 bg-gray-100 rounded-[10px] shrink-0" />
+								<div className="w-20 h-20 bg-gray-100 rounded-[10px] shrink-0 relative overflow-hidden">
+									<Image
+										src={item.image || "/images/placeholder-man.jpg"}
+										alt={item.name}
+										fill
+										className="rounded-[10px] object-contain"
+									/>
+								</div>
 
 								{/* PRODUCT DETAILS */}
 								<div className="flex-1 flex flex-col">

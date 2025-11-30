@@ -632,7 +632,7 @@ export default function ProductListPage() {
 
 								<div className="flex justify-between items-center gap-2 w-full md:w-auto">
 									<span
-										className="text-text-gray whitespace-nowrap"
+										className="text-[#21465E] whitespace-nowrap"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										Sort by:
@@ -669,7 +669,7 @@ export default function ProductListPage() {
 
 								<div className="hidden md:flex items-center gap-2 w-full md:w-auto">
 									<span
-										className="text-text-gray whitespace-nowrap"
+										className="text-[#21465E] whitespace-nowrap"
 										style={{ letterSpacing: "-0.02em" }}
 									>
 										Show items:
@@ -690,7 +690,9 @@ export default function ProductListPage() {
 								</div>
 							</div>
 						</div>
-						<div className="h-[204px] md:h-[381px] w-full bg-gray-100 mb-8 rounded-[10px]"></div>
+						<div className="h-[204px] md:h-[381px] w-full bg-gray-100 mb-8 rounded-[10px] overflow-hidden">
+							<img src="/images/products/product-banner.jpg" alt="" className="w-full h-full" />
+						</div>
 					</div>
 					{/* Product Grid */}
 					<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

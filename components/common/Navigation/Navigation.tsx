@@ -22,16 +22,19 @@ export const Navigation = () => {
 		<>
 			<nav className="w-full bg-white border-b border-[#BBBBBB]">
 				<div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-11">
-					<div className="flex items-center h-[50px] sm:h-[54px] gap-4 md:gap-6 lg:gap-8">
+					<div className="flex justify-center items-center h-[50px] sm:h-[54px] gap-4 md:gap-6 lg:gap-20">
 						{/* Hamburger Menu Button */}
 						<button
-							className="flex items-center justify-center w-8 h-8 hover:bg-gray-100 rounded transition-colors"
+							className="flex items-center justify-center hover:bg-gray-100 rounded transition-colors gap-3"
 							onClick={() =>
 								setIsMobileMenuOpen(!isMobileMenuOpen)
 							}
 							aria-label="Toggle menu"
 						>
 							<Menu className="w-5 h-5 sm:w-6 sm:h-6 text-[#1D1D1D]" />
+							<span>
+								Browse All Categories
+							</span>
 						</button>
 
 						{/* Navigation Links - Horizontal */}

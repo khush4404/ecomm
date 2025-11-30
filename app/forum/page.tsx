@@ -14,6 +14,7 @@ import { Menu, X } from "lucide-react";
 export default function ForumPage() {
 	const [activeTab, setActiveTab] = useState<string>("explore");
 	const [isCreatePostOpen, setIsCreatePostOpen] = useState<boolean>(false);
+	const [isCreateGroupOpen, setIsCreateGroupOpen] = useState<boolean>(false);
 	const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
 	const contentComponents: Record<string, React.ReactNode> = {
@@ -22,12 +23,9 @@ export default function ForumPage() {
 		events: <Events />,
 		favorites: <Favorites />,
 		followed: <FollowedList />,
-		createGroup: (
-			<CreateGroup
-				isOpen={true}
-				onClose={() => setActiveTab("explore")}
-			/>
-		),
+		// Note: CreateGroup is rendered as a modal overlay below, not as
+		// part of the main `contentComponents` map. This keeps tabs unchanged
+		// when the modal opens.
 	};
 
 	return (
@@ -93,7 +91,7 @@ export default function ForumPage() {
 						<Categories
 							activeTab={activeTab}
 							onTabChange={setActiveTab}
-							onCreateGroup={() => setActiveTab("createGroup")}
+							onCreateGroup={() => setIsCreateGroupOpen(true)}
 						/>
 						<FollowedList />
 					</aside>
@@ -133,7 +131,7 @@ export default function ForumPage() {
 										setIsSidebarOpen(false);
 									}}
 									onCreateGroup={() => {
-										setActiveTab("createGroup");
+										setIsCreateGroupOpen(true);
 										setIsSidebarOpen(false);
 									}}
 								/>
@@ -157,6 +155,12 @@ export default function ForumPage() {
 			<CreatePost
 				isOpen={isCreatePostOpen}
 				onClose={() => setIsCreatePostOpen(false)}
+			/>
+
+			{/* Create Group Modal (overlay) */}
+			<CreateGroup
+				isOpen={isCreateGroupOpen}
+				onClose={() => setIsCreateGroupOpen(false)}
 			/>
 		</main >
 	);

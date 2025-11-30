@@ -11,7 +11,7 @@ interface FeedPost {
 	author: {
 		id: string;
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	title: string;
 	content: string;
@@ -27,7 +27,7 @@ interface FeedComment {
 	id: string;
 	author: {
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	content: string;
 	likes: number;
@@ -45,7 +45,6 @@ export const Feed = () => {
 			author: {
 				id: "1",
 				name: "Jamie Hilton",
-				avatar: "👤",
 			},
 			title: "Gamification: User levels based on activities and engagement",
 			content:
@@ -59,7 +58,6 @@ export const Feed = () => {
 					id: "1",
 					author: {
 						name: "David Mayor",
-						avatar: "👨",
 					},
 					content:
 						"Many cultivators are noticing changes in what buyers value most — aroma, visual appearance, or overall scent. Some dispensaries are returning to long-term certificate stability trends.",
@@ -70,7 +68,6 @@ export const Feed = () => {
 					id: "2",
 					author: {
 						name: "Sarah",
-						avatar: "👩",
 					},
 					content:
 						"Many cultivators are noticing changes in what buyers value most — aroma, visual appearance, or overall scent. Some dispensaries are returning to long-term certificate stability trends.",
@@ -84,13 +81,12 @@ export const Feed = () => {
 			author: {
 				id: "2",
 				name: "Jamie Hilton",
-				avatar: "👤",
 			},
 			title: "Gamification: User levels based on activities and engagement",
 			content:
 				"We need a gamification mechanism inside the community to increase user engagement. Simple gamification, like what Circle monthly launched, is sufficient for us, and from a business perspective, it can be another key feature. As I checked, the...",
 			images: [
-				"https://images.unsplash.com/photo-1490099019820-a748c6a3e739?w=600&h=400&fit=crop",
+				"/images/forum/feedimg.png",
 			],
 			likes: 300,
 			shares: 10,
@@ -101,7 +97,6 @@ export const Feed = () => {
 					id: "3",
 					author: {
 						name: "Morgan Robinson",
-						avatar: "👩",
 					},
 					content:
 						"This is a great point about engagement. The key is to balance rewards with meaningful interactions. I've seen similar approaches work well in other communities.",
@@ -112,7 +107,6 @@ export const Feed = () => {
 					id: "4",
 					author: {
 						name: "Zachary Hughes",
-						avatar: "👨",
 					},
 					content:
 						"How would you implement this without making it too complicated? Users might get overwhelmed with too many levels.",
@@ -123,7 +117,6 @@ export const Feed = () => {
 					id: "5",
 					author: {
 						name: "Juliette Cordier",
-						avatar: "👩",
 					},
 					content:
 						"I agree! Simple and straightforward gamification is always better. Users appreciate clarity and tangible rewards.",
@@ -137,7 +130,6 @@ export const Feed = () => {
 			author: {
 				id: "3",
 				name: "Jamie Hilton",
-				avatar: "👤",
 			},
 			title: "Gamification: User levels based on activities and engagement",
 			content:
@@ -151,7 +143,6 @@ export const Feed = () => {
 					id: "6",
 					author: {
 						name: "David Meyer",
-						avatar: "👨",
 					},
 					content:
 						"Great insights! I've been thinking about similar features for our platform. Do you have any data on user retention with gamification?",
@@ -162,7 +153,6 @@ export const Feed = () => {
 					id: "7",
 					author: {
 						name: "Kelly Foster",
-						avatar: "👩",
 					},
 					content:
 						"The leaderboard concept could really drive healthy competition. Just need to be careful not to create toxicity.",
@@ -177,36 +167,36 @@ export const Feed = () => {
 	const trendingPosts = [
 		{
 			id: "1",
-			author: { name: "Trun van Wijk", avatar: "👨" },
+			author: { name: "Trun van Wijk" },
 			views: 170,
 		},
 		{
 			id: "2",
-			author: { name: "Morgan Robinson", avatar: "👩" },
+			author: { name: "Morgan Robinson" },
 			views: 128,
 		},
 		{
 			id: "3",
-			author: { name: "Jimin Winglyen", avatar: "👨" },
+			author: { name: "Jimin Winglyen" },
 			views: 89,
 		},
 		{
 			id: "4",
-			author: { name: "Zachary Hughes", avatar: "👨" },
+			author: { name: "Zachary Hughes" },
 			views: 75,
 		},
 		{
 			id: "5",
-			author: { name: "Adriane Cordier", avatar: "👩" },
+			author: { name: "Adriane Cordier" },
 			views: 72,
 		},
-		{ id: "6", author: { name: "Luca Cook", avatar: "👨" }, views: 54 },
-		{ id: "7", author: { name: "David Mayor", avatar: "👨" }, views: 47 },
-		{ id: "8", author: { name: "Kelly Foster", avatar: "👩" }, views: 42 },
-		{ id: "9", author: { name: "Sharon Lloyd", avatar: "👩" }, views: 15 },
+		{ id: "6", author: { name: "Luca Cook" }, views: 54 },
+		{ id: "7", author: { name: "David Mayor" }, views: 47 },
+		{ id: "8", author: { name: "Kelly Foster" }, views: 42 },
+		{ id: "9", author: { name: "Sharon Lloyd" }, views: 15 },
 		{
 			id: "10",
-			author: { name: "Rachela Moser", avatar: "👩" },
+			author: { name: "Rachela Moser" },
 			views: 10,
 		},
 	];

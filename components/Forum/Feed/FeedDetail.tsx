@@ -10,7 +10,7 @@ interface FeedPost {
 	author: {
 		id: string;
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	title: string;
 	content: string;
@@ -26,7 +26,7 @@ interface FeedComment {
 	id: string;
 	author: {
 		name: string;
-		avatar: string;
+		image?: string;
 	};
 	content: string;
 	likes: number;
@@ -82,7 +82,11 @@ export const FeedDetail: React.FC<FeedDetailProps> = ({ post, onBack }) => {
 											className="flex gap-3"
 										>
 											<span className="text-lg">
-												{comment.author.avatar}
+												<img
+													src={comment.author.image || "/images/placeholder-man.jpg"}
+													alt={comment.author.name}
+													className="rounded-full object-contain h-10 w-10"
+												/>
 											</span>
 											<div className="flex-1">
 												<div className="rounded-[10px] md:px-3 px-0">

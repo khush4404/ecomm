@@ -37,11 +37,13 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 
 	// Mock data
 	const allPeople = [
-		{ id: "1", name: "Zachary Hughes", avatar: "👨" },
-		{ id: "2", name: "Juliette Cordier", avatar: "👩" },
-		{ id: "3", name: "Luca Cook", avatar: "👨" },
-		{ id: "4", name: "David Meyer", avatar: "👨" },
-		{ id: "5", name: "Kelly Foster", avatar: "👩" },
+		{
+			id: "1", name: "Zachary Hughes"
+		},
+		{ id: "2", name: "Juliette Cordier", image: "" },
+		{ id: "3", name: "Luca Cook", image: "" },
+		{ id: "4", name: "David Meyer", image: "" },
+		{ id: "5", name: "Kelly Foster", image: "" },
 	];
 
 	const allTopics = [
@@ -116,7 +118,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 		<>
 			{/* Desktop Modal - Only visible on lg screens and above */}
 			<div
-				className="hidden lg:block fixed inset-0 bg-opacity-50 z-40"
+				className="hidden lg:block fixed inset-0 bg-black/50 z-40"
 				onClick={onClose}
 			/>
 
@@ -339,7 +341,11 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 										>
 											<div className="flex items-center gap-3">
 												<span className="text-2xl">
-													{person.avatar}
+													<img
+														src={person.image || "/images/placeholder-man.jpg"}
+														alt={person.name}
+														className="rounded-full object-contain h-10 w-10"
+													/>
 												</span>
 												<span className="text-sm font-medium text-gray-700">
 													{person.name}
@@ -672,9 +678,11 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											}
 										>
 											<div className="flex items-center gap-3">
-												<span className="text-lg">
-													{person.avatar}
-												</span>
+												<img
+													src={person.image || "/images/placeholder-man.jpg"}
+													alt={person.name}
+													className="rounded-full object-contain h-10 w-10"
+												/>
 												<span className="text-sm font-medium text-[#1D1D1D]">
 													{person.name}
 												</span>

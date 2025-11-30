@@ -15,14 +15,14 @@ interface CreatePostModalProps {
 	isOpen: boolean;
 	onClose: () => void;
 	userName?: string;
-	userAvatar?: string;
+	userImage?: string;
 }
 
 export const CreatePost: React.FC<CreatePostModalProps> = ({
 	isOpen,
 	onClose,
 	userName = "Jamie Hilton",
-	userAvatar = "👤",
+	userImage,
 }) => {
 	const [postContent, setPostContent] = useState("");
 
@@ -48,7 +48,11 @@ export const CreatePost: React.FC<CreatePostModalProps> = ({
 			<div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-auto z-50 bg-white rounded-[10px] shadow-xl p-6">
 				{/* Header with User Info */}
 				<div className="flex items-center gap-3 mb-6 ">
-					<span className="text-3xl">{userAvatar}</span>
+					<span className="text-3xl"><img
+						src={userImage || "/images/placeholder-man.jpg"}
+						alt={userName}
+						className="rounded-full object-contain h-10 w-10"
+					/></span>
 					<span className="text-sm font-medium text-gray-700">
 						{userName}
 					</span>
@@ -143,9 +147,9 @@ export default CreatePost;
 // Inline Create Post Box (non-modal) — same layout as modal content but for embedding in pages
 export const CreatePostBox: React.FC<{
 	userName?: string;
-	userAvatar?: string;
+	userImage?: string;
 	onPost?: (content: string) => void;
-}> = ({ userName = "Jamie Hilton", userAvatar = "👤", onPost }) => {
+}> = ({ userName = "Jamie Hilton", userImage = "👤", onPost }) => {
 	const [postContent, setPostContent] = React.useState("");
 
 	const handleSubmit = () => {
@@ -158,7 +162,7 @@ export const CreatePostBox: React.FC<{
 	return (
 		<div className="bg-white rounded-[10px] shadow p-4">
 			<div className="flex items-center gap-3 mb-4">
-				<span className="text-2xl">{userAvatar}</span>
+				<span className="text-2xl">{userImage}</span>
 				<span className="text-sm font-medium text-gray-700">
 					{userName}
 				</span>

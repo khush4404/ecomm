@@ -32,9 +32,7 @@ export const RecentBlogCard: React.FC<{ item: BlogItem }> = ({ item }) => {
 				</p>
 
 				<div className="flex items-center gap-2 text-text-gray text-sm">
-					{/* optional avatar placeholder */}
 					<div className="w-6 h-6 bg-gray-200 rounded-full overflow-hidden">
-						{/* empty by design or could accept avatar */}
 					</div>
 					<div>
 						<p className="text-[12px]">

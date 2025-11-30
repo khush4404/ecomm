@@ -104,7 +104,6 @@ export function SingleProductTab(
                             ].map((review, idx) => (
                                 <div key={idx} className="border p-3.5 rounded-[10px] border-[#bbbbbb] flex flex-col">
                                     <div className="flex items-start lg:items-center gap-5.5">
-                                        {/* Avatar: Use initials as placeholder */}
                                         <div className='flex flex-col items-center justify-center gap-2.5'>
 
                                             <div className="size-15 lg:size-20 bg-gray-300 rounded-full flex items-center justify-center font-bold text-white text-lg shrink-0">

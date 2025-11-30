@@ -307,12 +307,12 @@ export const Footer = () => {
 									placeholder="Email"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
-									className="w-full h-[55px] bg-white border border-[#BBBBBB] lg:border-[#BBBBBB] pl-4 pr-[90px] lg:pr-[97px] text-text-gray text-xl font-normal leading-9 tracking-[-0.02em] outline-none"
+									className="w-full h-[55px] bg-white border border-[#BBBBBB] lg:border-[#BBBBBB] pl-4 pr-[90px] lg:pr-[97px] text-text-gray text-xl font-normal leading-9 tracking-[-0.02em] outline-none rounded-[10px]"
 									style={{ fontFamily: "Inter, sans-serif" }}
 								/>
 								<button
 									type="submit"
-									className="absolute right-0 top-0 w-[90px] lg:w-[97px] h-[55px] bg-[#F0BA43] text-[#1D1D1D] text-xl font-normal leading-9 tracking-[-0.02em] hover:bg-[#F0BA43]/90 transition-colors"
+									className="absolute right-0 top-0 w-[90px] lg:w-[97px] h-[55px] bg-[#F0BA43] text-[#1D1D1D] text-xl font-normal leading-9 tracking-[-0.02em] hover:bg-[#F0BA43]/90 transition-colors rounded-r-[10px]"
 									style={{ fontFamily: "Inter, sans-serif" }}
 								>
 									Send

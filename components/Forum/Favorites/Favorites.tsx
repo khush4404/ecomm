@@ -8,7 +8,7 @@ type Topic = {
 	id: string;
 	title: string;
 	excerpt: string;
-	avatar: string;
+	image?: string;
 	count: string;
 };
 
@@ -19,7 +19,6 @@ const sampleTopics: Topic[] = [
 		title: "Are retailers locking long-term prices again, or still shipping around batch by batch?",
 		excerpt:
 			"With market prices continuing to fluctuate, many retailers are rethinking their purchasing strategies. Some dispensaries are returning to long-term supply contracts to stabilize costs and ensure consistency.",
-		avatar: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=80&h=80&fit=crop",
 		count: "75",
 	},
 	{
@@ -28,7 +27,6 @@ const sampleTopics: Topic[] = [
 		title: "Are smaller shops still prioritizing terp profile variety or just chasing lowest per-lb cost?",
 		excerpt:
 			"In today's competitive market, smaller cannabis cultivators face tough choices — should they focus on maintaining unique terpene profiles and strain diversity, or cut costs to compete with large-scale producers?",
-		avatar: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=80&h=80&fit=crop",
 		count: "5k",
 	},
 	{
@@ -37,7 +35,6 @@ const sampleTopics: Topic[] = [
 		title: "How are dispensaries managing overstock this season? Are flash sales or bundles working?",
 		excerpt:
 			"Some are experimenting with flash sales, bundle offers, or BOGO deals to move inventory faster. Others are relying on wholesale partnerships, loyalty programs, or discount rotations to stay steady.",
-		avatar: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=80&h=80&fit=crop",
 		count: "10k",
 	},
 ];
@@ -60,7 +57,7 @@ export const Favorites: React.FC<{ topics?: Topic[] }> = ({
 						<div className="flex  gap-2.5 items-center">
 							<div className="w-8 h-8 md:w-10 md:h-10 relative shrink-0 rounded-full overflow-hidden">
 								<Image
-									src={t.avatar}
+									src={t.image || "/images/placeholder-man.jpg"}
 									alt={t.title}
 									fill
 									className="object-cover"

@@ -19,11 +19,10 @@ export const TabsHeader: React.FC<TabsHeaderProps> = ({
 				<button
 					key={tab.key}
 					onClick={() => onTabChange(tab.key)}
-					className={`px-6 py-2 rounded-full font-medium transition-all ${
-						activeTab === tab.key
-							? "bg-[#F0BA43] text-black"
-							: "bg-white text-gray-700 border  border-[#BBBBBB]hover:border-gray-400"
-					}`}
+					className={`px-6 py-2 rounded-full font-medium transition-all ${activeTab === tab.key
+						? "bg-[#F0BA43] text-white"
+						: "bg-white text-gray-700 border  border-[#BBBBBB]hover:border-gray-400"
+						}`}
 				>
 					{tab.label}
 				</button>

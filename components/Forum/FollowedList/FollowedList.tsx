@@ -5,7 +5,7 @@ import Image from "next/image";
 type Group = {
 	id: string;
 	name: string;
-	avatar: string;
+	image: string;
 	members: string;
 };
 
@@ -13,37 +13,37 @@ const sampleGroups: Group[] = [
 	{
 		id: "g1",
 		name: "Cannabis home",
-		avatar: "/images/followlist/followlist1.jpg",
+		image: "/images/followlist/followlist1.jpg",
 		members: "2K",
 	},
 	{
 		id: "g2",
 		name: "Marijuana hood",
-		avatar: "/images/followlist/followlist2.png",
+		image: "/images/followlist/followlist2.png",
 		members: "15K",
 	},
 	{
 		id: "g3",
 		name: "Flower Valley",
-		avatar: "/images/followlist/followlist3.jpg",
+		image: "/images/followlist/followlist3.jpg",
 		members: "25k",
 	},
 	{
 		id: "g4",
 		name: "Smoking ducks",
-		avatar: "/images/followlist/followlist5.jpg",
+		image: "/images/followlist/followlist5.jpg",
 		members: "128k",
 	},
 	{
 		id: "g5",
 		name: "Cannabis home",
-		avatar: "/images/followlist/followlist4.png",
+		image: "/images/followlist/followlist4.png",
 		members: "2K",
 	},
 	{
 		id: "g6",
 		name: "Marijuana hood",
-		avatar: "/images/followlist/followlist5.jpg",
+		image: "/images/followlist/followlist5.jpg",
 		members: "15K",
 	},
 ];
@@ -70,7 +70,7 @@ export const FollowedList: React.FC<{ groups?: Group[] }> = ({
 							<div className="flex items-center gap-3">
 								<div className="w-10 h-10 relative rounded-full overflow-hidden">
 									<Image
-										src={g.avatar}
+										src={g.image}
 										alt={g.name}
 										fill
 										className="object-cover"
