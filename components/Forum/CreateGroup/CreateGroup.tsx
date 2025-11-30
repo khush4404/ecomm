@@ -131,38 +131,36 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 					{/* Progress Steps */}
 					<div className="flex items-center justify-between mb-8 relative">
 						{/* Background Line */}
-						<div className="absolute top-4 left-0 right-0 h-1 bg-gray-300 -z-10" />
+						<div className="absolute top-4 left-10 right-15 h-1 bg-gray-300 -z-10" />
 						<div
-							className="absolute top-4 left-0 h-1 bg-[#F0BA43] -z-10 transition-all duration-300"
+							className="absolute top-4 left-10 h-1 bg-[#F0BA43] -z-10 transition-all duration-300"
 							style={{
 								width:
 									currentStep === "details"
 										? "0%"
 										: currentStep === "people"
-										? "50%"
-										: "100%",
+											? "50%"
+											: "100%",
 							}}
 						/>
 
 						{/* Step 1 */}
 						<div className="flex flex-col items-center z-10">
 							<div
-								className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 transition-all duration-300 ${
-									currentStep === "details" ||
+								className={`w-4 h-4 rounded-full flex items-center justify-center text-sm font-semibold mt-2.5 transition-all duration-300 ${currentStep === "details" ||
 									currentStep === "people" ||
 									currentStep === "info"
-										? "bg-[#F0BA43] text-white"
-										: "bg-gray-300 text-white"
-								}`}
+									? "bg-[#F0BA43] text-white"
+									: "bg-gray-300 text-white"
+									}`}
 							>
-								1
+								<span className="bg-white h-1/2 w-1/2 rounded-full"></span>
 							</div>
 							<span
-								className={`text-xs font-medium transition-colors duration-300 ${
-									currentStep === "details"
-										? "text-yellow-400"
-										: "text-gray-500"
-								}`}
+								className={`text-xs font-medium transition-colors duration-300 ${currentStep === "details"
+									? "text-yellow-400"
+									: "text-gray-500"
+									}`}
 							>
 								Group details
 							</span>
@@ -174,21 +172,19 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 						{/* Step 2 */}
 						<div className="flex flex-col items-center z-10">
 							<div
-								className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 transition-all duration-300 ${
-									currentStep === "people" ||
+								className={`w-4 h-4 rounded-full flex items-center justify-center text-sm font-semibold mt-2.5 transition-all duration-300 ${currentStep === "people" ||
 									currentStep === "info"
-										? "bg-[#F0BA43] text-white"
-										: "bg-gray-300 text-white"
-								}`}
+									? "bg-[#F0BA43] text-white"
+									: "bg-gray-300 text-white"
+									}`}
 							>
-								2
+								<span className="bg-white h-1/2 w-1/2 rounded-full"></span>
 							</div>
 							<span
-								className={`text-xs font-medium transition-colors duration-300 ${
-									currentStep === "people"
-										? "text-yellow-400"
-										: "text-gray-500"
-								}`}
+								className={`text-xs font-medium transition-colors duration-300 ${currentStep === "people"
+									? "text-yellow-400"
+									: "text-gray-500"
+									}`}
 							>
 								People
 							</span>
@@ -200,20 +196,18 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 						{/* Step 3 */}
 						<div className="flex flex-col items-center z-10">
 							<div
-								className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold mb-2 transition-all duration-300 ${
-									currentStep === "info"
-										? "bg-[#F0BA43] text-white"
-										: "bg-gray-300 text-white"
-								}`}
+								className={`w-4 h-4 rounded-full flex items-center justify-center text-sm font-semibold mt-2.5 transition-all duration-300 ${currentStep === "info"
+									? "bg-[#F0BA43] text-white"
+									: "bg-gray-300 text-white"
+									}`}
 							>
-								3
+								<span className="bg-white h-1/2 w-1/2 rounded-full"></span>
 							</div>
 							<span
-								className={`text-xs font-medium transition-colors duration-300 ${
-									currentStep === "info"
-										? "text-yellow-400"
-										: "text-gray-500"
-								}`}
+								className={`text-xs font-medium transition-colors duration-300 ${currentStep === "info"
+									? "text-yellow-400"
+									: "text-gray-500"
+									}`}
 							>
 								Group info
 							</span>
@@ -273,18 +267,16 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											isPublic: !prev.isPublic,
 										}))
 									}
-									className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-										formData.isPublic
-											? "bg-[#F0BA43]"
-											: "bg-gray-300"
-									}`}
+									className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${formData.isPublic
+										? "bg-[#F0BA43]"
+										: "bg-gray-300"
+										}`}
 								>
 									<span
-										className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-											formData.isPublic
-												? "translate-x-6"
-												: "translate-x-1"
-										}`}
+										className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${formData.isPublic
+											? "translate-x-6"
+											: "translate-x-1"
+											}`}
 									/>
 								</button>
 								<div>
@@ -356,10 +348,10 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											{formData.selectedPeople.includes(
 												person.id
 											) && (
-												<span className="text-yellow-400 text-lg">
-													✓
-												</span>
-											)}
+													<span className="text-yellow-400 text-lg">
+														✓
+													</span>
+												)}
 										</div>
 									))}
 								</div>
@@ -418,10 +410,10 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											{formData.selectedTopics.includes(
 												topic
 											) && (
-												<span className="text-yellow-400 text-lg">
-													✓
-												</span>
-											)}
+													<span className="text-yellow-400 text-lg">
+														✓
+													</span>
+												)}
 										</div>
 									))}
 								</div>
@@ -448,7 +440,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 							disabled={
 								currentStep === "details" && !formData.groupName
 							}
-							className="px-8 py-2 bg-[#F0BA43] bg-[#FFFFFF] font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ml-auto"
+							className="px-8 py-2 bg-[#F0BA43] text-[#FFFFFF] font-medium rounded-full  transition-colors disabled:opacity-50 disabled:cursor-not-allowed ml-auto"
 						>
 							Next
 						</button>
@@ -474,98 +466,98 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 					</h2>
 				</div>
 
-				{/* Mobile Progress Steps - Compact */}
-				<div className="flex flex-col items-center justify-between mb-8 relative px-2">
-					{/* Background Line */}
-					<div className="absolute top-3 left-0 right-0 h-1 bg-text-gray -z-10" />
+				{/* Mobile Progress Steps - Compact (vertical) */}
+				<div className="flex lg:hidden flex-col mb-8 relative pl-6">
+					{/* Vertical Background Line */}
+					<div className="absolute top-3 left-4 bottom-8 w-1 bg-gray-300 -z-10" />
 					<div
-						className="absolute top-3 left-0 h-1 bg-[#F0BA43] -z-10 transition-all duration-300"
+						className="absolute top-3 bottom-10 left-4 w-1 bg-[#F0BA43] -z-10 transition-all duration-300"
 						style={{
-							width:
+							height:
 								currentStep === "details"
 									? "0%"
 									: currentStep === "people"
-									? "50%"
-									: "100%",
+										? "50%"
+										: "100%",
 						}}
 					/>
 
 					{/* Step 1 */}
-					<div className="flex flex-col items-center z-10 flex-1">
+					<div className="relative -ml-3.5 flex items-start gap-3 z-10 mb-6">
 						<div
-							className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-300 ${
-								currentStep === "details" ||
+							className={`w-4 h-4 rounded-full flex items-center justify-center mt-1.5 transition-all duration-300 ${currentStep === "details" ||
 								currentStep === "people" ||
 								currentStep === "info"
-									? "bg-[#F0BA43] text-white"
-									: "bg-gray-300 text-white"
-							}`}
+								? "bg-[#F0BA43] text-white"
+								: "bg-gray-300 text-white"
+								}`}
 						>
-							1
+							<span className="bg-white h-1/2 w-1/2 rounded-full"></span>
 						</div>
-						<span
-							className={`text-xs font-medium transition-colors duration-300 text-center mt-1 ${
-								currentStep === "details"
+						<div>
+							<span
+								className={`text-sm font-medium block ${currentStep === "details"
 									? "text-yellow-400"
 									: "text-gray-500"
-							}`}
-						>
-							Group details
-						</span>
-						<span className="text-xs text-gray-400">
-							Basic Information
-						</span>
+									}`}
+							>
+								Group details
+							</span>
+							<span className="text-xs text-gray-400">
+								Basic information
+							</span>
+						</div>
 					</div>
 
 					{/* Step 2 */}
-					<div className="flex flex-col items-center z-10 flex-1">
+					<div className="flex items-start -ml-3.5 gap-3 z-10 mb-6">
 						<div
-							className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-300 ${
-								currentStep === "people" ||
+							className={`w-4 h-4 rounded-full flex items-center justify-center mt-1.5 transition-all duration-300 ${currentStep === "people" ||
 								currentStep === "info"
-									? "bg-[#F0BA43] text-white"
-									: "bg-gray-300 text-white"
-							}`}
+								? "bg-[#F0BA43] text-white"
+								: "bg-gray-300 text-white"
+								}`}
 						>
-							2
+							<span className="bg-white h-1/2 w-1/2 rounded-full"></span>
 						</div>
-						<span
-							className={`text-xs font-medium transition-colors duration-300 text-center mt-1 ${
-								currentStep === "people"
+						<div>
+							<span
+								className={`text-sm font-medium block ${currentStep === "people"
 									? "text-yellow-400"
 									: "text-gray-500"
-							}`}
-						>
-							People
-						</span>
-						<span className="text-xs text-gray-400">
-							Add people to the group
-						</span>
+									}`}
+							>
+								People
+							</span>
+							<span className="text-xs text-gray-400">
+								Add people to the group
+							</span>
+						</div>
 					</div>
 
 					{/* Step 3 */}
-					<div className="flex flex-col items-center z-10 flex-1">
+					<div className="flex items-start -ml-3.5 gap-3 z-10">
 						<div
-							className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-300 ${
-								currentStep === "info"
-									? "bg-[#F0BA43] text-white"
-									: "bg-gray-300 text-white"
-							}`}
+							className={`w-4 h-4 rounded-full flex items-center justify-center mt-1.5 transition-all duration-300 ${currentStep === "info"
+								? "bg-[#F0BA43] text-white"
+								: "bg-gray-300 text-white"
+								}`}
 						>
-							3
+							<span className="bg-white h-1/2 w-1/2 rounded-full"></span>
 						</div>
-						<span
-							className={`text-xs font-medium transition-colors duration-300 text-center mt-1 ${
-								currentStep === "info"
+						<div>
+							<span
+								className={`text-sm font-medium block ${currentStep === "info"
 									? "text-yellow-400"
 									: "text-gray-500"
-							}`}
-						>
-							Group info
-						</span>
-						<span className="text-xs text-gray-400">
-							Select info for the group
-						</span>
+									}`}
+							>
+								Group info
+							</span>
+							<span className="text-xs text-gray-400">
+								Select info for the group
+							</span>
+						</div>
 					</div>
 				</div>
 
@@ -619,18 +611,16 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											isPublic: !prev.isPublic,
 										}))
 									}
-									className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-										formData.isPublic
-											? "bg-[#F0BA43]"
-											: "bg-gray-300"
-									}`}
+									className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${formData.isPublic
+										? "bg-[#F0BA43]"
+										: "bg-gray-300"
+										}`}
 								>
 									<span
-										className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-											formData.isPublic
-												? "translate-x-5"
-												: "translate-x-1"
-										}`}
+										className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${formData.isPublic
+											? "translate-x-5"
+											: "translate-x-1"
+											}`}
 									/>
 								</button>
 								<div className="flex flex-col">
@@ -692,10 +682,10 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											{formData.selectedPeople.includes(
 												person.id
 											) && (
-												<span className="text-yellow-400 text-lg">
-													✓
-												</span>
-											)}
+													<span className="text-yellow-400 text-lg">
+														✓
+													</span>
+												)}
 										</div>
 									))}
 								</div>
@@ -744,10 +734,10 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 											{formData.selectedTopics.includes(
 												topic
 											) && (
-												<span className="text-yellow-400 text-lg">
-													✓
-												</span>
-											)}
+													<span className="text-yellow-400 text-lg">
+														✓
+													</span>
+												)}
 										</div>
 									))}
 								</div>
@@ -758,14 +748,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 
 				{/* Mobile Footer Buttons */}
 				<div className="flex flex-col gap-2">
-					{currentStep !== "details" && (
-						<button
-							onClick={handleBack}
-							className="w-full px-6 py-2.5 border border-[#BBBBBB] rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm"
-						>
-							Back
-						</button>
-					)}
+
 
 					{currentStep !== "info" && (
 						<button
@@ -773,7 +756,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 							disabled={
 								currentStep === "details" && !formData.groupName
 							}
-							className="w-full px-8 py-2.5 bg-[#F0BA43]  font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+							className="w-full px-8 py-2.5 bg-[#F0BA43]  font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm text-white"
 						>
 							Next
 						</button>
@@ -782,9 +765,18 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 					{currentStep === "info" && (
 						<button
 							onClick={handleSubmit}
-							className="w-full px-8 py-2.5 bg-[#F0BA43] bg-[#FFFFFF] font-medium rounded-full hover:bg-yellow-500 transition-colors text-sm"
+							className="w-full px-8 py-2.5 bg-[#F0BA43] text-[#FFFFFF] font-medium rounded-full hover:bg-yellow-500 transition-colors text-sm"
 						>
 							Create group
+						</button>
+					)}
+
+					{currentStep !== "details" && (
+						<button
+							onClick={handleBack}
+							className="w-full px-6 py-2.5 border border-[#BBBBBB] rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm"
+						>
+							Back
 						</button>
 					)}
 				</div>
