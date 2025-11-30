@@ -341,13 +341,13 @@ export const Pdetails: React.FC = () => {
 												Deliver to Canada
 											</span>
 										</button>
-										<button className="w-full bg-[#F0BA43] text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-yellow-500 transition-colors">
+										<button className="w-full bg-[#F0BA43] text-[#FFFFFF] font-semibold rounded-[10px] py-2 px-4 hover:bg-yellow-500 transition-colors">
 											See Similar Items
 										</button>
-										<button className="w-full border border-gray-300 text-gray-700 font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
+										<button className="w-full border border-gray-300 text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											See all Buying Options
 										</button>
-										<button className="w-full border border-gray-300 text-gray-700 font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
+										<button className="w-full border border-gray-300 text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											Add to List
 										</button>
 									</div>

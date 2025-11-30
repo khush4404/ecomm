@@ -334,7 +334,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 
 					{/* Order Summary */}
 					<div className="lg:col-span-1">
-						<div className="sticky top-8 p-6 bg-[#F9F9F9] rounded-[10px] border border-[#E8E8E8]">
+						<div className="sticky top-8 md:p-6 p-2 bg-[#F9F9F9] rounded-[10px] border border-[#E8E8E8]">
 							<div className="space-y-4 mb-6">
 								<div className="flex justify-between text-sm md:text-base font-semibold">
 									<span className="text-text-gray">
