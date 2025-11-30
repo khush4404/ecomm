@@ -159,16 +159,15 @@ export function Orders() {
 			</div>
 
 			{/* Tabs */}
-			<nav className="flex justify-center lg:justify-start gap-y-4 gap-x-6 flex-wrap">
+			<nav className="flex justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-15 flex-wrap">
 				{tabs.map((t) => (
 					<button
 						key={t.key}
 						onClick={() => setActiveTab(t.key)}
-						className={`-mb-px leading-9  text-text-dark ${
-							activeTab === t.key
-								? "border-b-4 border-amber-400 font-semibold"
-								: "text-text-gray"
-						}`}
+						className={`-mb-px leading-9  text-text-dark ${activeTab === t.key
+							? "border-b-4 border-amber-400 font-semibold"
+							: "text-text-gray"
+							}`}
 					>
 						{t.label}{" "}
 						<span className="text-sm">({counts[t.key] || 0})</span>

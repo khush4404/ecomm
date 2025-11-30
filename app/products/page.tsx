@@ -42,10 +42,10 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 	<div className="bg-white border  border-[#BBBBBB]p-6 space-y-6">
 		{/* Product Categories */}
 		<div className="border-b  border-[#BBBBBB]pb-6">
-			<h2 className="font-semibold text-base text-blue-900 mb-4 border-b border-[#BBBBBB] pb-4">
+			<h2 className="font-semibold text-base text-[#21465E] mb-4 border-b border-[#BBBBBB] p-4">
 				Product Categories
 			</h2>
-			<div className="space-y-2.5">
+			<div className="space-y-2.5 p-4">
 				{categories
 					.slice(0, showCategoryMore ? categories.length : 8)
 					.map((category, idx) => (
@@ -70,9 +70,8 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 					See More
 					<ChevronDown
 						size={16}
-						className={`transition-transform ${
-							showCategoryMore ? "rotate-180" : ""
-						}`}
+						className={`transition-transform ${showCategoryMore ? "rotate-180" : ""
+							}`}
 					/>
 				</button>
 			)}
@@ -214,9 +213,8 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 					See More
 					<ChevronDown
 						size={16}
-						className={`transition-transform ${
-							showBrandMore ? "rotate-180" : ""
-						}`}
+						className={`transition-transform ${showBrandMore ? "rotate-180" : ""
+							}`}
 					/>
 				</button>
 			)}
@@ -630,11 +628,10 @@ export default function ProductListPage() {
 						{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((page) => (
 							<button
 								key={page}
-								className={`px-3 py-1 rounded-[10px] ${
-									page === 1
-										? "bg-gray-200 text-[#1D1D1D] font-semibold"
-										: "text-gray-600 hover:text-[#1D1D1D]"
-								}`}
+								className={`px-3 py-1 rounded-[10px] ${page === 1
+									? "bg-gray-200 text-[#1D1D1D] font-semibold"
+									: "text-gray-600 hover:text-[#1D1D1D]"
+									}`}
 							>
 								{page}
 							</button>

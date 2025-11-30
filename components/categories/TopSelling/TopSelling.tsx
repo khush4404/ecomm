@@ -104,7 +104,7 @@ export const TopSelling: React.FC = () => {
 				{/* Divider under header */}
 				<div className="border-t border-[#BBBBBB]  mt-6" />
 
-				<div className="flex flex-col lg:flex-row mt-10 gap-6">
+				<div className="flex flex-col lg:flex-row mt-5 sm:mt-10 gap-6">
 					{/* Left: grid of products */}
 					<div className="flex-1">
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-[21px] ">

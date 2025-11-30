@@ -49,15 +49,14 @@ export const BlogCategories: React.FC = () => {
 		<section className="py-6 lg:py-12">
 			<div className="container mx-auto md:px-4 px-0">
 				{/* Pills */}
-				<div className="flex flex-wrap flex-col sm:flex-row w-auto  md:gap-11 gap-2.5  justify-center mb-8">
+				<div className="flex flex-wrap flex-col sm:flex-row w-auto  md:gap-x-11 md:gap-y-6 gap-2.5  justify-center mb-8">
 					{categories.map((c) => (
 						<button
 							key={c.id}
-							className={`px-4 py-2 rounded-full border text-sm md:text-base transition-all whitespace-nowrap ${
-								c.active
-									? "bg-[#F0BA43] text-white border-yellow-400"
-									: "bg-white text-gray-800 border-[#BBBBBB] hover:bg-gray-50"
-							}`}
+							className={`px-4 py-2 rounded-full border text-sm md:text-base transition-all whitespace-nowrap ${c.active
+								? "bg-[#F0BA43] text-white border-yellow-400"
+								: "bg-white text-gray-800 border-[#BBBBBB] hover:bg-gray-50"
+								}`}
 						>
 							{c.name}
 						</button>

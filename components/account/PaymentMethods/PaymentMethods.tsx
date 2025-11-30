@@ -52,7 +52,7 @@ export function PaymentMethods() {
 										name="upi"
 										className="shrink-0"
 									/>
-									<label className="text-sm  text-gray-700">
+									<label className="text-sm  text-text-gray">
 										Phone pay
 									</label>
 								</div>
@@ -63,7 +63,7 @@ export function PaymentMethods() {
 										name="upi"
 										className="shrink-0"
 									/>
-									<label className="text-sm text-gray-700">
+									<label className="text-sm text-text-gray">
 										Google pay
 									</label>
 								</div>
@@ -74,14 +74,14 @@ export function PaymentMethods() {
 										name="upi"
 										className="shrink-0"
 									/>
-									<label className="text-sm text-gray-700">
+									<label className="text-sm text-text-gray">
 										UPI ID
 									</label>
 								</div>
 
 								<div className="flex  items-center">
-									<Input placeholder="Enter UPI ID" />
-									<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2 hover:bg-yellow-500 transition-colors">
+									<Input placeholder="Enter UPI ID" className="rounded-r-none" />
+									<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2 hover:bg-yellow-500 transition-colors rounded-l-none rounded-[10px]">
 										Verify
 									</button>
 								</div>
@@ -130,16 +130,16 @@ export function PaymentMethods() {
 					<div className="md:block hidden">
 						<h4 className="font-semibold mb-2">Net Banking</h4>
 						<div className="border border-[#BBBBBB] rounded-[10px] p-4">
-							<div className="flex flex-col gap-3">
-								<label className="flex items-center gap-3">
+							<div className="flex flex-col">
+								<label className="flex items-center gap-3 p-3 border-b border-[#BBBBBB] text-text-gray">
 									<input type="radio" name="bank" />
 									<span>State Bank of India</span>
 								</label>
-								<label className="flex items-center gap-3">
+								<label className="flex items-center gap-3 p-3 border-b border-[#BBBBBB] text-text-gray">
 									<input type="radio" name="bank" />
 									<span>HDFC Bank</span>
 								</label>
-								<label className="flex items-center gap-3">
+								<label className="flex items-center gap-3 p-3 text-text-gray">
 									<input type="radio" name="bank" />
 									<span>ICICI Bank</span>
 								</label>
@@ -159,13 +159,13 @@ export function PaymentMethods() {
 							Add Gift Card or Promo Code
 						</h4>
 						<div className="border border-[#BBBBBB] rounded-[10px] p-4">
-							<div className="flex gap-3 text-base items-center">
+							<div className="flex text-base items-center">
 								<Input
 									placeholder="Card Number"
 									label="Card Number"
-									className=""
+									className="rounded-r-none"
 								/>
-								<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2  rounded-[10px] hover:bg-yellow-500 transition-colors">
+								<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2  rounded-[10px] hover:bg-yellow-500 transition-colors self-end rounded-l-none">
 									Apply
 								</button>
 							</div>

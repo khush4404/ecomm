@@ -32,10 +32,10 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 				</h2>
 
 				<div className="flex items-center gap-2">
-					<label className="md:text-[12px] md:text-sm text-gray-600">
+					<label className="md:text-[12px] md:text-sm text-text-dark ">
 						Show details:
 					</label>
-					<select className=" px-3 py-1 text-[12px] md:text-sm">
+					<select className=" px-3 py-1 text-[12px] md:text-sm text-text-gray">
 						<option>Last month</option>
 						<option>Last 3 months</option>
 						<option>Last year</option>
@@ -46,7 +46,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 			{/* Order Info Summary */}
 			<div className="flex justify-between">
 				<div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-1 flex-3">
-					<div className="flex flex-col md:gap-2.5 gap-0">
+					<div className="flex md:flex-col gap-2.5 gap-0">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
 							Date ordered
 						</p>
@@ -54,7 +54,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 							{order.date}
 						</p>
 					</div>
-					<div className="flex flex-col md:gap-2.5 gap-0">
+					<div className="flex md:flex-col gap-2.5 gap-0">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
 							Order Number
 						</p>
@@ -62,7 +62,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 							{order.orderNumber}
 						</p>
 					</div>
-					<div className="flex flex-col md:gap-2.5 gap-0">
+					<div className="flex md:flex-col gap-2.5 gap-0">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
 							Total Amount
 						</p>
@@ -160,16 +160,16 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 					))}
 
 					{/* Buttons Below Orders */}
-					<div className="inline-flex md:hidden items-center gap-4 justify-between w-full">
-						<button className="border  border-[#BBBBBB] px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
+					<div className="inline-flex md:hidden items-center gap-2 w-full">
+						<button className="border  border-[#BBBBBB] px-8 py-3.5 rounded-md text-base hover:bg-gray-50 flex-1">
 							View Order
 						</button>
-						<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500">
+						<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500 flex-1">
 							View Invoice
 						</button>
 					</div>
 
-					<button className="border border-[#bbbbbb] text-base leading-6 py-3.5 px-10 rounded-[10px] text-text-dark w-fit self-center mt-4">
+					<button className="text-base leading-6 px-10 rounded-[10px] text-text-dark w-fit self-center mt-4">
 						No more results to display
 					</button>
 				</div>

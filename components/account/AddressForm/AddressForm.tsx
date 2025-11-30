@@ -79,9 +79,9 @@ export const AddressForm: React.FC<Props> = ({
 
 	return (
 		<form onSubmit={handleSubmit} className="">
-			<h2 className="text-2xl font-bold mb-6">Address Inforamtion</h2>
-			<div className="grid md:grid-cols-3">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full col-span-2">
+			<h2 className="text-2xl font-bold pb-6 border-b border-[#bbbbbb]">Address Inforamtion</h2>
+			<div className="grid md:grid-cols-6 pt-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full col-span-5">
 					<Input
 						label="Name:"
 						value={form.name ?? ""}
@@ -144,21 +144,23 @@ export const AddressForm: React.FC<Props> = ({
 					/>
 				</div>
 			</div>
-			<div className="mt-6 flex gap-4">
-				<button
-					type="submit"
-					className="bg-amber-400 text-white px-6 py-2   rounded-md font-semibold hover:bg-amber-500"
-				>
-					{initialData ? "Save Address" : "Add Address"}
-				</button>
+			<div className="grid md:grid-cols-6 pt-6">
+				<div className=" grid md:grid-cols-4 gap-4 col-span-5">
+					<button
+						type="submit"
+						className="bg-amber-400 text-white px-6 py-2   rounded-md font-semibold hover:bg-amber-500 flex-1"
+					>
+						{initialData ? "Save Address" : "Add Address"}
+					</button>
 
-				<button
-					type="button"
-					onClick={onCancel}
-					className="bg-white border  border-[#BBBBBB]px-6 py-2 rounded-md"
-				>
-					Discard
-				</button>
+					<button
+						type="button"
+						onClick={onCancel}
+						className="bg-white border  border-[#BBBBBB] px-6 py-2 rounded-md flex-1"
+					>
+						Discard
+					</button>
+				</div>
 			</div>
 		</form>
 	);

@@ -94,7 +94,7 @@ export function Wishlist() {
 					<select
 						value={view}
 						onChange={(e) => setView(e.target.value)}
-						className=" md:px-3 md:py-2 p-1 pt-2 md:pt-0 text-[12px] md:text-sm text-text-gray"
+						className=" md:px-3 md:py-2 p-1 pt-2 text-[12px] md:text-sm text-text-gray"
 					>
 						<option value="All">All</option>
 						<option value="InStock">In Stock</option>
@@ -103,7 +103,7 @@ export function Wishlist() {
 				</div>
 			</div>
 
-			<div className="flex items-center md:py-6 md:px-4 sm:py-4 sm:px-3">
+			<div className="flex items-center md:py-6 md:px-4 sm:py-4 sm:px-3 border-t border-[#bbbbbb]">
 				<Input
 					placeholder="Search for your save items"
 					value={query}

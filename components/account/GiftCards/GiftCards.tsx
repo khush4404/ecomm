@@ -75,10 +75,10 @@ export function GiftCards() {
 					</p>
 				</div>
 				<div className="grid lg:grid-cols-2 grid-cols-1 gap-3">
-					<button className="bg-[#F0BA43] text-[#FFFFFF] font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-yellow-500 transition-colors sm:w-auto w-2/3 mx-auto">
+					<button className="bg-[#F0BA43] text-[#FFFFFF] font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-yellow-500 transition-colors  mx-auto sm:w-full w-2/3">
 						Update your balance
 					</button>
-					<button className="border   border-[#BBBBBB]text-text-gray font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-gray-50 transition-colors sm:w-auto w-2/3 mx-auto">
+					<button className="border border-[#BBBBBB] text-text-gray font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-gray-50 transition-colors mx-auto sm:w-full w-2/3">
 						Redeem your gift card
 					</button>
 				</div>
@@ -98,18 +98,18 @@ export function GiftCards() {
 						>
 							{/* Left content */}
 							<div className="flex-1 flex flex-col gap-3 min-w-0">
-								<h4 className="font-semibold text-base">
+								<h4 className="font-semibold text-base text-text-dark">
 									{coupon.title}
 								</h4>
-								<p className="md:text-base text-xs  text-gray-600">
+								<p className="md:text-base text-xs  text-text-gray">
 									{coupon.description}
 								</p>
-								<p className="text-xs md:text-base text-gray-500">
+								<p className="text-xs md:text-base text-text-gray">
 									Valid until: {coupon.validUntil} • Min.
 									order {coupon.minOrder} • {coupon.cashback}{" "}
 									Cashback
 								</p>
-								<button className="flex md:block hidden text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors w-fit">
+								<button className=" md:flex hidden text-sm font-semibold text-text-dark hover:text-gray-600 transition-colors w-fit mt-2">
 									More details
 								</button>
 							</div>
