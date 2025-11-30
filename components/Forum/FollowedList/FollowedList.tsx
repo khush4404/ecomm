@@ -52,40 +52,45 @@ export const FollowedList: React.FC<{ groups?: Group[] }> = ({
 	groups = sampleGroups,
 }) => {
 	return (
-		<div className="bg-white rounded-[10px] shadow-sm p-4">
-			<h3 className="text-sm font-semibold text-gray-900 mb-3">
+		<>
+			<h3 className="text-base font-semibold text-[#1D1D1D] mb-3">
 				Followed Groups List
 			</h3>
-
-			<ul className="space-y-3">
-				{groups.map((g) => (
-					<li
-						key={g.id}
-						className="flex items-center justify-between"
-					>
-						<div className="flex items-center gap-3">
-							<div className="w-10 h-10 relative rounded-full overflow-hidden">
-								<Image
-									src={g.avatar}
-									alt={g.name}
-									fill
-									className="object-cover"
-								/>
-							</div>
-							<div className="min-w-0">
-								<div className="text-sm font-medium text-gray-900 truncate">
-									{g.name}
+			<div className="bg-white rounded-[10px] border border-[#BBBBBB] p-4">
+				<div className="flex justify-between pb-3">
+					<h2>Group name</h2>
+					<p>Members</p>
+				</div>
+				<ul className="space-y-3">
+					{groups.map((g) => (
+						<li
+							key={g.id}
+							className="flex items-center justify-between"
+						>
+							<div className="flex items-center gap-3">
+								<div className="w-10 h-10 relative rounded-full overflow-hidden">
+									<Image
+										src={g.avatar}
+										alt={g.name}
+										fill
+										className="object-cover"
+									/>
+								</div>
+								<div className="min-w-0">
+									<div className="text-base font-medium text-[#878787] truncate">
+										{g.name}
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div className="text-sm text-gray-500 ml-4">
-							{g.members}
-						</div>
-					</li>
-				))}
-			</ul>
-		</div>
+							<div className="text-base text-[#1D1D1D] ml-4">
+								{g.members}
+							</div>
+						</li>
+					))}
+				</ul>
+			</div>
+		</>
 	);
 };
 
