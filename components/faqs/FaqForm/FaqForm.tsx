@@ -94,7 +94,7 @@ export const FaqForm = () => {
 					<div className="flex md:justify-end  pt-4">
 						<button
 							type="submit"
-							className="px-8 py-3 w-full md:w-[212px] bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium rounded-[10px] transition"
+							className="px-8 py-3 w-full md:w-[212px] bg-[#F0BA43] hover:bg-yellow-500 text-gray-900 font-medium rounded-[10px] transition"
 						>
 							Submit Now
 						</button>

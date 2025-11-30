@@ -124,7 +124,7 @@ export const CreatePost: React.FC<CreatePostModalProps> = ({
 					<button
 						onClick={handleSubmit}
 						disabled={!postContent.trim()}
-						className="px-8 py-2 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+						className="px-8 py-2 bg-[#F0BA43] text-black font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
 					>
 						Post
 					</button>
@@ -199,7 +199,7 @@ export const CreatePostBox: React.FC<{
 				<button
 					onClick={handleSubmit}
 					disabled={!postContent.trim()}
-					className="px-6 py-2 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+					className="px-6 py-2 bg-[#F0BA43] text-black font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
 				>
 					Post
 				</button>

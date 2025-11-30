@@ -55,7 +55,7 @@ export const BlogCategories: React.FC = () => {
 							key={c.id}
 							className={`px-4 py-2 rounded-full border text-sm md:text-base transition-all whitespace-nowrap ${
 								c.active
-									? "bg-yellow-400 text-white border-yellow-400"
+									? "bg-[#F0BA43] text-white border-yellow-400"
 									: "bg-white text-gray-800 border-gray-200 hover:bg-gray-50"
 							}`}
 						>

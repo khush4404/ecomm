@@ -21,7 +21,7 @@ export const TabsHeader: React.FC<TabsHeaderProps> = ({
 					onClick={() => onTabChange(tab.key)}
 					className={`px-6 py-2 rounded-full font-medium transition-all ${
 						activeTab === tab.key
-							? "bg-yellow-400 text-black"
+							? "bg-[#F0BA43] text-black"
 							: "bg-white text-gray-700 border border-gray-300 hover:border-gray-400"
 					}`}
 				>

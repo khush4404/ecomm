@@ -114,7 +114,7 @@ export const FaqQuestions: React.FC = () => {
 										<span className="text-left text-base md:text-xl text-[#1D1D1D] font-medium">
 											{item.question}
 										</span>
-										<div className="shrink-0 ml-4 w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
+										<div className="shrink-0 ml-4 w-6 h-6 rounded-full bg-[#F0BA43] flex items-center justify-center">
 											{expandedItem === item.id ? (
 												<Minus
 													size={16}

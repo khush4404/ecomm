@@ -286,7 +286,7 @@ export const Explore: React.FC = () => {
 			<div className="flex flex-col items-center md:items-start gap-3 mt-4 pb-3">
 				{/* Row 1 (Desktop: all 3 in one row — Mobile: only active tab) */}
 				<div className="flex items-center gap-3 flex-wrap sm:flex-nowrap">
-					<button className="px-6 py-2 bg-yellow-400 text-white font-medium rounded-full flex items-center gap-2">
+					<button className="px-6 py-2 bg-[#F0BA43] text-white font-medium rounded-full flex items-center gap-2">
 						Categories
 						<span className="text-white text-sm">▼</span>
 					</button>

@@ -221,7 +221,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 				</button>
 			)}
 		</div>
-		<button className="items-center flex bg-yellow-400 text-[#1D1D1D] px-10.5 py-2 rounded-full font-medium hover:bg-yellow-500 transition">
+		<button className="items-center flex bg-[#F0BA43] text-[#1D1D1D] px-10.5 py-2 rounded-full font-medium hover:bg-yellow-500 transition">
 			{/* Mobile text */}
 			<span className="block md:hidden">Apply</span>
 
@@ -436,7 +436,7 @@ export default function ProductListPage() {
 
 				{/* Mobile Filter Button */}
 				{/* <div className="md:hidden mb-4">
-          <button className="w-full bg-yellow-400 text-[#1D1D1D] py-2 rounded-[10px] font-medium flex items-center justify-center gap-2">
+          <button className="w-full bg-[#F0BA43] text-[#1D1D1D] py-2 rounded-[10px] font-medium flex items-center justify-center gap-2">
             <Search size={18} />
             All Filters
           </button>
