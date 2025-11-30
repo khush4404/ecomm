@@ -52,11 +52,11 @@ export const FollowedList: React.FC<{ groups?: Group[] }> = ({
 	groups = sampleGroups,
 }) => {
 	return (
-		<>
-			<h3 className="text-base font-semibold text-[#1D1D1D] mb-3">
+		<div className="flex flex-col gap-2.5 lg:p-0 p-5 pt-2">
+			<h3 className="text-base font-semibold text-[#1D1D1D] leading-9">
 				Followed Groups List
 			</h3>
-			<div className="bg-white rounded-[10px] border border-[#BBBBBB] p-4">
+			<div className="bg-white lg:rounded-[10px] lg:border lg:border-[#BBBBBB] lg:p-4">
 				<div className="flex justify-between pb-3">
 					<h2>Group name</h2>
 					<p>Members</p>
@@ -90,7 +90,7 @@ export const FollowedList: React.FC<{ groups?: Group[] }> = ({
 					))}
 				</ul>
 			</div>
-		</>
+		</div>
 	);
 };
 
