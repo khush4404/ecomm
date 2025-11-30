@@ -34,7 +34,7 @@ export default function CheckoutPage() {
 											<img
 												src="/images/categories/googlepay.png"
 												alt="G Pay"
-												className="h-8 md:h-10 object-contain"
+												className="h-8 md:h-8.5 size-22 object-contain"
 											/>
 										</div>
 
@@ -42,7 +42,7 @@ export default function CheckoutPage() {
 											<img
 												src="/images/categories/paypal.png"
 												alt="PayPal"
-												className="h-8 md:h-10 object-contain"
+												className="h-8 md:h-8.5 size-22 object-contain"
 											/>
 										</div>
 
@@ -50,7 +50,7 @@ export default function CheckoutPage() {
 											<img
 												src="/images/categories/amazonpay.png"
 												alt="Amazon Pay"
-												className="h-8 md:h-10 object-contain"
+												className="h-8 md:h-8.5 size-22 object-contain"
 											/>
 										</div>
 									</div>
@@ -72,7 +72,7 @@ export default function CheckoutPage() {
 							</h3>
 							<a
 								href="/account/login"
-								className="md:text-base text-[12px] text-blue-600 hover:underline"
+								className="md:text-base text-[12px] text-[#21465E] hover:underline"
 							>
 								Already have an account? Login
 							</a>

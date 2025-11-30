@@ -14,10 +14,10 @@ export function Privacy() {
 			</div>
 			<div className="grid lg:grid-cols-2 grid-cols-1 py-6.5 border-y border-[#bbbbbb]">
 				<div className="grid grid-cols-2">
-					<p className="md:leading-9 leading-6 text-[12px] md:text-base text-text-gray">
+					<p className="md:leading-9 leading-6 text-[12px] md:text-base text-text-dark">
 						Thomas
 					</p>
-					<p className="md:leading-9 leading-6 text-[12px] md:text-base text-text-dark">
+					<p className="md:leading-9 leading-6 text-[12px] md:text-base text-text-gray">
 						Name
 					</p>
 					<p className="md:leading-9 leading-6 text-[12px] md:text-base text-text-dark">

@@ -44,7 +44,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 			</div>
 
 			{/* Order Info Summary */}
-			<div className="flex">
+			<div className="flex ">
 				<div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-1 flex-3">
 					<div className="flex flex-col md:gap-2.5 gap-0">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
@@ -73,8 +73,8 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 				</div>
 
 				<div className="md:block hidden flex items-center gap-4 flex-2 justify-end">
-					<button className="border  border-[#BBBBBB]px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
-						View Order
+					<button className="border  border-[#BBBBBB] px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
+						View Orderrrrr
 					</button>
 					<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500">
 						View Invoice
@@ -161,7 +161,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 
 					{/* Buttons Below Orders */}
 					<div className="inline-flex md:hidden items-center gap-4 justify-between w-full">
-						<button className="border  border-[#BBBBBB]px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
+						<button className="border  border-[#BBBBBB] px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
 							View Order
 						</button>
 						<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500">

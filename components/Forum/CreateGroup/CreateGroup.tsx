@@ -773,7 +773,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 							disabled={
 								currentStep === "details" && !formData.groupName
 							}
-							className="w-full px-8 py-2.5 bg-[#F0BA43] bg-[#FFFFFF] font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+							className="w-full px-8 py-2.5 bg-[#F0BA43]  font-medium rounded-full hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
 						>
 							Next
 						</button>
