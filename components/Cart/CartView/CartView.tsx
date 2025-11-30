@@ -319,7 +319,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 										onChange={(e) =>
 											setCouponCode(e.target.value)
 										}
-										className="flex-1 px-3 py-2 border rounded text-sm "
+										className="flex-1 px-3 py-2 border border-[#BBBBBB] rounded text-sm "
 									/>
 									<button
 										onClick={handleApplyCoupon}

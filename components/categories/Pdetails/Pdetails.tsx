@@ -58,7 +58,7 @@ export const Pdetails: React.FC = () => {
 	return (
 		<>
 			<section className="w-full bg-white py-8 lg:py-16">
-				<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[35px]">
+				<div className="max-w-[1440px] mx-auto px-0 sm:px-6 lg:px-[35px]">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-[19px]">
 						{/* Left: Image Gallery */}
 						<div className="lg:col-span-5">
