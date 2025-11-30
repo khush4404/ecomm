@@ -39,9 +39,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 	priceRanges,
 	brands,
 }) => (
-	<div className="bg-white border border-gray-300 p-6 space-y-6">
+	<div className="bg-white border  border-[#BBBBBB]p-6 space-y-6">
 		{/* Product Categories */}
-		<div className="border-b border-gray-300 pb-6">
+		<div className="border-b  border-[#BBBBBB]pb-6">
 			<h2 className="font-semibold text-base text-blue-900 mb-4 border-b border-[#BBBBBB] pb-4">
 				Product Categories
 			</h2>
@@ -78,7 +78,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 			)}
 		</div>
 		{/* Price Section */}
-		<div className="border-b border-gray-300 pb-6">
+		<div className="border-b  border-[#BBBBBB]pb-6">
 			<h1 className="font-semibold text-base text-[#21465E] mb-4">
 				Product Categories
 			</h1>

@@ -155,7 +155,7 @@ export const AddressForm: React.FC<Props> = ({
 				<button
 					type="button"
 					onClick={onCancel}
-					className="bg-white border border-gray-300 px-6 py-2 rounded-md"
+					className="bg-white border  border-[#BBBBBB]px-6 py-2 rounded-md"
 				>
 					Discard
 				</button>

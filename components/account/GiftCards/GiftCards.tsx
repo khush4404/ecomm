@@ -78,7 +78,7 @@ export function GiftCards() {
 					<button className="bg-[#F0BA43] text-[#FFFFFF] font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-yellow-500 transition-colors sm:w-auto w-2/3 mx-auto">
 						Update your balance
 					</button>
-					<button className="border  border-gray-300 text-text-gray font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-gray-50 transition-colors sm:w-auto w-2/3 mx-auto">
+					<button className="border   border-[#BBBBBB]text-text-gray font-semibold md:h-[52px] h-[42px] px-4 py-2 rounded-[10px] hover:bg-gray-50 transition-colors sm:w-auto w-2/3 mx-auto">
 						Redeem your gift card
 					</button>
 				</div>

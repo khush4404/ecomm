@@ -292,22 +292,22 @@ export const Explore: React.FC = () => {
 					</button>
 
 					{/* Hide these two on small screens */}
-					<button className="hidden sm:flex px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+					<button className="hidden sm:flex px-6 py-2 border  border-[#BBBBBB]text-gray-700 rounded-full hover:bg-gray-100">
 						Topics
 					</button>
 
-					<button className="hidden sm:flex px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+					<button className="hidden sm:flex px-6 py-2 border  border-[#BBBBBB]text-gray-700 rounded-full hover:bg-gray-100">
 						Top
 					</button>
 				</div>
 
 				{/* Row 2 – show on mobile only */}
 				<div className="flex sm:hidden items-center gap-3">
-					<button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+					<button className="px-6 py-2 border  border-[#BBBBBB]text-gray-700 rounded-full hover:bg-gray-100">
 						Topics
 					</button>
 
-					<button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100">
+					<button className="px-6 py-2 border  border-[#BBBBBB]text-gray-700 rounded-full hover:bg-gray-100">
 						Top
 					</button>
 				</div>

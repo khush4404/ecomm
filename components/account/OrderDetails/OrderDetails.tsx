@@ -73,7 +73,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 				</div>
 
 				<div className="md:block hidden flex items-center gap-4 flex-2 justify-end">
-					<button className="border border-gray-300 px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
+					<button className="border  border-[#BBBBBB]px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
 						View Order
 					</button>
 					<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500">
@@ -161,7 +161,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 
 					{/* Buttons Below Orders */}
 					<div className="inline-flex md:hidden items-center gap-4 justify-between w-full">
-						<button className="border border-gray-300 px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
+						<button className="border  border-[#BBBBBB]px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
 							View Order
 						</button>
 						<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500">

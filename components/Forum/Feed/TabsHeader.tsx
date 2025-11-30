@@ -22,7 +22,7 @@ export const TabsHeader: React.FC<TabsHeaderProps> = ({
 					className={`px-6 py-2 rounded-full font-medium transition-all ${
 						activeTab === tab.key
 							? "bg-[#F0BA43] text-black"
-							: "bg-white text-gray-700 border border-gray-300 hover:border-gray-400"
+							: "bg-white text-gray-700 border  border-[#BBBBBB]hover:border-gray-400"
 					}`}
 				>
 					{tab.label}
