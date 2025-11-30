@@ -50,7 +50,7 @@ export const Navigation = () => {
 								>
 									{link.name}
 									{isActive(link.href) && (
-										<span className="absolute -bottom-[13px] sm:-bottom-[14px] left-1/2 -translate-x-1/2 w-[50px] sm:w-[60px] lg:w-[70px] h-1 bg-[#F0BA43] rounded-[10px]" />
+										<span className="absolute -bottom-[13px] sm:-bottom-3.5 left-1/2 -translate-x-1/2 w-[50px] sm:w-[60px] lg:w-[70px] h-1 bg-[#F0BA43] rounded-[10px]" />
 									)}
 								</Link>
 							))}

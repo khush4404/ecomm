@@ -10,6 +10,7 @@ const Navbar = () => {
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState("Select Country");
     const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+    const [openSearchModal, setOpenSearchModal] = useState(false);
 
     const countries = ["United States", "Canada", "United Kingdom", "Germany", "Netherlands"];
 
@@ -26,19 +27,19 @@ const Navbar = () => {
             {/* Desktop Navbar */}
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? "bg-slate-900/95 backdrop-blur-md shadow-lg shadow-black/10"
-                        : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900"
+                    ? "bg-slate-900/95 backdrop-blur-md shadow-lg shadow-black/10"
+                    : "bg-linear-to-r from-slate-900 via-slate-800 to-slate-900"
                     }`}
             >
                 {/* Top accent line */}
-                <div className="h-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400" />
+                <div className="h-1 bg-linear-to-r from-amber-400 via-amber-500 to-amber-400" />
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 md:h-20">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="relative">
-                                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 group-hover:from-amber-300 group-hover:to-amber-500 transition-all duration-300">
+                                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-linear-to-br from-amber-400 to-amber-600 p-0.5 group-hover:from-amber-300 group-hover:to-amber-500 transition-all duration-300">
                                     <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
                                         <svg
                                             viewBox="0 0 40 40"
@@ -102,8 +103,8 @@ const Navbar = () => {
                             >
                                 <div
                                     className={`absolute inset-0 rounded-full transition-all duration-300 ${isSearchFocused
-                                            ? "bg-gradient-to-r from-amber-400/20 to-amber-600/20 blur-xl"
-                                            : ""
+                                        ? "bg-linear-to-r from-amber-400/20 to-amber-600/20 blur-xl"
+                                        : ""
                                         }`}
                                 />
                                 <div className="relative flex w-full bg-white/10 backdrop-blur-sm rounded-full border border-slate-600/50 hover:border-amber-500/50 focus-within:border-amber-400 focus-within:bg-white/15 transition-all duration-300">
@@ -158,11 +159,15 @@ const Navbar = () => {
                             {/* Join Button - Desktop */}
                             <Link
                                 href="/join"
-                                className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-900 font-semibold rounded-full transition-all duration-300 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-105"
+                                className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-900 font-semibold rounded-full transition-all duration-300 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-105"
                             >
                                 <span>Join Passion Farms</span>
                             </Link>
 
+                            {/* Search */}
+                            <button className="flex lg:hidden relative p-2.5 rounded-full bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700/50 hover:border-amber-500/30" onClick={()=>setOpenSearchModal(!openSearchModal)}>
+                                <Search className="w-5 h-5" />
+                            </button>
                             {/* Wishlist */}
                             <button className="hidden md:flex relative p-2.5 rounded-full bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700/50 hover:border-amber-500/30">
                                 <Heart className="w-5 h-5" />
@@ -170,7 +175,6 @@ const Navbar = () => {
                                     3
                                 </span>
                             </button>
-
                             {/* Cart */}
                             <button className="relative p-2.5 rounded-full bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700/50 hover:border-amber-500/30">
                                 <ShoppingCart className="w-5 h-5" />
@@ -199,7 +203,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile Search - Shows below main nav on tablet */}
-                    <div className="lg:hidden pb-4">
+                    <div className={`${openSearchModal ? 'block pb-4' : 'hidden'}`}>
                         <div className="flex bg-white/10 backdrop-blur-sm rounded-full border border-slate-600/50">
                             <div className="flex items-center pl-4">
                                 <Search className="w-5 h-5 text-slate-400" />
@@ -290,7 +294,7 @@ const Navbar = () => {
                             {/* Join Button - Mobile */}
                             <Link
                                 href="/join"
-                                className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-semibold rounded-xl transition-all duration-300"
+                                className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 font-semibold rounded-xl transition-all duration-300"
                             >
                                 Join Passion Farms
                             </Link>
@@ -300,7 +304,7 @@ const Navbar = () => {
             </nav>
 
             {/* Spacer for fixed navbar */}
-            <div className="h-28 md:h-24 lg:h-20" />
+            <div className="h-24 lg:h-20" />
         </>
     );
 };

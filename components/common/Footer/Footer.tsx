@@ -2,7 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Youtube, Linkedin, Send } from "lucide-react";
+import {
+	Instagram,
+	Facebook,
+	Linkedin,
+	Send,
+	Home,
+	Bell,
+	User,
+	ShoppingCart,
+} from "lucide-react";
 import { useState } from "react";
 
 export const Footer = () => {
@@ -16,7 +25,7 @@ export const Footer = () => {
 
 	return (
 		<>
-			<footer className="w-full bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+			<footer className="w-full bg-linear-to-r from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
 				{/* Main Footer Content */}
 				<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[73px] py-8 sm:py-12 lg:py-16">
 					<div className="flex flex-col lg:grid lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
@@ -353,11 +362,20 @@ export const Footer = () => {
 					</div>
 				</div>
 			</footer>
+			{/* Mobile Bottom Icons (replaced images with lucide icons) */}
 			<div className="sm:hidden flex flex-row items-center justify-between p-8">
-				<img src="/images/home.png" alt="" />
-				<img src="/images/messages.png" alt="" />
-				<img src="/images/notification.png" alt="" />
-				<img src="/images/user.png" alt="" />
+				<button aria-label="Home" className="p-2">
+					<Home className="w-6 h-6 text-[#1D1D1D]" />
+				</button>
+				<button aria-label="Messages" className="p-2">
+					<ShoppingCart className="w-6 h-6 text-[#1D1D1D]" />
+				</button>
+				<button aria-label="Notifications" className="p-2">
+					<Bell className="w-6 h-6 text-[#1D1D1D]" />
+				</button>
+				<button aria-label="Account" className="p-2">
+					<User className="w-6 h-6 text-[#1D1D1D]" />
+				</button>
 			</div>
 		</>
 	);

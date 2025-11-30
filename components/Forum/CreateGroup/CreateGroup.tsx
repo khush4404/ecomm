@@ -449,7 +449,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 					{currentStep === "info" && (
 						<button
 							onClick={handleSubmit}
-							className="px-8 py-2 bg-[#F0BA43] bg-[#FFFFFF] font-medium rounded-full hover:bg-yellow-500 transition-colors ml-auto"
+							className="px-8 py-2 bg-yellow-btn text-[#FFFFFF] font-medium rounded-full hover:bg-yellow-500 transition-colors ml-auto"
 						>
 							Create group
 						</button>
