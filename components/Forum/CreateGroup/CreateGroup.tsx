@@ -133,9 +133,9 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 					{/* Progress Steps */}
 					<div className="flex items-center justify-between mb-8 relative">
 						{/* Background Line */}
-						<div className="absolute top-4 left-10 right-15 h-1 bg-gray-300 -z-10" />
+						<div className="absolute top-4 left-10 right-5 h-1 bg-gray-300 -z-10" />
 						<div
-							className="absolute top-4 left-10 h-1 bg-[#F0BA43] -z-10 transition-all duration-300"
+							className="absolute top-4 left-0 h-1 w-4 bg-[#F0BA43] -z-10 transition-all duration-300"
 							style={{
 								width:
 									currentStep === "details"

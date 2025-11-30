@@ -134,8 +134,8 @@ export const AvailableNow = ({
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
                 className={`min-w-[118px] h-9 px-4 rounded-[40px] text-base font-normal leading-9 tracking-[-0.02em] transition-all duration-300 ${activeTab === tab.id
-                    ? "bg-[#F0BA43] text-[#1D1D1D] shadow-[0px_10px_48px_rgba(5,6,15,0.1)]"
-                    : "bg-white text-[#1D1D1D] border border-[rgba(187,187,187,0.73)]"
+                  ? "bg-[#F0BA43] text-white shadow-[0px_10px_48px_rgba(5,6,15,0.1)]"
+                  : "bg-white text-[#1D1D1D] border border-[rgba(187,187,187,0.73)]"
                   }`}
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
@@ -171,7 +171,7 @@ export const AvailableNow = ({
           <div className="flex justify-center lg:justify-end">
             <button
               onClick={handleViewAll}
-              className="min-w-[200px] h-[50px] px-8 bg-[#F0BA43] rounded-[40px] text-[#1D1D1D] text-base font-medium leading-9 tracking-[-0.02em] hover:bg-[#F0BA43]/90 transition-colors shadow-[0px_10px_48px_rgba(5,6,15,0.1)]"
+              className="min-w-[200px] h-[50px] px-8 bg-[#F0BA43] rounded-[40px] text-white text-base font-medium leading-9 tracking-[-0.02em] hover:bg-[#F0BA43]/90 transition-colors shadow-[0px_10px_48px_rgba(5,6,15,0.1)]"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               {viewAllButtonText}

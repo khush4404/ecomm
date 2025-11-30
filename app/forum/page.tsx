@@ -23,9 +23,32 @@ export default function ForumPage() {
 		events: <Events />,
 		favorites: <Favorites />,
 		followed: <FollowedList />,
+		// Mobile-only CreatePost view (inline). Hidden on lg+ so desktop modal
+		// remains separate and unaffected.
+		createPost: (
+			<div className="lg:hidden">
+				<CreatePost isOpen={true} onClose={() => setActiveTab("explore")} />
+			</div>
+		),
 		// Note: CreateGroup is rendered as a modal overlay below, not as
 		// part of the main `contentComponents` map. This keeps tabs unchanged
 		// when the modal opens.
+		// When on mobile we want CreateGroup to open as a normal tab inside
+		// the main page content. Render CreateGroup with isOpen=true so the
+		// component shows its mobile (lg:hidden) layout. On desktop the
+		// modal behavior remains controlled by `isCreateGroupOpen` below.
+		createGroup: (
+			// Render the mobile-only CreateGroup layout inside the main content.
+			// We wrap it in `lg:hidden` so it isn't visible on desktop and does
+			// not interfere with the desktop modal overlay (which is driven by
+			// `isCreateGroupOpen` below).
+			<div className="lg:hidden">
+				<CreateGroup
+					isOpen={true}
+					onClose={() => setActiveTab("explore")}
+				/>
+			</div>
+		),
 	};
 
 	return (
@@ -54,12 +77,26 @@ export default function ForumPage() {
 								type="text"
 								placeholder="Write a post"
 								className="flex-1 bg-light-bg rounded-l-full px-6 py-3 outline-none cursor-pointer hover:bg-gray-50"
-								onClick={() => setIsCreatePostOpen(true)}
+								onClick={() => {
+									if (typeof window !== "undefined" && window.innerWidth < 1024) {
+										// Mobile: open inline create-post tab
+										setActiveTab("createPost");
+									} else {
+										// Desktop: open modal
+										setIsCreatePostOpen(true);
+									}
+								}}
 								readOnly
 							/>
 
 							<button
-								onClick={() => setIsCreatePostOpen(true)}
+								onClick={() => {
+									if (typeof window !== "undefined" && window.innerWidth < 1024) {
+										setActiveTab("createPost");
+									} else {
+										setIsCreatePostOpen(true);
+									}
+								}}
 								className="bg-[#F0BA43] hover:bg-yellow-500 text-white font-medium px-6 py-3 rounded-r-full"
 							>
 								Post
@@ -131,7 +168,9 @@ export default function ForumPage() {
 										setIsSidebarOpen(false);
 									}}
 									onCreateGroup={() => {
-										setIsCreateGroupOpen(true);
+										// On mobile open CreateGroup as a normal tab in the main
+										// content area instead of the desktop modal.
+										setActiveTab("createGroup");
 										setIsSidebarOpen(false);
 									}}
 								/>

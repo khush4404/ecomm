@@ -87,18 +87,21 @@ export function SingleProductTab(
                                     name: 'Thomas',
                                     date: 'December 4, 2022 at 3:12 pm',
                                     rating: 4.4,
+                                    image: '',
                                     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?',
                                 },
                                 {
                                     name: 'Gemma',
                                     date: 'December 4, 2022 at 3:12 pm',
                                     rating: 4.4,
+                                    image: '',
                                     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?',
                                 },
                                 {
                                     name: 'Sandler',
                                     date: 'December 4, 2022 at 3:12 pm',
                                     rating: 4.4,
+                                    image: '',
                                     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?',
                                 },
                             ].map((review, idx) => (
@@ -107,7 +110,7 @@ export function SingleProductTab(
                                         <div className='flex flex-col items-center justify-center gap-2.5'>
 
                                             <div className="size-15 lg:size-20 bg-gray-300 rounded-full flex items-center justify-center font-bold text-white text-lg shrink-0">
-                                                {review.name[0]}
+                                                <img src={review.image || '/images/placeholder-man.jpg'} alt='stars' className='rounded-full' />
                                             </div>
                                             <p className="font-semibold text-[14px] lg:text-base leading-6 text-text-dark">{review.name}</p>
                                         </div>

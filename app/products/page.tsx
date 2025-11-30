@@ -319,7 +319,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 				</button>
 			)}
 		</div>
-		<button className="items-center flex bg-[#F0BA43] text-[#1D1D1D] px-10.5 py-2 rounded-full font-medium hover:bg-yellow-500 transition m-4">
+		<button className="items-center flex bg-[#F0BA43] text-white px-10.5 py-2 rounded-full font-medium hover:bg-yellow-500 transition m-4">
 			{/* Mobile text */}
 			<span className="block md:hidden">Apply</span>
 

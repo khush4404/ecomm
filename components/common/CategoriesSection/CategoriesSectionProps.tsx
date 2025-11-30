@@ -123,7 +123,7 @@ export const CategoriesSection: React.FC<CategoriesSectionProps> = ({
                                 <div className="self-end">
                                     <button
                                         onClick={handleViewAll}
-                                        className="min-w-[120px] h-9 px-4 bg-[#F0BA43] rounded-[40px] text-[#1D1D1D] text-sm font-medium hover:bg-[#F0BA43]/90 transition-colors shadow"
+                                        className="min-w-[120px] h-9 px-4 bg-[#F0BA43] rounded-[40px] text-white text-sm font-medium hover:bg-[#F0BA43]/90 transition-colors shadow"
                                         style={{ fontFamily: "Inter, sans-serif" }}
                                     >
                                         {viewAllButtonText}
