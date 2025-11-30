@@ -28,7 +28,7 @@ export const RecentlyViewed = () => {
                 <div className="flex-1">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[18px] ">
                         {products.map((p) => (
-                            <ProductCardRow key={p.id} p={p} />
+                            <ProductCardRow key={p.id} p={p} className="bg-white border border-[#bbbbbb]" />
                         ))}
                     </div>
                 </div>

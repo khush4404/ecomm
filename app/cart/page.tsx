@@ -3,6 +3,7 @@ import { CartView } from "@/components/Cart/CartView";
 import { Discount } from "@/components/Cart/Discount";
 import { RecentlyViewed } from "@/components/Cart/RecentlyViewed";
 import { SimilarItems } from "@/components/categories/SimilarItems";
+import Support from "@/components/common/Support";
 import React from "react";
 
 export default function CartPage() {
@@ -15,6 +16,7 @@ export default function CartPage() {
       />
       <RecentlyViewed />
       <Discount />
+      <Support />
     </div>
   );
 }

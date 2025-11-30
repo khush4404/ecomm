@@ -145,7 +145,7 @@ export const AddressForm: React.FC<Props> = ({
 				</div>
 			</div>
 			<div className="grid md:grid-cols-6 pt-6">
-				<div className=" grid md:grid-cols-4 gap-4 col-span-5">
+				<div className=" grid md:grid-cols-4 grid-cols-2 gap-4 col-span-5">
 					<button
 						type="submit"
 						className="bg-amber-400 text-white px-6 py-2   rounded-md font-semibold hover:bg-amber-500 flex-1"

@@ -52,7 +52,7 @@ export const FollowedList: React.FC<{ groups?: Group[] }> = ({
 	groups = sampleGroups,
 }) => {
 	return (
-		<div className="flex flex-col gap-2.5 lg:p-0 p-5 pt-2">
+		<div className="flex flex-col gap-2.5 pt-2">
 			<h3 className="text-base text-center md:text-start font-semibold text-[#1D1D1D] leading-9">
 				Followed Groups List
 			</h3>

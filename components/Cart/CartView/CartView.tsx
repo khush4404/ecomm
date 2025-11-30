@@ -190,7 +190,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 										</p>
 
 										{/* QUANTITY */}
-										<div className="col-span-2 flex items-center justify-center gap-2">
+										<div className="col-span-2 flex items-center justify-center gap-2 mr-2">
 											<button
 												onClick={() =>
 													handleQuantityChange(
@@ -210,7 +210,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 												type="text"
 												readOnly
 												value={qty}
-												className="w-10 text-center border border-[#D0D0D0] rounded px-2 py-1 text-sm"
+												className="w-10 text-center  rounded px-2 py-1 text-sm"
 											/>
 
 											<button
@@ -240,7 +240,8 @@ export const CartView: React.FC<ProductCartProps> = ({
 												onClick={() =>
 													handleRemoveItem(item.id)
 												}
-												className="p-2 hover:bg-[#FFE8E8] rounded text-[#E74C3C]"
+												className="p-2 hover:bg-[#FFE8E8] rounded 
+												text-text-dark"
 											>
 												<Trash2 size={18} />
 											</button>
@@ -273,15 +274,15 @@ export const CartView: React.FC<ProductCartProps> = ({
 						{/* Coupon & Shipping */}
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
 							{/* Shipping */}
-							<div className="p-4 bg-[#F2F2F2] rounded-[10px] border border-[#E8E8E8]">
+							<div className="p-4 bg-[#F2F2F2] rounded-[10px] ">
 								<h3 className="text-sm md:text-base font-semibold leading-9">
 									Calculate Shipping
 								</h3>
 								<div className="space-y-3 mt-3">
-									<p className="text-sm md:text-base">
+									<p className="text-sm md:text-base text-text-gray">
 										Flat rate: 5%
 									</p>
-									<select className="w-full h-[52px] px-3 py-2 border border-[#BBBBBB] rounded text-sm">
+									<select className="w-full h-[52px] px-3 py-2 border border-[#BBBBBB] rounded text-sm text-text-gray">
 										<option>Canada</option>
 										<option>USA</option>
 										<option>Mexico</option>
@@ -303,7 +304,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 							</div>
 
 							{/* Coupon */}
-							<div className="p-4">
+							<div className="">
 								<h3 className="text-base leading-9 font-semibold">
 									Apply Coupon
 								</h3>

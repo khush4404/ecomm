@@ -9,7 +9,7 @@ type Post = {
 		name: string;
 		avatar: string;
 	};
-	category: string;
+	time: string;
 	title: string;
 	description: string;
 	image?: string;
@@ -45,7 +45,7 @@ const whatNewData: Post[] = [
 			name: "John Wilson",
 			avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
 		},
-		category: "Cannabis",
+		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
 		description:
 			"We need a gamification framework in order to incentivize and streamline user engagement. Simple mechanics like daily login bonuses, task-based achievements, and gamified user rewards help keep users engaged long-term and reduce churn.",
@@ -58,7 +58,7 @@ const whatNewData: Post[] = [
 			name: "Sarah Mitchell",
 			avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
 		},
-		category: "Strains",
+		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
 		description:
 			"We need a gamification framework in order to incentivize and streamline user engagement. Simple mechanics like daily login bonuses, task-based achievements, and gamified user rewards help keep users engaged long-term and reduce churn.",
@@ -71,7 +71,7 @@ const whatNewData: Post[] = [
 			name: "Mike Johnson",
 			avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
 		},
-		category: "Growing",
+		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
 		description:
 			"We need a gamification framework in order to incentivize and streamline user engagement. Simple mechanics like daily login bonuses, task-based achievements, and gamified user rewards help keep users engaged long-term and reduce churn.",
@@ -87,7 +87,7 @@ const yourFeedData: Post[] = [
 			name: "Emma Davis",
 			avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
 		},
-		category: "Wellness",
+		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
 		description:
 			"We need a gamification framework in order to incentivize and streamline user engagement. Simple mechanics like daily login bonuses, task-based achievements, and gamified user rewards help keep users engaged long-term and reduce churn.",
@@ -100,7 +100,7 @@ const yourFeedData: Post[] = [
 			name: "Alex Chen",
 			avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
 		},
-		category: "News",
+		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
 		description:
 			"We need a gamification framework in order to incentivize and streamline user engagement. Simple mechanics like daily login bonuses, task-based achievements, and gamified user rewards help keep users engaged long-term and reduce churn.",
@@ -113,7 +113,7 @@ const yourFeedData: Post[] = [
 			name: "Lisa Park",
 			avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
 		},
-		category: "Events",
+		time: "10 days ago",
 		title: "Gamification: User levels based on activities and engagement",
 		description:
 			"We need a gamification framework in order to incentivize and streamline user engagement. Simple mechanics like daily login bonuses, task-based achievements, and gamified user rewards help keep users engaged long-term and reduce churn.",
@@ -172,7 +172,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 						</span>
 					</div>
 					<span className="md:text-xs text-sm text-text-gray">
-						{post.category}
+						{post.time}
 					</span>
 				</div>
 			</div>
@@ -182,7 +182,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 			</h3>
 
 			<p className="text-sm md:text-base text-text-gray mb-3 line-clamp-3">
-				{post.description}
+				{post.time}
 			</p>
 
 			<div className="flex float-right items-center gap-3 text-xs text-gray-500 pt-3 border-t border-gray-100">
@@ -288,7 +288,6 @@ export const Explore: React.FC = () => {
 				<div className="flex items-center gap-3 flex-wrap sm:flex-nowrap">
 					<button className="px-6 py-2 bg-[#F0BA43] text-white font-medium rounded-full flex items-center gap-2">
 						Categories
-						<span className="text-white text-sm">▼</span>
 					</button>
 
 					{/* Hide these two on small screens */}

@@ -59,7 +59,7 @@ export function GiftCards() {
 		<div className="grid lg:grid-cols-10 grid-cols-1 lg:gap-6">
 			{/* Header */}
 			<div className="flex items-center justify-between mt-4 md:mt-4 col-span-10">
-				<h2 className="text-base border-b border-[#BBBBBB] md:border-0 w-full pb-5 md:pb-0 text-center md:text-left md:text-2xl font-bold">
+				<h2 className="text-base border-b border-[#BBBBBB] w-full pb-5 pb-0 text-center md:text-left md:text-2xl font-bold">
 					Gift Cards & Coupons
 				</h2>
 			</div>
@@ -67,7 +67,7 @@ export function GiftCards() {
 			{/* Gift Card Balance Section */}
 			<div className="flex flex-col gap-4 col-span-6 ">
 				<div className="flex items-center mt-4 md:mt-4 justify-between">
-					<p className="text-sm md:text-[20px]  text-gray-700">
+					<p className="text-sm md:text-[20px] text-text-dark">
 						Your Gift Card Balance:
 					</p>
 					<p className="text-[20px] text-text-gray font-bold">
@@ -86,7 +86,7 @@ export function GiftCards() {
 
 			{/* Coupon Card Details Section */}
 			<div className="flex flex-col gap-4 col-span-9">
-				<h3 className="text-lg mt-4 md:mt-0 font-semibold">
+				<h3 className="text-[12px] sm:text-lg mt-4 md:mt-0 font-semibold">
 					Gift Coupon Card Details
 				</h3>
 
@@ -115,8 +115,8 @@ export function GiftCards() {
 							</div>
 
 							{/* Right content: discount % and button */}
-							<div className="flex  flex-row sm:flex-col items-center sm:items-end gap-17 shrink-0">
-								<button className="flex md:hidden block text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors w-fit">
+							<div className="flex  flex-row sm:flex-col items-center sm:items-end gap-17 shrink-0 sm:justify-start justify-between sm:w-auto w-full">
+								<button className="flex md:hidden text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors w-fit">
 									More details
 								</button>
 								<div>

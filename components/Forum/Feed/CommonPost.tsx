@@ -73,7 +73,7 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 	return (
 		<div className="bg-white rounded-[10px]  border border-[#BBBBBB] overflow-hidden mb-4">
 			{/* Post Header */}
-			<div className="p-4 border-b border-[#BBBBBB]">
+			<div className="p-4">
 				<div className="flex items-start justify-between mb-2">
 					<div className="flex items-center gap-3">
 						<span className="text-2xl">{post.author.avatar}</span>
@@ -106,9 +106,9 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 
 			{/* Post Images */}
 			{post.images && post.images.length > 0 && (
-				<div className="bg-gray-100">
+				<div className="bg-gray-100 m-4 rounded-[10px] overflow-hidden">
 					{displayedImages?.map((image, index) => (
-						<div key={index} className="relative overflow-hidden">
+						<div key={index} className="relative overflow-hidden ">
 							<img
 								src={image}
 								alt={`Post image ${index + 1}`}
@@ -163,11 +163,10 @@ export const CommonPost: React.FC<CommonPostProps> = ({
 			<div className="px-4 py-3 grid md:grid-cols-3 grid-cols-2  items-center  gap-2">
 				<button
 					onClick={handleLikeClick}
-					className={`flex items-center justify-center border w-full gap-2 px-4 py-2 rounded-[42px] transition-colors ${
-						isLiked
-							? "bg-[#F0BA43] text-white"
-							: "hover:bg-text-gray text-[#F0BA43]"
-					}`}
+					className={`flex items-center justify-center border w-full gap-2 px-4 py-2 rounded-[42px] transition-colors ${isLiked
+						? "bg-[#F0BA43] text-white"
+						: "hover:bg-text-gray text-[#F0BA43]"
+						}`}
 				>
 					<span className="text-lg">
 						<Heart />

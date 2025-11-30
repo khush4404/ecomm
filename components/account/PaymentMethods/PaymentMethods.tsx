@@ -81,7 +81,7 @@ export function PaymentMethods() {
 
 								<div className="flex  items-center">
 									<Input placeholder="Enter UPI ID" className="rounded-r-none" />
-									<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2 hover:bg-yellow-500 transition-colors rounded-l-none rounded-[10px]">
+									<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] font-semibold px-4 py-2 hover:bg-yellow-500 transition-colors rounded-l-none rounded-[10px] self-stretch">
 										Verify
 									</button>
 								</div>
@@ -165,7 +165,7 @@ export function PaymentMethods() {
 									label="Card Number"
 									className="rounded-r-none"
 								/>
-								<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2  rounded-[10px] hover:bg-yellow-500 transition-colors self-end rounded-l-none">
+								<button className="bg-[#F0BA43] text-[#FFFFFF] h-[52px] font-semibold px-4 py-2  rounded-[10px] hover:bg-yellow-500 transition-colors self-end rounded-l-none">
 									Apply
 								</button>
 							</div>

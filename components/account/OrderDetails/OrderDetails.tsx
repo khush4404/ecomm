@@ -26,13 +26,13 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 	return (
 		<div className="flex flex-col gap-6">
 			{/* Header */}
-			<div className="flex flex-col items-center md:flex-row justify-between">
+			<div className="flex flex-col items-center md:flex-row justify-between border-b border-[#BBBBBB] pb-6">
 				<h2 className="text-base md:text-2xl font-bold">
 					Order Details
 				</h2>
 
 				<div className="flex items-center gap-2">
-					<label className="md:text-[12px] md:text-sm text-text-dark ">
+					<label className="text-[12px] md:text-sm text-text-dark ">
 						Show details:
 					</label>
 					<select className=" px-3 py-1 text-[12px] md:text-sm text-text-gray">
@@ -46,7 +46,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 			{/* Order Info Summary */}
 			<div className="flex justify-between">
 				<div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-1 flex-3">
-					<div className="flex md:flex-col gap-2.5 gap-0">
+					<div className="flex md:flex-col gap-2.5">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
 							Date ordered
 						</p>
@@ -54,7 +54,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 							{order.date}
 						</p>
 					</div>
-					<div className="flex md:flex-col gap-2.5 gap-0">
+					<div className="flex md:flex-col gap-2.5">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
 							Order Number
 						</p>
@@ -62,7 +62,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 							{order.orderNumber}
 						</p>
 					</div>
-					<div className="flex md:flex-col gap-2.5 gap-0">
+					<div className="flex md:flex-col gap-2.5">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
 							Total Amount
 						</p>
@@ -140,7 +140,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 										<p className="text-sm text-gray-600">
 											x{item.qty}
 										</p>
-										<p className="text-[12px] font-bold">
+										<p className="font-bold">
 											{item.price}
 										</p>
 									</div>
@@ -148,10 +148,10 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 
 								{/* Action Buttons */}
 								<div className="flex justify-between gap-8">
-									<button className="text-[#f0ba43] hover:underline font-semibold text-sm">
+									<button className="text-yellow-btn hover:underline text-xs sm:text-sm">
 										View Product
 									</button>
-									<button className="text-[#f0ba43] hover:underline font-semibold text-sm">
+									<button className="text-yellow-btn hover:underline text-xs sm:text-sm">
 										Buy again
 									</button>
 								</div>
@@ -161,15 +161,15 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 
 					{/* Buttons Below Orders */}
 					<div className="inline-flex md:hidden items-center gap-2 w-full">
-						<button className="border  border-[#BBBBBB] px-8 py-3.5 rounded-md text-base hover:bg-gray-50 flex-1">
+						<button className="border  border-[#BBBBBB] px-8 py-2 sm:py-3.5 rounded-md text-base hover:bg-gray-50 flex-1">
 							View Order
 						</button>
-						<button className="bg-amber-400 text-white px-8 py-3.5 rounded-md text-base hover:bg-amber-500 flex-1">
+						<button className="bg-amber-400 text-white px-8 py-2 sm:py-3.5 rounded-md text-base hover:bg-amber-500 flex-1">
 							View Invoice
 						</button>
 					</div>
 
-					<button className="text-base leading-6 px-10 rounded-[10px] text-text-dark w-fit self-center mt-4">
+					<button className="text-base leading-6 px-10 rounded-[10px] text-text-dark w-fit self-center mt-4 lg:border border-[#BBBBBB] lg:py-3.5 hover:bg-gray-50">
 						No more results to display
 					</button>
 				</div>

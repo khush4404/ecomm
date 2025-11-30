@@ -107,7 +107,7 @@ export const VideoLatestEvent: React.FC = () => {
 			<div className="container mx-auto md:px-4 p-0">
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
 					{/* Video posts - left (large) */}
-					<div className="lg:col-span-1">
+					<div className="lg:col-span-1 sm:pb-0 pb-4 sm:border-none border-b border-[#bbbbbb]">
 						{videoPosts.map((v) => (
 							<div
 								key={v.id}
@@ -192,7 +192,7 @@ export const VideoLatestEvent: React.FC = () => {
 							{latestNews.map((n) => (
 								<div
 									key={n.id}
-									className="flex gap-4 items-start"
+									className="flex gap-4 items-start border-b border-[#bbbbbb] pb-4"
 								>
 									<div className="w-18.5 h-18.5 md:w-34 md:h-34 relative rounded-[10px] overflow-hidden">
 										<Image
@@ -205,17 +205,16 @@ export const VideoLatestEvent: React.FC = () => {
 									</div>
 									<div className="flex-1">
 										<div className="text-xs flex items-center gap-5 ">
-											<div className="font-semibold text-[#1D1D1D] text-sm md:text-base">
+											<div className="font-semibold text-text-dark text-sm md:text-base">
 												{n.owner}
 											</div>
-											<div className="text-gray-400 text-[12px]">
+											<div className="text-text-gray text-[12px]">
 												{n.date}
 											</div>
 										</div>
-										<h5 className="text-base  font-medium text-[#1D1D1D]">
+										<h5 className="text-base  text-text-gray">
 											{n.title}
 										</h5>
-										<div className="border-b border-[#BBBBBB] md:pt-8 pt-4"></div>
 									</div>
 								</div>
 							))}

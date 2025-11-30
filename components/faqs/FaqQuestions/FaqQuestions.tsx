@@ -118,12 +118,12 @@ export const FaqQuestions: React.FC = () => {
 											{expandedItem === item.id ? (
 												<Minus
 													size={16}
-													className="text-[#1D1D1D]"
+													className="text-white"
 												/>
 											) : (
 												<Plus
 													size={16}
-													className="text-[#1D1D1D]"
+													className="text-white"
 												/>
 											)}
 										</div>
@@ -131,7 +131,7 @@ export const FaqQuestions: React.FC = () => {
 
 									{/* Expandable Answer */}
 									{expandedItem === item.id && (
-										<div className="px-4 md:px-6 py-4 bg-white border-t border-[#BBBBBB]">
+										<div className="px-4 md:px-6 py-4 pt-0 bg-white">
 											<p className="text-sm md:text-xl text-text-gray leading-relaxed">
 												{item.answer}
 											</p>

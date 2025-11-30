@@ -103,7 +103,7 @@ export function Wishlist() {
 				</div>
 			</div>
 
-			<div className="flex items-center md:py-6 md:px-4 sm:py-4 sm:px-3 border-t border-[#bbbbbb]">
+			<div className="flex items-center md:py-6 py-4 border-t border-[#bbbbbb]">
 				<Input
 					placeholder="Search for your save items"
 					value={query}

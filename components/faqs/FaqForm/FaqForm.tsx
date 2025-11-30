@@ -40,7 +40,7 @@ export const FaqForm = () => {
 		<div className="py-8 md:py-12">
 			<div className="max-w-2xl mx-auto">
 				{/* Heading */}
-				<div className="text-center mb-4 md:mb-8 pb-4 border-b boder-[#BBBBBB] md:border-0">
+				<div className="text-center mb-4 md:mb-8 pb-4 border-b boder-[#BBB] md:border-0">
 					<h2 className="text-base md:text-2xl font-semibold text-[#1D1D1D] mb-2.5">
 						In what way can we help?
 					</h2>
@@ -96,7 +96,7 @@ export const FaqForm = () => {
 					<div className="flex md:justify-end  pt-4">
 						<button
 							type="submit"
-							className="px-8 py-3 w-full md:w-[212px] bg-[#F0BA43] hover:bg-yellow-500 text-[#1D1D1D] font-medium rounded-[10px] transition"
+							className="px-8 py-3 w-full md:w-[212px] bg-[#F0BA43] hover:bg-yellow-500 text-white font-medium rounded-[10px] transition"
 						>
 							Submit Now
 						</button>

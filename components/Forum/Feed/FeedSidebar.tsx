@@ -33,10 +33,10 @@ export const FeedSidebar: React.FC<FeedSidebarProps> = ({
 					Please log in if you are already a member or sign up for an
 					account.
 				</p>
-				<button className="w-full bg-[#F0BA43] text-[#FFFFFF] font-medium py-2 rounded-[10px] transition-colors mb-3 text-xl">
+				<button className="w-full bg-[#F0BA43] text-[#FFFFFF] font-medium py-2 rounded-full transition-colors mb-3 text-xl">
 					Join the community
 				</button>
-				<p className="text-xl text-text-gray border py-2 rounded-[10px]  text-center">
+				<p className="text-xl text-text-gray border py-2 rounded-full  text-center">
 					Already a member?
 				</p>
 			</div>

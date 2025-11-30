@@ -135,7 +135,7 @@ export function Addresses(props: Props) {
 
 	return (
 		<div className="flex flex-col md:gap-10 gap-4">
-			<div className="lg:flex-row flex-col items-center flex justify-between">
+			<div className="lg:flex-row flex-col items-center flex justify-between gap-4">
 				<h2 className="md:text-2xl text-base font-bold">
 					Address Inforamtion
 				</h2>

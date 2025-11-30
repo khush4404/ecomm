@@ -4,7 +4,7 @@ import React from "react";
 import Input from "@/components/common/Input";
 import Select from "@/components/common/Select";
 import Support from "@/components/common/Support";
-import { ArrowDown, ArrowLeft } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function CheckoutPage() {
 	const countryOptions = [
@@ -83,7 +83,7 @@ export default function CheckoutPage() {
 							<Input
 								placeholder="Email"
 								type="email"
-								className="!w-[560px]"
+								className="w-full"
 							/>
 							<div className="flex items-center">
 								<input
@@ -145,7 +145,7 @@ export default function CheckoutPage() {
 									<Select
 										options={countryOptions}
 										placeholder="Select a country"
-										className="h-[52px] "
+										className="h-[52px] text-text-gray focus:outline-none"
 									/>
 								</div>
 							</div>
@@ -164,7 +164,7 @@ export default function CheckoutPage() {
 							<div className="flex flex-col md:flex-row gap-4 mb-4 ">
 								<div className="flex-1">
 									<Select
-										className="w-full h-[52px]"
+										className="w-full h-[52px] text-text-gray focus:outline-none "
 										options={companyOptions}
 									/>
 								</div>
@@ -187,14 +187,15 @@ export default function CheckoutPage() {
 					<div className="flex items-center gap-4 justify-between">
 						<a
 							href="/cart"
-							className="inline-flex items-center border border-[#BBBBBB] rounded-md md:border-0 md:px-0 px-4 py-2 gap-2 text-base text-text-dark"
+							className="inline-flex items-center border border-[#BBBBBB] rounded-md md:border-0 md:px-0 px-3 sm:px-4 py-1.5 sm:py-2 gap-2 text-base text-text-dark"
 						>
 							<ArrowLeft className="text-text-dark size-4" />
 							Return to Cart
 						</a>
 
-						<button className="bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded-md flex items-center gap-2 font-semibold">
-							Place an Order →
+						<button className="bg-amber-400 hover:bg-amber-500 text-white px-3 sm:px-4 py-2 rounded-md flex items-center gap-2 font-semibold">
+							Place an Order
+							<ArrowRight className="text-white size-4" />
 						</button>
 					</div>
 				</div>
@@ -212,16 +213,22 @@ export default function CheckoutPage() {
 									key={i}
 									className="flex items-center gap-3 border border-[#BBBBBB] rounded-md p-3"
 								>
-									<div className="w-16 h-16 bg-gray-100 rounded-md" />
+									<div className="sm:size-16 size-8 bg-gray-100 rounded-md" />
 									<div className="flex-1">
 										<div className="font-medium">
 											Product name
 										</div>
+										<div className="flex gap-3">
+											<img src="/images/categories/stars.svg" alt="" />
+											<span className="text-text-gray text-xs">65</span>
+										</div>
+									</div>
+									<div className="flex gap-2 sm:gap-20">
 										<div className="text-sm text-gray-500">
 											x1
 										</div>
+										<div className="font-medium">$1,075.00</div>
 									</div>
-									<div className="font-medium">$1,075.00</div>
 								</div>
 							))}
 						</div>
@@ -250,7 +257,7 @@ export default function CheckoutPage() {
 					</div>
 				</aside>
 			</div>
-			<Support />;
+			<Support />
 		</div>
 	);
 }

@@ -79,7 +79,7 @@ export const FeedItem: React.FC<FeedItemProps> = ({
 										<span>{comment.timestamp}</span>
 									</div>
 								</div>
-								<button className="text-gray-500 hover:text-gray-700">
+								<button className="text-text-dark">
 									<svg
 										className="w-4 h-4"
 										fill="currentColor"

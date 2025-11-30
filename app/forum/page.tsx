@@ -55,14 +55,14 @@ export default function ForumPage() {
 							<input
 								type="text"
 								placeholder="Write a post"
-								className="flex-1 border border-[#BBBBBB] rounded-l-full px-4 py-2 outline-none cursor-pointer hover:bg-gray-50"
+								className="flex-1 bg-light-bg rounded-l-full px-6 py-3 outline-none cursor-pointer hover:bg-gray-50"
 								onClick={() => setIsCreatePostOpen(true)}
 								readOnly
 							/>
 
 							<button
 								onClick={() => setIsCreatePostOpen(true)}
-								className="bg-[#F0BA43] hover:bg-yellow-500 text-black font-medium px-6 py-2 rounded-r-full"
+								className="bg-[#F0BA43] hover:bg-yellow-500 text-white font-medium px-6 py-3 rounded-r-full"
 							>
 								Post
 							</button>
@@ -143,10 +143,9 @@ export default function ForumPage() {
 										setActiveTab("followed");
 										setIsSidebarOpen(false);
 									}}
-									className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 rounded-md bg-white border border-[#BBBBBB] hover:bg-gray-50"
+									className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 rounded-md bg-white  hover:bg-gray-50"
 								>
 									<span className="font-semibold">Followed Groups List</span>
-									<span className="text-sm text-gray-500">View</span>
 								</button>
 							</div>
 						</div>
