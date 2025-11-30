@@ -45,11 +45,11 @@ export const FeedSidebar: React.FC<FeedSidebarProps> = ({
 			<div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
 				<div className="flex items-center gap-2 mb-2">
 					<span className="text-lg">🔥</span>
-					<h3 className="font-semibold text-gray-900 text-sm">
+					<h3 className="font-semibold text-[#1D1D1D] text-xl">
 						Trending posts
 					</h3>
 				</div>
-				<p className="text-xs text-gray-500 mb-4">
+				<p className="text-sm border-b border-[#BBBBBB] pb-2 text-text-gray mb-4">
 					Most popular this week
 				</p>
 
@@ -57,17 +57,17 @@ export const FeedSidebar: React.FC<FeedSidebarProps> = ({
 					{trendingPosts.map((post) => (
 						<div
 							key={post.id}
-							className="flex items-center justify-between pb-3 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50 p-2 -mx-2 px-2 rounded transition-colors cursor-pointer"
+							className="flex items-center justify-between pb-4 rounded transition-colors cursor-pointer"
 						>
 							<div className="flex items-center gap-2 flex-1 min-w-0">
 								<span className="text-xl shrink-0">
 									{post.author.avatar}
 								</span>
-								<p className="text-xs font-medium text-gray-900 truncate">
+								<p className="text-base font-medium text-[#1D1D1D] truncate">
 									{post.author.name}
 								</p>
 							</div>
-							<span className="text-xs font-semibold text-gray-600 ml-2 shrink-0">
+							<span className="text-base font-semibold text-text-gray ml-2 shrink-0">
 								{post.views}
 							</span>
 						</div>
