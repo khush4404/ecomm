@@ -39,10 +39,10 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 	priceRanges,
 	brands,
 }) => (
-	<div className="bg-white border  border-[#BBBBBB]p-6 space-y-6">
+	<div className="bg-white border  border-[#BBBBBB] pb-6">
 		{/* Product Categories */}
-		<div className="border-b  border-[#BBBBBB]pb-6">
-			<h2 className="font-semibold text-base text-[#21465E] mb-4 border-b border-[#BBBBBB] p-4">
+		<div className="border-b  border-[#BBBBBB]">
+			<h2 className="font-semibold text-base text-[#21465E] border-b border-[#BBBBBB] px-7 py-5">
 				Product Categories
 			</h2>
 			<div className="space-y-2.5 p-4">
@@ -51,33 +51,33 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 					.map((category, idx) => (
 						<label
 							key={idx}
-							className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-1 rounded"
+							className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-1 rounded leading-9"
 						>
-							<span className="text-[#1D1D1d] md:text-base text-sm">
+							<span className="text-[#1D1D1d] md:text-base text-sm leading-9">
 								{category.name}
 							</span>
-							<span className="px-2 py-0.5 bg-gray-200 rounded text-xs text-[#1D1D1D]">
+							<span className="px-2 py-0.5 bg-[#f2f2f2] rounded text-xs text-[#1D1D1D] w-[34px] inline-flex itmes-center justify-center leading-[26px]">
 								{category.count}
 							</span>
 						</label>
 					))}
+				{categories.length > 4 && (
+					<button
+						onClick={() => setShowCategoryMore(!showCategoryMore)}
+						className="flex items-center gap-2 mt-4 text-[#1D1D1D] font-medium"
+					>
+						See More
+						<ChevronDown
+							size={16}
+							className={`transition-transform ${showCategoryMore ? "rotate-180" : ""
+								}`}
+						/>
+					</button>
+				)}
 			</div>
-			{categories.length > 8 && (
-				<button
-					onClick={() => setShowCategoryMore(!showCategoryMore)}
-					className="flex items-center gap-2 mt-4 text-[#1D1D1D] font-medium"
-				>
-					See More
-					<ChevronDown
-						size={16}
-						className={`transition-transform ${showCategoryMore ? "rotate-180" : ""
-							}`}
-					/>
-				</button>
-			)}
 		</div>
 		{/* Price Section */}
-		<div className="border-b  border-[#BBBBBB]pb-6">
+		<div className="border-b border-[#BBBBBB] p-6">
 			<h1 className="font-semibold text-base text-[#21465E] mb-4">
 				Product Categories
 			</h1>
@@ -161,7 +161,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 			</div>
 		</div>
 		{/* Brands Section */}
-		<div>
+		<div className="p-6">
 			<h2 className="font-semibold text-base text-[#21465E] mb-4">
 				Brands
 			</h2>
@@ -219,7 +219,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
 				</button>
 			)}
 		</div>
-		<button className="items-center flex bg-[#F0BA43] text-[#1D1D1D] px-10.5 py-2 rounded-full font-medium hover:bg-yellow-500 transition">
+		<button className="items-center flex bg-[#F0BA43] text-[#1D1D1D] px-10.5 py-2 rounded-full font-medium hover:bg-yellow-500 transition m-4">
 			{/* Mobile text */}
 			<span className="block md:hidden">Apply</span>
 

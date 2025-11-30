@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 type VideoPost = {
 	id: string;
@@ -116,8 +117,12 @@ export const VideoLatestEvent: React.FC = () => {
 									<h4 className="font-semibold text-xl md:text-2xl">
 										Video Posts
 									</h4>
-									<a className="text-sm md:text-base text-yellow-500">
-										View Details
+									<a className="text-sm md:text-base text-yellow-500 flex items-center gap-2">
+										View More
+										<ChevronRight
+											size={20}
+											className="text-text-dark"
+										/>
 									</a>
 								</div>
 								<div className="relative w-full h-56 md:h-64 lg:h-56">
@@ -174,8 +179,12 @@ export const VideoLatestEvent: React.FC = () => {
 							<h4 className="font-semibold text-xl md:text-2xl">
 								Latest News
 							</h4>
-							<a className="text-sm md:text-base text-yellow-500">
+							<a className="text-sm md:text-base text-yellow-500 flex items-center gap-2">
 								View More
+								<ChevronRight
+									size={20}
+									className="text-text-dark"
+								/>
 							</a>
 						</div>
 
@@ -219,8 +228,12 @@ export const VideoLatestEvent: React.FC = () => {
 							<h4 className="font-semibold text-xl md:text-2xl">
 								Upcoming Events
 							</h4>
-							<a className="text-sm md:text-base text-yellow-500">
+							<a className="text-sm md:text-base text-yellow-500 flex items-center gap-2">
 								View All
+								<ChevronRight
+									size={20}
+									className="text-text-dark"
+								/>
 							</a>
 						</div>
 

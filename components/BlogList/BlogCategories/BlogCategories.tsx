@@ -49,7 +49,7 @@ export const BlogCategories: React.FC = () => {
 		<section className="py-6 lg:py-12">
 			<div className="container mx-auto md:px-4 px-0">
 				{/* Pills */}
-				<div className="flex flex-wrap flex-col sm:flex-row w-auto  md:gap-x-11 md:gap-y-6 gap-2.5  justify-center mb-8">
+				<div className="flex flex-wrap flex-col sm:flex-row w-auto  md:gap-x-6 md:gap-y-5 gap-2.5 justify-center mb-8">
 					{categories.map((c) => (
 						<button
 							key={c.id}
@@ -68,7 +68,7 @@ export const BlogCategories: React.FC = () => {
 					{cards.map((card) => (
 						<div
 							key={card.id}
-							className="flex items-center gap-4 bg-gray-50 rounded-[10px] md:p-9 p-3 shadow-sm hover:shadow-md transition"
+							className="flex items-center gap-4 bg-gray-50 rounded-[10px] md:p-4 p-3 shadow-sm hover:shadow-md transition"
 						>
 							<div className="w-12 h-12 rounded-[10px] bg-white flex items-center justify-center text-gray-600">
 								{/* simple icon placeholder */}
@@ -97,18 +97,18 @@ export const BlogCategories: React.FC = () => {
 							</div>
 
 							<div className="flex-1">
-								<div className="text-sm md:text-base font-medium text-[#1D1D1D]">
+								<div className="text-sm md:text-base font-medium text-[#1D1D1D] mb-2">
 									{card.title}
 								</div>
-								<div className="text-sm text-gray-500">
+								<div className="text-sm text-text-gray">
 									{card.subtitle}
 								</div>
 							</div>
 
 							<div>
 								<ChevronRight
-									size={20}
-									className="text-gray-400"
+									size={30}
+									className="text-text-dark"
 								/>
 							</div>
 						</div>
