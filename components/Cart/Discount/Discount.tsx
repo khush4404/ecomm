@@ -2,27 +2,27 @@
 
 import React, { useState } from "react";
 
-
 export const Discount = () => {
 	const [email, setEmail] = useState("");
 
 	return (
-		<section className="overflow-hidden rounded-lg h-[250px] sm:h-auto">
-			<div className="bg-[#21465E] text-white rounded-lg h-full">
+		<section className="overflow-hidden rounded-[10px] h-[250px] sm:h-auto">
+			<div className="bg-[#21465E] text-white rounded-[10px] h-full">
 				<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
 					<div className="relative overflow-hidden flex  sm:items-center gap-6 h-full">
 						<div className="relative z-3 flex sm:flex-row flex-col md:nowrap item-center sm:justify-between justify-start  md:p-13.5  md:gap-45 min-w-0 sm:mt-0 mt-5 ">
 							<div className="sm:mx-0 mx-5">
 								<h3 className="text-sm md:text-[30px] leading-9  font-semibold">
-									Subscribe & Get <span className="text-yellow-btn">10%</span> Discount
+									Subscribe & Get{" "}
+									<span className="text-yellow-btn">10%</span>{" "}
+									Discount
 								</h3>
 								<p className="mt-2 text-[12px] md:text-lg sm:leading-9 text-[#D9E7EA] max-w-xl">
-									Get E-mail updates about our latest shop and special offers.
+									Get E-mail updates about our latest shop and
+									special offers.
 								</p>
 							</div>
-							<form
-								className="mt-4 sm:mt-0 flex items-center"
-							>
+							<form className="mt-4 sm:mt-0 flex items-center">
 								<input
 									id="subscribe-email"
 									type="email"

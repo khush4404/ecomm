@@ -121,7 +121,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 			/>
 
 			{/* Desktop Modal Popup */}
-			<div className="hidden lg:block fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl z-50 bg-white rounded-lg  p-8 ">
+			<div className="hidden lg:block fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl z-50 bg-white rounded-[10px]  p-8 ">
 				{/* Desktop Header */}
 				<div className="mb-8 w-full">
 					<h2 className="text-xl font-semibold mb-6">
@@ -570,7 +570,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 				</div>
 
 				{/* Mobile Content */}
-				<div className="mb-6  rounded-lg  space-y-4">
+				<div className="mb-6  rounded-[10px]  space-y-4">
 					{/* Step 1: Group Details */}
 					{currentStep === "details" && (
 						<div className="space-y-4">
@@ -607,7 +607,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 										}))
 									}
 									rows={3}
-									className="w-full h-[200px] border border-[#BBBBBB] rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none bg-white"
+									className="w-full h-[200px] border border-[#BBBBBB] rounded-[10px] px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none bg-white"
 								/>
 							</div>
 
@@ -657,7 +657,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 									onChange={(e) =>
 										setSearchPeople(e.target.value)
 									}
-									className="w-full border border-[#BBBBBB] rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
+									className="w-full border border-[#BBBBBB] rounded-[10px] px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
 								/>
 								<button className="absolute right-3  bottom-4">
 									<Search />
@@ -669,7 +669,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 									People add ({formData.selectedPeople.length}
 									)
 								</p>
-								<div className="bg-white rounded-lg p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
+								<div className="bg-white rounded-[10px] p-3 max-h-[250px] overflow-y-auto space-y-2 border border-gray-200">
 									<p className="text-xs text-gray-500 mb-2">
 										{filteredPeople.length} people found
 									</p>
@@ -714,7 +714,7 @@ export const CreateGroup: React.FC<CreateGroupModalProps> = ({
 									onChange={(e) =>
 										setSearchPeople(e.target.value)
 									}
-									className="w-full border border-[#BBBBBB] rounded-lg px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
+									className="w-full border border-[#BBBBBB] rounded-[10px] px-3 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 bg-white"
 								/>
 								<button className="absolute right-3  bottom-4">
 									<Search />

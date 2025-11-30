@@ -110,7 +110,7 @@ export const VideoLatestEvent: React.FC = () => {
 						{videoPosts.map((v) => (
 							<div
 								key={v.id}
-								className="bg-white rounded-lg  overflow-hidden"
+								className="bg-white rounded-[10px]  overflow-hidden"
 							>
 								<div className="flex items-center justify-between mb-2.5 md:mb-5">
 									<h4 className="font-semibold text-xl md:text-2xl">
@@ -228,7 +228,7 @@ export const VideoLatestEvent: React.FC = () => {
 							{events.map((ev) => (
 								<div
 									key={ev.id}
-									className="flex  items-center gap-4 bg-[#F2F2F2] rounded-lg p-3.5"
+									className="flex  items-center gap-4 bg-[#F2F2F2] rounded-[10px] p-3.5"
 								>
 									<div className="w-14 shrink-0">
 										<div className="text-center  rounded-[10px]  py-2">

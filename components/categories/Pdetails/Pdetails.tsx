@@ -32,7 +32,8 @@ const productDetails = {
 	description:
 		"Cherry Garcia is a crowd-favorite strain known for its smooth, dessert-like flavor and balanced effects. Expect a burst of sweet cherry and creamy berry notes on the inhale, rounded by earthy undertones that linger pleasantly. This premium bulk flower offers dense, trichome-rich buds with deep green hues and a hint of purple – a visual treat that matches its flavor.",
 	effects: "Relaxing • Uplifting • Creative Calm",
-	idealFor: "Evening sessions, stress relief, and winding down without couch-lock.",
+	idealFor:
+		"Evening sessions, stress relief, and winding down without couch-lock.",
 	thca: "77.20%",
 	paymentLogos: [
 		"/images/categories/visa.png",
@@ -70,10 +71,11 @@ export const Pdetails: React.FC = () => {
 											onClick={() =>
 												setSelectedImageIndex(idx)
 											}
-											className={`shrink-0 w-[70px] h-[70px] lg:w-[94px] lg:h-[94px] rounded-[10px] overflow-hidden transition-all border ${idx === selectedImageIndex
-												? "bg-gray-50 border-text-gray"
-												: "bg-white border-[#bbbbbb] hover:border-gray-400"
-												}`}
+											className={`shrink-0 w-[70px] h-[70px] lg:w-[94px] lg:h-[94px] rounded-[10px] overflow-hidden transition-all border ${
+												idx === selectedImageIndex
+													? "bg-gray-50 border-text-gray"
+													: "bg-white border-[#bbbbbb] hover:border-gray-400"
+											}`}
 										>
 											<img
 												src={img}
@@ -251,10 +253,10 @@ export const Pdetails: React.FC = () => {
 													</button>
 												</div>
 												<div className="grid grid-cols-2 gap-3 flex-1 items-end">
-													<button className="border border-gray-300 text-gray-700 font-semibold rounded-lg py-3 px-4 hover:bg-gray-50 transition-colors">
+													<button className="border border-gray-300 text-gray-700 font-semibold rounded-[10px] py-3 px-4 hover:bg-gray-50 transition-colors">
 														Add to cart
 													</button>
-													<button className="bg-[#F0BA43] text-white font-semibold rounded-lg py-3 px-4 hover:bg-yellow-500 transition-colors">
+													<button className="bg-[#F0BA43] text-white font-semibold rounded-[10px] py-3 px-4 hover:bg-yellow-500 transition-colors">
 														Buy Now
 													</button>
 												</div>
@@ -322,7 +324,7 @@ export const Pdetails: React.FC = () => {
 										<div className="">Add To wishlist</div>
 									</div>
 									{/* Offers Box */}
-									<div className="bg-gray-50 border border-gray-300 rounded-lg p-4">
+									<div className="bg-gray-50 border border-gray-300 rounded-[10px] p-4">
 										<p className="text-sm text-gray-600 mb-2">
 											{productDetails.offers}
 										</p>
@@ -333,19 +335,19 @@ export const Pdetails: React.FC = () => {
 
 									{/* Delivery & Buttons */}
 									<div className="space-y-3">
-										<button className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-50">
+										<button className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											<MapPin className="w-5 h-5" />
 											<span className="text-sm">
 												Deliver to Canada
 											</span>
 										</button>
-										<button className="w-full bg-[#F0BA43] text-[#1D1D1D] font-semibold rounded-lg py-2 px-4 hover:bg-yellow-500 transition-colors">
+										<button className="w-full bg-[#F0BA43] text-[#1D1D1D] font-semibold rounded-[10px] py-2 px-4 hover:bg-yellow-500 transition-colors">
 											See Similar Items
 										</button>
-										<button className="w-full border border-gray-300 text-gray-700 font-semibold rounded-lg py-2 px-4 hover:bg-gray-50">
+										<button className="w-full border border-gray-300 text-gray-700 font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											See all Buying Options
 										</button>
-										<button className="w-full border border-gray-300 text-gray-700 font-semibold rounded-lg py-2 px-4 hover:bg-gray-50">
+										<button className="w-full border border-gray-300 text-gray-700 font-semibold rounded-[10px] py-2 px-4 hover:bg-gray-50">
 											Add to List
 										</button>
 									</div>

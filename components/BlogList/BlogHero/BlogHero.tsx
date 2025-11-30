@@ -43,7 +43,7 @@ export const BlogHero: React.FC = () => {
 	return (
 		<section className="py-0 md:py-6">
 			<div className="container mx-auto px-4">
-				<div className="relative rounded-lg overflow-hidden flex flex-col gap-4">
+				<div className="relative rounded-[10px] overflow-hidden flex flex-col gap-4">
 					{/* Slides */}
 					<div className="relative w-full h-[220px] md:h-[380px] lg:h-[420px]">
 						{slides.map((s, i) => (

@@ -12,13 +12,13 @@ type BlogItem = {
 export const RecentBlogCard: React.FC<{ item: BlogItem }> = ({ item }) => {
 	return (
 		<article className="flex flex-col gap-4 w-full grow">
-			<div className="w-full h-40 md:h-48 lg:h-[300px] overflow-hidden rounded-lg relative">
+			<div className="w-full h-40 md:h-48 lg:h-[300px] overflow-hidden rounded-[10px] relative">
 				<Image
 					src={item.imgSrc}
 					alt={item.title}
 					fill
 					sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-					className="object-cover rounded-lg"
+					className="object-cover rounded-[10px]"
 				/>
 			</div>
 

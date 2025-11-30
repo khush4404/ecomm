@@ -27,10 +27,10 @@ export default function CheckoutPage() {
 						{/* Payment methods */}
 						<div className="md:pb-6 pb-4 ">
 							{/* Top banner / photo area */}
-							<div className="w-full  rounded-lg overflow-hidden  flex items-center justify-center">
+							<div className="w-full  rounded-[10px] overflow-hidden  flex items-center justify-center">
 								<div className="w-full max-w-4xl md:px-4">
 									<div className="flex  md:gap-5 gap-[5px] items-center">
-										<div className="flex-1 flex items-center justify-center border border-gray-200 rounded-lg p-3 bg-white">
+										<div className="flex-1 flex items-center justify-center border border-gray-200 rounded-[10px] p-3 bg-white">
 											<img
 												src="/images/categories/googlepay.png"
 												alt="G Pay"
@@ -38,7 +38,7 @@ export default function CheckoutPage() {
 											/>
 										</div>
 
-										<div className="flex-1 flex items-center justify-center border border-gray-200 rounded-lg p-3 bg-white">
+										<div className="flex-1 flex items-center justify-center border border-gray-200 rounded-[10px] p-3 bg-white">
 											<img
 												src="/images/categories/paypal.png"
 												alt="PayPal"
@@ -46,7 +46,7 @@ export default function CheckoutPage() {
 											/>
 										</div>
 
-										<div className="flex-1 flex items-center justify-center border border-gray-200 rounded-lg p-3 bg-white">
+										<div className="flex-1 flex items-center justify-center border border-gray-200 rounded-[10px] p-3 bg-white">
 											<img
 												src="/images/categories/amazonpay.png"
 												alt="Amazon Pay"

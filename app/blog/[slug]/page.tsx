@@ -111,7 +111,7 @@ export default function BlogDetailsPage() {
 					</p>
 
 					{/* Featured Image */}
-					<div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden md:mb-5 mb-2.5">
+					<div className="relative w-full h-64 md:h-96 rounded-[10px] overflow-hidden md:mb-5 mb-2.5">
 						<Image
 							src={blogPost.img_1}
 							alt={blogPost.title}
@@ -131,7 +131,7 @@ export default function BlogDetailsPage() {
 
 								{/* Show img_2 after 2nd paragraph (idx === 1) */}
 								{idx === 1 && (
-									<div className="relative h-40 md:h-48 rounded-lg overflow-hidden mt-6">
+									<div className="relative h-40 md:h-48 rounded-[10px] overflow-hidden mt-6">
 										<Image
 											src={blogPost.img_2}
 											alt="inline-image"

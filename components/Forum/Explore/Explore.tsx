@@ -155,7 +155,7 @@ const videosData: VideoPost[] = [
 // Post Card Component
 const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 	return (
-		<div className="bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition">
+		<div className="bg-white rounded-[10px] shadow-sm p-4 hover:shadow-md transition">
 			<div className="flex items-start gap-3 mb-2.5 md:mb-1">
 				<Image
 					src={post.author.avatar}
@@ -253,7 +253,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({
 
 const VideoCard: React.FC<{ video: VideoPost }> = ({ video }) => {
 	return (
-		<div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+		<div className="bg-white rounded-[10px] shadow-sm overflow-hidden hover:shadow-md transition">
 			<div className="relative w-full h-48 bg-gray-200">
 				<Image
 					src={video.thumbnail}

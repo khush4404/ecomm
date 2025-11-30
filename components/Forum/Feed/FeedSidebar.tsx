@@ -21,7 +21,7 @@ export const FeedSidebar: React.FC<FeedSidebarProps> = ({
 	return (
 		<div className="space-y-4">
 			{/* Good Morning Card */}
-			<div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
+			<div className="bg-white rounded-[10px] shadow-sm border border-gray-200 p-5">
 				<h3 className="font-semibold text-[##1D1D1D] mb-2.5 text-xl">
 					Good Morning
 				</h3>
@@ -42,7 +42,7 @@ export const FeedSidebar: React.FC<FeedSidebarProps> = ({
 			</div>
 
 			{/* Trending Posts */}
-			<div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
+			<div className="bg-white rounded-[10px] shadow-sm border border-gray-200 p-5">
 				<div className="flex items-center gap-2 mb-2">
 					<span className="text-lg">🔥</span>
 					<h3 className="font-semibold text-[#1D1D1D] text-xl">

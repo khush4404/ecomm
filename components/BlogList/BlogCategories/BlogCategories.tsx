@@ -69,9 +69,9 @@ export const BlogCategories: React.FC = () => {
 					{cards.map((card) => (
 						<div
 							key={card.id}
-							className="flex items-center gap-4 bg-gray-50 rounded-lg md:p-9 p-3 shadow-sm hover:shadow-md transition"
+							className="flex items-center gap-4 bg-gray-50 rounded-[10px] md:p-9 p-3 shadow-sm hover:shadow-md transition"
 						>
-							<div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-gray-600">
+							<div className="w-12 h-12 rounded-[10px] bg-white flex items-center justify-center text-gray-600">
 								{/* simple icon placeholder */}
 								<svg
 									width="24"

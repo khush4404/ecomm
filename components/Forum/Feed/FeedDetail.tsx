@@ -130,7 +130,7 @@ export const FeedDetail: React.FC<FeedDetailProps> = ({ post, onBack }) => {
 
 				{/* Sidebar - Right */}
 				<div className="lg:col-span-1">
-					<div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 sticky top-4">
+					<div className="bg-white rounded-[10px] shadow-sm border border-gray-200 p-5 sticky top-4">
 						<h3 className="font-semibold text-gray-900 mb-4">
 							Related Topics
 						</h3>

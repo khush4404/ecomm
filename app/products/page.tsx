@@ -436,7 +436,7 @@ export default function ProductListPage() {
 
 				{/* Mobile Filter Button */}
 				{/* <div className="md:hidden mb-4">
-          <button className="w-full bg-yellow-400 text-[#1D1D1D] py-2 rounded-lg font-medium flex items-center justify-center gap-2">
+          <button className="w-full bg-yellow-400 text-[#1D1D1D] py-2 rounded-[10px] font-medium flex items-center justify-center gap-2">
             <Search size={18} />
             All Filters
           </button>
@@ -450,7 +450,7 @@ export default function ProductListPage() {
 							<div className="flex items-center gap-3 text-base w-full md:w-auto">
 								<button
 									onClick={() => setMobileFiltersOpen(true)}
-									className="flex  items-center gap-2 font-medium  text-[#21465E] px-4 py-2 rounded-lg transition w-full md:w-auto justify-center"
+									className="flex  items-center gap-2 font-medium  text-[#21465E] px-4 py-2 rounded-[10px] transition w-full md:w-auto justify-center"
 								>
 									<svg
 										width="24"

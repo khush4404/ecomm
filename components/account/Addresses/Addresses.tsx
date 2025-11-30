@@ -156,7 +156,7 @@ export function Addresses(props: Props) {
 				{addresses.map((address) => (
 					<div
 						key={address.id}
-						className="border border-[#bbbbbb] rounded-lg p-6 flex flex-col justify-between min-h-[180px]"
+						className="border border-[#bbbbbb] rounded-[10px] p-6 flex flex-col justify-between min-h-[180px]"
 					>
 						<div className="flex gap-4 items-start">
 							<div className="flex-1 flex flex-col gap-2">

@@ -84,7 +84,9 @@ export function Wishlist() {
 	return (
 		<div className="flex flex-col gap-6 pt-10 sm:pt-0">
 			<div className="flex flex-col md:flex-row items-center justify-between gap-2">
-				<h2 className="text-base md:text-2xl font-semibold">My Wishlist</h2>
+				<h2 className="text-base md:text-2xl font-semibold">
+					My Wishlist
+				</h2>
 				<div className="flex items-center gap-4">
 					<label className="text-[12px] md:text-sm text-gray-600 font-semibold">
 						View:
@@ -128,7 +130,7 @@ export function Wishlist() {
 					{filtered.map((item) => (
 						<div
 							key={item.id}
-							className="rounded-lg border border-gray-200 overflow-hidden bg-[#F2F2F2]"
+							className="rounded-[10px] border border-gray-200 overflow-hidden bg-[#F2F2F2]"
 						>
 							<div className="p-4 flex items-center justify-center h-40">
 								<img
@@ -159,7 +161,7 @@ export function Wishlist() {
 								<div>
 									<button
 										disabled={!item.inStock}
-										className="w-full h-10 md:h-[52px] bg-[#F0BA43] text-[#FFFFFF] font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+										className="w-full h-10 md:h-[52px] bg-[#F0BA43] text-[#FFFFFF] font-semibold px-4 py-2 rounded-[10px] hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
 									>
 										BUY
 									</button>

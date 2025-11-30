@@ -100,7 +100,7 @@ export const Events: React.FC = () => {
 	return (
 		<div className="w-full">
 			{/* Hero */}
-			<div className="rounded-lg overflow-hidden mb-6">
+			<div className="rounded-[10px] overflow-hidden mb-6">
 				<div className="h-40 bg-linear-to-r from-purple-800 via-indigo-700 to-purple-600 flex md:gap-12 gap-9 flex-col p-6 text-white">
 					<div>
 						<h2 className="text-xl md:text-4xl font-semibold">
@@ -151,7 +151,7 @@ export const Events: React.FC = () => {
 				{items.map((ev) => (
 					<article
 						key={ev.id}
-						className="bg-white rounded-lg shadow-sm overflow-hidden"
+						className="bg-white rounded-[10px] shadow-sm overflow-hidden"
 					>
 						<div
 							className="h-36 bg-gray-200 bg-cover bg-center"

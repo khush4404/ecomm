@@ -105,7 +105,7 @@ export const FaqQuestions: React.FC = () => {
 							{category.items.map((item) => (
 								<div
 									key={item.id}
-									className="border border-[#BBBBBB] rounded-lg overflow-hidden hover:shadow-sm transition"
+									className="border border-[#BBBBBB] rounded-[10px] overflow-hidden hover:shadow-sm transition"
 								>
 									<button
 										onClick={() => toggleExpand(item.id)}

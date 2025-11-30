@@ -45,7 +45,7 @@ export const CreatePost: React.FC<CreatePostModalProps> = ({
 			/>
 
 			{/* Modal */}
-			<div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-auto z-50 bg-white rounded-lg shadow-xl p-6">
+			<div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-auto z-50 bg-white rounded-[10px] shadow-xl p-6">
 				{/* Header with User Info */}
 				<div className="flex items-center gap-3 mb-6 ">
 					<span className="text-3xl">{userAvatar}</span>
@@ -156,7 +156,7 @@ export const CreatePostBox: React.FC<{
 	};
 
 	return (
-		<div className="bg-white rounded-lg shadow p-4">
+		<div className="bg-white rounded-[10px] shadow p-4">
 			<div className="flex items-center gap-3 mb-4">
 				<span className="text-2xl">{userAvatar}</span>
 				<span className="text-sm font-medium text-gray-700">
@@ -170,7 +170,7 @@ export const CreatePostBox: React.FC<{
 					value={postContent}
 					onChange={(e) => setPostContent(e.target.value)}
 					rows={4}
-					className="w-full border border-gray-200 rounded-lg px-4 py-3 outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none text-gray-700"
+					className="w-full border border-gray-200 rounded-[10px] px-4 py-3 outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 resize-none text-gray-700"
 				/>
 			</div>
 

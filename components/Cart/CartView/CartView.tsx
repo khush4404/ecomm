@@ -98,7 +98,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
 					<div className="lg:col-span-2">
 						{/* ---------- TABLE HEADER ---------- */}
-						<div className="grid grid-cols-12 bg-[#F2F2F2] px-4 sm:px-6 py-3 border border-[#E8E8E8] rounded-lg text-sm font-semibold text-[#666666] mb-4">
+						<div className="grid grid-cols-12 bg-[#F2F2F2] px-4 sm:px-6 py-3 border border-[#E8E8E8] rounded-[10px] text-sm font-semibold text-[#666666] mb-4">
 							<div className="col-span-1 flex items-center">
 								<input
 									type="checkbox"
@@ -254,7 +254,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 						<div className="flex flex-col sm:flex-row gap-4 mt-6 justify-between">
 							<button
 								onClick={() => onContinueShopping?.()}
-								className="md:px-4 px-2 py-2 md:w-auto w-[196px] bg-[#F0BA43] text-white font-medium rounded-lg hover:bg-[#E8B140] flex gap-3"
+								className="md:px-4 px-2 py-2 md:w-auto w-[196px] bg-[#F0BA43] text-white font-medium rounded-[10px] hover:bg-[#E8B140] flex gap-3"
 							>
 								<img
 									src="/images/categories/arrow-back.svg"
@@ -264,7 +264,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 							</button>
 							<button
 								onClick={() => onUpdateCart?.()}
-								className="px-6 py-2 md:2-auto w-[159px] bg-[#F0BA43] text-white font-medium rounded-lg hover:bg-[#E8B140]"
+								className="px-6 py-2 md:2-auto w-[159px] bg-[#F0BA43] text-white font-medium rounded-[10px] hover:bg-[#E8B140]"
 							>
 								⟳ Update Cart
 							</button>
@@ -273,7 +273,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 						{/* Coupon & Shipping */}
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
 							{/* Shipping */}
-							<div className="p-4 bg-[#F2F2F2] rounded-lg border border-[#E8E8E8]">
+							<div className="p-4 bg-[#F2F2F2] rounded-[10px] border border-[#E8E8E8]">
 								<h3 className="text-sm md:text-base font-semibold leading-9">
 									Calculate Shipping
 								</h3>
@@ -334,7 +334,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 
 					{/* Order Summary */}
 					<div className="lg:col-span-1">
-						<div className="sticky top-8 p-6 bg-[#F9F9F9] rounded-lg border border-[#E8E8E8]">
+						<div className="sticky top-8 p-6 bg-[#F9F9F9] rounded-[10px] border border-[#E8E8E8]">
 							<div className="space-y-4 mb-6">
 								<div className="flex justify-between text-sm md:text-base font-semibold">
 									<span className="text-text-gray">
@@ -376,7 +376,7 @@ export const CartView: React.FC<ProductCartProps> = ({
 
 							<button
 								onClick={onCheckout}
-								className="w-full px-4 py-3 bg-[#F0BA43] rounded-lg font-semibold text-white"
+								className="w-full px-4 py-3 bg-[#F0BA43] rounded-[10px] font-semibold text-white"
 							>
 								Proceed to CheckOut
 							</button>

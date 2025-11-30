@@ -52,7 +52,7 @@ export const FollowedList: React.FC<{ groups?: Group[] }> = ({
 	groups = sampleGroups,
 }) => {
 	return (
-		<div className="bg-white rounded-lg shadow-sm p-4">
+		<div className="bg-white rounded-[10px] shadow-sm p-4">
 			<h3 className="text-sm font-semibold text-gray-900 mb-3">
 				Followed Groups List
 			</h3>
