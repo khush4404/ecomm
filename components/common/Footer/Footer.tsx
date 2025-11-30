@@ -353,6 +353,7 @@ export const Footer = () => {
 					</div>
 				</div>
 			</footer>
+
 			<div className="sm:hidden flex flex-row items-center justify-between p-8">
 				<img src="/images/home.png" alt="" />
 				<img src="/images/messages.png" alt="" />

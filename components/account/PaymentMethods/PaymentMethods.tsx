@@ -145,7 +145,7 @@ export function PaymentMethods() {
 								</label>
 
 								<div>
-									<button className="w-full bg-[#F0BA43] text-[#FFFFFF] font-semibold px-4 py-2 rounded-[10px] hover:bg-yellow-500 transition-colors">
+									<button className="w-full border border-[#F0BA43] text-[#F0BA43] font-semibold px-4 py-2 rounded-[10px] hover:bg-yellow-50 transition-colors">
 										Pay
 									</button>
 								</div>
@@ -159,13 +159,13 @@ export function PaymentMethods() {
 							Add Gift Card or Promo Code
 						</h4>
 						<div className="border border-[#BBBBBB] rounded-[10px] p-4">
-							<div className="flex gap-3 text-base">
+							<div className="flex gap-3 text-base items-center">
 								<Input
 									placeholder="Card Number"
 									label="Card Number"
 									className=""
 								/>
-								<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2 rounded-[10px] hover:bg-yellow-500 transition-colors">
+								<button className="bg-[#F0BA43] text-[#FFFFFF] md:h-[52px] h-[42px] font-semibold px-4 py-2  rounded-[10px] hover:bg-yellow-500 transition-colors">
 									Apply
 								</button>
 							</div>
