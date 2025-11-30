@@ -44,7 +44,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 			</div>
 
 			{/* Order Info Summary */}
-			<div className="flex ">
+			<div className="flex justify-between">
 				<div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-1 flex-3">
 					<div className="flex flex-col md:gap-2.5 gap-0">
 						<p className="md:text-base text-[12px] text-text-dark font-semibold">
@@ -72,7 +72,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
 					</div>
 				</div>
 
-				<div className="md:block hidden flex items-center gap-4 flex-2 justify-end">
+				<div className="md:flex hidden items-center gap-4 flex-2 justify-end">
 					<button className="border  border-[#BBBBBB] px-8 py-3.5 rounded-md text-base hover:bg-gray-50">
 						View Orderrrrr
 					</button>
