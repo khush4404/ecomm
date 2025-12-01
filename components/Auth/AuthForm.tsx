@@ -72,7 +72,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ mode = "login" }) => {
 
     // Card component (right side)
     const Card = (
-        <div className="w-full max-w-md bg-white rounded-2xl py-6 px-5 shadow-xl flex flex-col gap-5">
+        <div className="w-full max-w-md bg-white rounded-[30px] py-6 px-5 shadow-xl flex flex-col gap-5">
             <div className="flex flex-col gap-[5px]">
                 <h2 className="text-2xl font-semibold leading-9 text-center text-text-dark">{mode === "login" ? "Login to your account" : "Sign up"}</h2>
                 <p className="text-[18px] leading-9 text-center text-text-gray">{mode === "login" ? "Welcome! to passionfarms." : "Welcome! to passionfarms."}</p>
