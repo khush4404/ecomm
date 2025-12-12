@@ -26,6 +26,7 @@ export const Steps = () => {
 			actionIcon: <Play size={14} className="fill-black" />,
 			bgColor: "bg-[#FFEBF0]", // Light Pink
 			icon: "/images/sell/register.png",
+			bgborder: "border-[#FFC7D5]",
 		},
 		{
 			title: "Sell",
@@ -33,8 +34,9 @@ export const Steps = () => {
 				"List your products and exclusives on our marketplace. Set your store, terms, utilize our logistics partners, and connect directly with buyers from the community.",
 			actionText: "Read More",
 			actionIcon: <FileText size={14} />,
-			bgColor: "bg-[#FFF8E1]", // Light Yellow
+			bgColor: "bg-[#FFF6E5]", // Light Yellow
 			icon: "/images/sell/sellimg.png",
+			bgborder: "border-[#FFEAC3]",
 		},
 		{
 			title: "Earn",
@@ -42,8 +44,9 @@ export const Steps = () => {
 				"Get paid securely and on time. Our managed escrow and payment processing ensures smooth, reliable transactions upon verified delivery.",
 			actionText: "Watch Video",
 			actionIcon: <Play size={14} className="fill-black" />,
-			bgColor: "bg-[#E0F2F1]", // Light Mint
+			bgColor: "bg-[#E5F5F2]", // Light Mint
 			icon: "/images/sell/earn.png",
+			bgborder: "border-[#B1F2E6]",
 		},
 		{
 			title: "Grow",
@@ -51,8 +54,9 @@ export const Steps = () => {
 				"Unlock higher membership tiers. Access multi-state leads, featured vendor spots, dedicated account support, and back-end system to scale your operation.",
 			actionText: "Read more",
 			actionIcon: <FileText size={14} />,
-			bgColor: "bg-[#FBE9E7]", // Light Peach
+			bgColor: "bg-[#FFEEE7]", // Light Peach
 			icon: "/images/sell/grow.png",
+			bgborder: "border-[#FDD7C8]",
 		},
 	];
 
@@ -117,27 +121,27 @@ export const Steps = () => {
 		{
 			title: "0% Marketplace Fee",
 			desc: "Sell freely with full revenue retention. For new sellers we charge zero commission fees on all your sales in our marketplace.",
-			icon: "/images/sell/commission.png"
+			icon: "/images/sell/commission.png",
 		},
 		{
 			title: "Free shoutouts to our community",
 			desc: "Receive complimentary promotion for your brand to our entire network of verified cannabis business professionals.",
-			icon: "/images/sell/corporation.png"
+			icon: "/images/sell/corporation.png",
 		},
 		{
 			title: "Up to 70% Discount on Logistics for New sellers",
 			desc: "Launch with major savings. New sellers receives a discount of up to 70%.",
-			icon: "/images/sell/team.png"
+			icon: "/images/sell/team.png",
 		},
 		{
 			title: "Dedicated Account Manager After 10 Orders",
 			desc: "Unlock personalized guidance. A dedicated expert manages your account and audit your store after ten successful orders.",
-			icon: "/images/sell/document.png"
+			icon: "/images/sell/document.png",
 		},
 		{
 			title: "Access to our business Tools",
 			desc: "Complimentary access to our full platform of professional cannabis business management resources for new users.",
-			icon: "/images/sell/premium.png"
+			icon: "/images/sell/premium.png",
 		},
 	];
 
@@ -177,7 +181,9 @@ export const Steps = () => {
 								{step.description}
 							</p>
 
-							<button className="bg-white text-[#000000] text-base font-semibold py-2.5 px-6 rounded-[30px]  border border-[#FFEAC3] flex items-center gap-2 transition-colors">
+							<button
+								className={`${step.bgborder} bg-white text-[#000000] text-base font-semibold py-2.5 px-6 rounded-[30px]  border  flex items-center gap-2 transition-colors`}
+							>
 								{step.actionIcon}
 								{step.actionText}
 							</button>
