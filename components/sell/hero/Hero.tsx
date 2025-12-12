@@ -1,8 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import { MoveRight, Play } from "lucide-react";
 
-const Hero = () => {
+export const Hero = () => {
 	return (
 		<div className="min-h-screen bg-[#FFF9F0] text-[#1A1A1A] font-sans overflow-x-hidden selection:bg-orange-200">
 			{/* --- Top Navigation / Banner --- */}
@@ -93,13 +92,12 @@ const Hero = () => {
 											className="w-10 h-10 rounded-full border-2 border-[#121214] bg-gray-600 relative overflow-hidden"
 										>
 											<Image
-												src={`https://images.unsplash.com/photo-${
-													i === 1
-														? "1534528741775-53994a69daeb"
-														: i === 2
+												src={`https://images.unsplash.com/photo-${i === 1
+													? "1534528741775-53994a69daeb"
+													: i === 2
 														? "1506794778202-cad84cf45f1d"
 														: "1507003211169-0a1dd7228f2d"
-												}?w=100&h=100&fit=crop`}
+													}?w=100&h=100&fit=crop`}
 												alt="User"
 												fill
 												className="object-cover"
@@ -222,4 +220,3 @@ const Hero = () => {
 		</div>
 	);
 };
-export default Hero;
