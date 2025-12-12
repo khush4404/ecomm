@@ -1,12 +1,11 @@
-import { Hero } from "@/components/Sell/Hero"
-
+import { Hero } from "@/components/Sell/Hero";
 
 const SellPage = () => {
-    return (
-        <>
-            <Hero />
-        </>
-    )
-}
+	return (
+		<>
+			<Hero />
+		</>
+	);
+};
 
-export default SellPage
+export default SellPage;
