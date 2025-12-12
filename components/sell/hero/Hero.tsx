@@ -26,7 +26,7 @@ export const Hero = () => {
 			{/* --- Main Content Grid --- */}
 			<main className="max-w-7xl mx-auto px-6 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
 				{/* === LEFT COLUMN: Typography & CTA === */}
-				<div className="lg:col-span-5 flex flex-col gap-8 z-10">
+				<div className="lg:col-span-5 flex flex-col gap-[25px] z-10">
 					<h1 className="text-[65px] text-[#1D1D1D] leading-[1.1] font-bold tracking-tight">
 						Your Products Deserve a
 						<span className="block">Bigger Market.</span>
@@ -40,7 +40,7 @@ export const Hero = () => {
 						<span>Connect</span>
 					</div>
 
-					<div className="flex flex-wrap items-center gap-4 mt-4">
+					<div className="flex flex-wrap items-center gap-4 mt-[71px]">
 						<button className="bg-[#EAB345] hover:bg-[#dca335] text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
 							Start Selling
 						</button>
