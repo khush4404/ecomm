@@ -1,0 +1,1 @@
+export { TheMinds } from './TheMinds'
