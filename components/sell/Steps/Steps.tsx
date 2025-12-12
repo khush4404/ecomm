@@ -34,7 +34,7 @@ export const Steps = () => {
 			actionText: "Read More",
 			actionIcon: <FileText size={14} />,
 			bgColor: "bg-[#FFF8E1]", // Light Yellow
-			icon: <Image src="/images/sell/supermarket.png" alt="sell" width={48} height={48} className="object-contain" />,
+			icon: "/images/sell/sellimg.png",
 		},
 		{
 			title: "Earn",
@@ -43,7 +43,7 @@ export const Steps = () => {
 			actionText: "Watch Video",
 			actionIcon: <Play size={14} className="fill-black" />,
 			bgColor: "bg-[#E0F2F1]", // Light Mint
-			icon: <DollarSign size={48} className="text-teal-600" />,
+			icon: "/images/sell/earn.png",
 		},
 		{
 			title: "Grow",
@@ -52,7 +52,7 @@ export const Steps = () => {
 			actionText: "Read more",
 			actionIcon: <FileText size={14} />,
 			bgColor: "bg-[#FBE9E7]", // Light Peach
-			icon: <Sprout size={48} className="text-orange-500" />,
+			icon: "/images/sell/grow.png",
 		},
 	];
 
@@ -61,22 +61,54 @@ export const Steps = () => {
 		{
 			title: "100,000 Monthly reach",
 			desc: "Show your products to 100,000+ monthly active buyers and industry decision makers.",
-			icon: <Image src="/images/sell/supermarket.png" alt="store" width={48} height={48} className="object-contain" />,
+			icon: (
+				<Image
+					src="/images/sell/supermarket.png"
+					alt="store"
+					width={48}
+					height={48}
+					className="object-contain"
+				/>
+			),
 		},
 		{
 			title: "3000+ B2B members",
 			desc: "Build partnerships within our verified network of 3,000+ B2B cannabis operators.",
-			icon: <Image src="/images/sell/group.png" width={48} height={48} className="object-contain" alt="group" />,
+			icon: (
+				<Image
+					src="/images/sell/group.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="group"
+				/>
+			),
 		},
 		{
 			title: "$10M+ in sales",
 			desc: "Scale your revenue in our 10 million in annual sales wholesale marketplace.",
-			icon: <Image src="/images/sell/bar-graph.png" width={48} height={48} className="object-contain" alt="chart" />,
+			icon: (
+				<Image
+					src="/images/sell/bar-graph.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="chart"
+				/>
+			),
 		},
 		{
 			title: "12k+ deliveries",
 			desc: "Successfully delivered over 12000+ deliveries across US and now entering Thailand market.",
-			icon: <Image src="/images/sell/deliver-man.png" width={48} height={48} className="object-contain" alt="truck" />,
+			icon: (
+				<Image
+					src="/images/sell/deliver-man.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="truck"
+				/>
+			),
 		},
 	];
 
@@ -85,27 +117,67 @@ export const Steps = () => {
 		{
 			title: "0% Marketplace Fee",
 			desc: "Sell freely with full revenue retention. For new sellers we charge zero commission fees on all your sales in our marketplace.",
-			icon: <Image src="/images/sell/commission.png" width={48} height={48} className="object-contain" alt="percent" />,
+			icon: (
+				<Image
+					src="/images/sell/commission.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="percent"
+				/>
+			),
 		},
 		{
 			title: "Free shoutouts to our community",
 			desc: "Receive complimentary promotion for your brand to our entire network of verified cannabis business professionals.",
-			icon: <Image src="/images/sell/corporation.png" width={48} height={48} className="object-contain" alt="megaphone" />,
+			icon: (
+				<Image
+					src="/images/sell/corporation.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="megaphone"
+				/>
+			),
 		},
 		{
 			title: "Up to 70% Discount on Logistics for New sellers",
 			desc: "Launch with major savings. New sellers receives a discount of up to 70%.",
-			icon: <Image src="/images/sell/team.png" width={48} height={48} className="object-contain" alt="box" />,
+			icon: (
+				<Image
+					src="/images/sell/team.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="box"
+				/>
+			),
 		},
 		{
 			title: "Dedicated Account Manager After 10 Orders",
 			desc: "Unlock personalized guidance. A dedicated expert manages your account and audit your store after ten successful orders.",
-			icon: <Image src="/images/sell/document.png" width={48} height={48} className="object-contain" alt="user-check" />,
+			icon: (
+				<Image
+					src="/images/sell/document.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="user-check"
+				/>
+			),
 		},
 		{
 			title: "Access to our business Tools",
 			desc: "Complimentary access to our full platform of professional cannabis business management resources for new users.",
-			icon: <Image src="/images/sell/premium.png" width={48} height={48} className="object-contain" alt="wrench" />,
+			icon: (
+				<Image
+					src="/images/sell/premium.png"
+					width={48}
+					height={48}
+					className="object-contain"
+					alt="wrench"
+				/>
+			),
 		},
 	];
 
@@ -121,7 +193,7 @@ export const Steps = () => {
 					</h2>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 w-full gap-5 mb-24">
+				<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 w-full gap-5 md:gap-0 mb-24">
 					{steps.map((step, index) => (
 						<div
 							key={index}
@@ -130,8 +202,13 @@ export const Steps = () => {
 							{/* Illustration Placeholder (floating top) */}
 							<div className="absolute md:-top-28 -top-22 md:w-[207px] w-[163px] md:h-[207px]  flex items-center justify-center">
 								{/* In a real app, use <Image /> here */}
-	
-								<Image src="/images/sell/register.png" width={207} height={207} alt="register" />
+
+								<Image
+									src="{step.icon}"
+									width={207}
+									height={207}
+									alt="register"
+								/>
 							</div>
 
 							<h3 className="md:text-[28px] text-xl  text-[#1D1D1D] font-bold mb-4 mt-2">
