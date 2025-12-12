@@ -60,9 +60,9 @@ export const Hero = () => {
 
 				{/* === CENTER: Floating Play Button === */}
 				{/* Positioned absolutely on desktop to bridge the two columns */}
-				<div className="hidden lg:flex absolute left-[40%] top-1/2 -translate-y-1/2 z-20">
+				<div className="hidden lg:flex absolute left-[40%] top-[36%] -translate-y-1/2 z-20">
 					<div className="relative group cursor-pointer">
-						<div className="w-24 h-24 bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10">
+						<div className="w-24 h-24  bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10">
 							<div className="border border-gray-600 rounded-full w-20 h-20 flex items-center justify-center">
 								<Play
 									className="fill-[#EAB345] text-[#EAB345] ml-1"
@@ -83,7 +83,7 @@ export const Hero = () => {
 						{/* -- Left Sub-Column of Grid -- */}
 						<div className="flex flex-col gap-4">
 							{/* Card 1: 5K+ Stats */}
-							<div className="bg-[#121214] p-6 rounded-3xl text-white shadow-xl h-48 flex flex-col justify-between relative overflow-hidden group">
+							<div className="bg-[#121214] p-6 border-l border-amber-400 rounded-3xl text-white shadow-xl h-48 flex flex-col justify-between relative overflow-hidden group">
 								{/* Avatar Group Placeholder */}
 								<div className="flex -space-x-3">
 									{[1, 2, 3].map((i) => (
@@ -92,12 +92,13 @@ export const Hero = () => {
 											className="w-10 h-10 rounded-full border-2 border-[#121214] bg-gray-600 relative overflow-hidden"
 										>
 											<Image
-												src={`https://images.unsplash.com/photo-${i === 1
-													? "1534528741775-53994a69daeb"
-													: i === 2
+												src={`https://images.unsplash.com/photo-${
+													i === 1
+														? "1534528741775-53994a69daeb"
+														: i === 2
 														? "1506794778202-cad84cf45f1d"
 														: "1507003211169-0a1dd7228f2d"
-													}?w=100&h=100&fit=crop`}
+												}?w=100&h=100&fit=crop`}
 												alt="User"
 												fill
 												className="object-cover"
@@ -115,7 +116,7 @@ export const Hero = () => {
 										has joined us recently.
 									</div>
 								</div>
-								<div className="absolute top-6 right-6 h-12 w-1 bg-yellow-500 rounded-full opacity-80"></div>
+								<div className="absolute top-6 left-3 h-35 w-1 bg-[#F0BA43] rounded-full opacity-80"></div>
 							</div>
 
 							{/* Card 2: Growth Chart (The one highlighted in your image) */}
