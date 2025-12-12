@@ -65,14 +65,14 @@ export const Faq = () => {
 	};
 
 	return (
-		<section className="bg-white py-16 px-4 font-sans text-[#1A1A1A]">
+		<section className="bg-white py-10 px-4 font-sans text-[#1A1A1A]">
 			<div className="max-w-4xl mx-auto">
 				{/* --- Header --- */}
-				<div className="text-center mb-10">
-					<h2 className="text-3xl font-bold text-[#1D1D1D] mb-3">
+				<div className="text-center mb-3">
+					<h2 className="md:text-[28px] text-base font-semibold text-[#1D1D1D] mb-3">
 						Frequently Asked Questions (FAQs)
 					</h2>
-					<p className="text-base text-gray-500 max-w-xl mx-auto">
+					<p className="md:text-base text-[12px] text-[#1D1D1D] max-w-xl mx-auto">
 						Find answers to common questions about our products,
 						orders, and more. For further help, feel free to contact
 						us
@@ -80,12 +80,12 @@ export const Faq = () => {
 				</div>
 
 				{/* --- Search Bar --- */}
-				<div className="mb-12">
+				<div className="md:mb-10 mb-5">
 					<div className="relative">
 						<input
 							type="text"
 							placeholder="Search"
-							className="w-full py-4 pl-14 pr-6 border border-gray-100 rounded-xl bg-gray-50 text-base text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all"
+							className="w-full py-4 pl-14 pr-6 rounded-[40px] bg-[#F5F5F5] text-base text-[#1D1D1D]  transition-all"
 						/>
 						<Search
 							size={20}
@@ -97,13 +97,16 @@ export const Faq = () => {
 				{/* --- FAQ Accordion Items --- */}
 				<div className="border-t border-gray-200">
 					{faqItems.slice(0, visibleCount).map((item) => (
-						<div key={item.id} className="border-b border-gray-200">
+						<div
+							key={item.id}
+							className="border-b border-[#BBBBBB]"
+						>
 							{/* Question/Toggle Button */}
 							<button
 								className="w-full text-left py-5 flex justify-between items-start focus:outline-none"
 								onClick={() => toggleFAQ(item.id)}
 							>
-								<span className="text-base font-semibold text-[#1D1D1D] pr-4">
+								<span className="md:text-base text-sm font-semibold text-[#1D1D1D] pr-4">
 									{item.question}
 								</span>
 								{renderIcon(item.id)}
@@ -111,7 +114,7 @@ export const Faq = () => {
 
 							{/* Answer Content (Collapsible) */}
 							{openId === item.id && (
-								<div className="pb-6 text-sm text-gray-600 leading-relaxed pr-8 transition-opacity duration-300">
+								<div className="pb-6 text-sm md:text-base text-[#878787] leading-relaxed pr-8 transition-opacity duration-300">
 									{item.answer}
 								</div>
 							)}
