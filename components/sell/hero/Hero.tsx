@@ -27,12 +27,12 @@ export const Hero = () => {
 			<main className="max-w-7xl mx-auto px-6 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
 				{/* === LEFT COLUMN: Typography & CTA === */}
 				<div className="lg:col-span-5 flex flex-col gap-8 z-10">
-					<h1 className="text-5xl md:text-6xl lg:text-[5rem] leading-[1.1] font-bold tracking-tight">
-						Your Products Deserve a{" "}
+					<h1 className="text-[65px] text-[#1D1D1D] leading-[1.1] font-bold tracking-tight">
+						Your Products Deserve a
 						<span className="block">Bigger Market.</span>
 					</h1>
 
-					<div className="flex items-center gap-4 text-xl md:text-2xl font-medium text-gray-800">
+					<div className="flex items-center gap-4 text-xl md:text-2xl font-medium text-[#15141A]">
 						<span>Sell</span>
 						<div className="h-6 w-[2px] bg-black"></div>
 						<span>Scale</span>
