@@ -1,0 +1,1 @@
+export { IntegratedCannabis } from './IntegratedCannabis'
