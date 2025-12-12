@@ -41,17 +41,17 @@ export const Hero = () => {
 					</div>
 
 					<div className="flex flex-wrap items-center gap-4 mt-[71px]">
-						<button className="bg-[#EAB345] hover:bg-[#dca335] text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+						<button className="bg-[#F0BA43] text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
 							Start Selling
 						</button>
 
-						<button className="flex items-center justify-center w-14 h-14 bg-[#EAB345] hover:bg-[#dca335] rounded-full text-white shadow-lg transition-all duration-300">
+						<button className="flex items-center justify-center w-14 h-14 bg-[#F0BA43] hover:bg-[#dca335] rounded-full text-white shadow-lg transition-all duration-300">
 							<MoveRight size={24} />
 						</button>
 
 						<a
 							href="#"
-							className="font-medium text-gray-700 ml-2 hover:underline"
+							className="font-medium text-[#1D1D1D] ml-2 hover:underline"
 						>
 							Learn more
 						</a>
