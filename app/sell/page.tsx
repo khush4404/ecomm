@@ -1,4 +1,4 @@
-import { Hero } from "@/components/sell/hero";
+import { Hero } from "@/components/Sell/Hero";
 
 const SellPage = () => {
 	return (

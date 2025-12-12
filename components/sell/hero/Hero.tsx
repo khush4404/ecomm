@@ -5,18 +5,19 @@ export const Hero = () => {
 	return (
 		<div className="min-h-screen bg-[#FFF9F0] text-[#1A1A1A] font-sans overflow-x-hidden selection:bg-orange-200">
 			{/* --- Top Navigation / Banner --- */}
-			<nav className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
-				<div className="font-bold text-lg mb-4 md:mb-0">
+			<nav className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row gap-[97px] items-center text-base">
+				<div className="font-bold text-[#1D1D1D] text-lg mb-4 md:mb-0">
 					Sell with Passionfarms
 				</div>
-				<div className="text-gray-600">
-					Get <span className="font-bold text-black">10% back</span>{" "}
+				<div className="text-[#878787]">
+					Get{" "}
+					<span className="font-bold text-[#1D1D1D]">10% back</span>{" "}
 					on your first{" "}
-					<span className="font-bold text-black">$10,000</span>{" "}
+					<span className="font-bold text-[#1D1D1D]">$10,000</span>{" "}
 					cannabis product sales.{" "}
 					<a
 						href="#"
-						className="underline font-semibold text-black hover:text-orange-500 transition"
+						className="underline font-semibold text-[#1D1D1D] hover:text-orange-500 transition"
 					>
 						Learn more
 					</a>
@@ -164,12 +165,10 @@ export const Hero = () => {
 						{/* -- Right Sub-Column of Grid -- */}
 						<div className="relative">
 							{/* Card 3: Tall Man Image */}
-							<div className="h-[23rem] w-full rounded-3xl overflow-hidden relative shadow-2xl">
-								<Image
-									src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
-									alt="Business Man"
-									fill
-									className="object-cover object-top"
+							<div className="h-[394px] w-full rounded-3xl overflow-hidden relative shadow-2xl">
+								<img
+									src="/images/sell/Bussiness.jpg"
+									alt="men"
 								/>
 							</div>
 
@@ -196,13 +195,8 @@ export const Hero = () => {
 
 						{/* -- Bottom Full Width Card -- */}
 						<div className="md:col-span-2 relative mt-4">
-							<div className="h-48 w-full rounded-3xl overflow-hidden relative shadow-lg">
-								<Image
-									src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop"
-									alt="Team Meeting"
-									fill
-									className="object-cover"
-								/>
+							<div className="h-[265px] w-full rounded-3xl overflow-hidden relative shadow-lg">
+								<img src="/images/sell/meet.jpg" alt="men" />
 							</div>
 
 							{/* Floating Badge 3: Community Members */}
