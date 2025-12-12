@@ -171,7 +171,7 @@ export const Hero = () => {
 						{/* -- Right Sub-Column of Grid -- */}
 						<div className="relative">
 							{/* Card 3: Tall Man Image */}
-							<div className="h-[394px] w-[302px] rounded-3xl overflow-hidden relative shadow-2xl">
+							<div className="h-[394px] w-[302px] rounded-3xl overflow-hidden relative ">
 								<img
 									src="/images/sell/Bussiness.jpg"
 									alt="men"
@@ -179,8 +179,8 @@ export const Hero = () => {
 							</div>
 
 							{/* Floating Badge 1: Satisfied Rate */}
-							<div className="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#121214] text-white p-4 rounded-2xl shadow-xl w-40 z-10 border border-gray-800">
-								<p className="text-xs text-gray-400 mb-1">
+							<div className="absolute -right-4 bottom-5 -translate-y-1/2 bg-[#15141A] text-white p-4 rounded-2xl  w-44 z-1">
+								<p className="text-base text-[#FFFFFF] mb-1">
 									Satisfied rate
 								</p>
 								<p className="text-3xl font-bold text-[#EAB345]">
@@ -189,8 +189,8 @@ export const Hero = () => {
 							</div>
 
 							{/* Floating Badge 2: Successful Deliveries */}
-							<div className="absolute -right-4 -bottom-6 bg-[#121214] text-white p-4 rounded-2xl shadow-xl w-44 z-20 border border-gray-800">
-								<p className="text-xs text-gray-400 mb-1">
+							<div className="absolute -right-4 top-[89%]   bg-[#15141A] text-white p-4 rounded-2xl  w-44 z-20">
+								<p className="text-base text-text-[#FFFFFF] mb-1">
 									Successful Deliveries
 								</p>
 								<p className="text-3xl font-bold text-[#EAB345]">
@@ -206,8 +206,8 @@ export const Hero = () => {
 							</div>
 
 							{/* Floating Badge 3: Community Members */}
-							<div className="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#121214] text-white p-4 rounded-2xl shadow-xl w-44 z-10 border border-gray-800">
-								<p className="text-xs text-gray-400 mb-1">
+							<div className="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#15141A] text-white p-4 rounded-2xl  w-44 z-10 ">
+								<p className="text-base text-[#FFFFFF] mb-1">
 									Community members
 								</p>
 								<p className="text-3xl font-bold text-[#EAB345]">
