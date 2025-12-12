@@ -117,67 +117,27 @@ export const Steps = () => {
 		{
 			title: "0% Marketplace Fee",
 			desc: "Sell freely with full revenue retention. For new sellers we charge zero commission fees on all your sales in our marketplace.",
-			icon: (
-				<Image
-					src="/images/sell/commission.png"
-					width={48}
-					height={48}
-					className="object-contain"
-					alt="percent"
-				/>
-			),
+			icon: "/images/sell/commission.png"
 		},
 		{
 			title: "Free shoutouts to our community",
 			desc: "Receive complimentary promotion for your brand to our entire network of verified cannabis business professionals.",
-			icon: (
-				<Image
-					src="/images/sell/corporation.png"
-					width={48}
-					height={48}
-					className="object-contain"
-					alt="megaphone"
-				/>
-			),
+			icon: "/images/sell/corporation.png"
 		},
 		{
 			title: "Up to 70% Discount on Logistics for New sellers",
 			desc: "Launch with major savings. New sellers receives a discount of up to 70%.",
-			icon: (
-				<Image
-					src="/images/sell/team.png"
-					width={48}
-					height={48}
-					className="object-contain"
-					alt="box"
-				/>
-			),
+			icon: "/images/sell/team.png"
 		},
 		{
 			title: "Dedicated Account Manager After 10 Orders",
 			desc: "Unlock personalized guidance. A dedicated expert manages your account and audit your store after ten successful orders.",
-			icon: (
-				<Image
-					src="/images/sell/document.png"
-					width={48}
-					height={48}
-					className="object-contain"
-					alt="user-check"
-				/>
-			),
+			icon: "/images/sell/document.png"
 		},
 		{
 			title: "Access to our business Tools",
 			desc: "Complimentary access to our full platform of professional cannabis business management resources for new users.",
-			icon: (
-				<Image
-					src="/images/sell/premium.png"
-					width={48}
-					height={48}
-					className="object-contain"
-					alt="wrench"
-				/>
-			),
+			icon: "/images/sell/premium.png"
 		},
 	];
 
@@ -202,9 +162,8 @@ export const Steps = () => {
 							{/* Illustration Placeholder (floating top) */}
 							<div className="absolute md:-top-28 -top-22 md:w-[207px] w-[163px] md:h-[207px]  flex items-center justify-center">
 								{/* In a real app, use <Image /> here */}
-
 								<Image
-									src="{step.icon}"
+									src={step.icon}
 									width={207}
 									height={207}
 									alt="register"
@@ -271,11 +230,16 @@ export const Steps = () => {
 									className="flex gap-4  items-start"
 								>
 									<div className="mt-1 shrink-0">
-										{/* Placeholder for specific colorful icons shown in image */}
 										<div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center">
-											{React.cloneElement(
+											{/* {React.cloneElement(
 												item.icon as React.ReactElement
-											)}
+											)} */}
+											<Image
+												src={item.icon}
+												width={207}
+												height={207}
+												alt="register"
+											/>
 										</div>
 									</div>
 									<div className="border-b border-[#E8E8E8] md:pb-5 pb-4 w-full">
