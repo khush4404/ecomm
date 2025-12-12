@@ -61,9 +61,14 @@ export const Hero = () => {
 
 				{/* === CENTER: Floating Play Button === */}
 				{/* Positioned absolutely on desktop to bridge the two columns */}
-				<div className="hidden lg:flex absolute left-[40%] top-[36%] -translate-y-1/2 z-20">
+				{/* === CENTER: Floating Play Button === */}
+				<div className="hidden lg:flex absolute left-[40%] top-[36%] -translate-y-1/2 z-30">
+					{" "}
+					{/* z-index vadharyo */}
 					<div className="relative group cursor-pointer">
-						<div className="w-24 h-24  bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10">
+						{/* Main Black Circle with "Gap" Border */}
+						{/* Change 1: Added border-[12px] and border-[#FFF9F0] */}
+						<div className="w-28 h-28 bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10 border-[12px] border-[#FFF9F0]">
 							<div className="border border-gray-600 rounded-full w-20 h-20 flex items-center justify-center">
 								<Play
 									className="fill-[#EAB345] text-[#EAB345] ml-1"
@@ -71,9 +76,10 @@ export const Hero = () => {
 								/>
 							</div>
 						</div>
-						{/* Curved text effect simulated with SVG or just omitted for clean code. 
-                    Here is a simple rotation wrapper for context */}
-						<div className="absolute inset-0 -m-2 border-2 border-dashed border-gray-300 rounded-full animate-spin-slow opacity-30"></div>
+
+						{/* Outer Dashed Ring */}
+						{/* Change 2: Adjusted margin (-m-3) to fit outside the new thick border */}
+						<div className="absolute inset-0 -m-3 border-2 border-dashed border-gray-300 rounded-full animate-spin-slow opacity-30"></div>
 					</div>
 				</div>
 
