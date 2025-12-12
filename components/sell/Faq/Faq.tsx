@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+"use client";
 import { Search, Plus, Minus } from "lucide-react";
+import { useState } from "react";
 
 // --- Static FAQ Data ---
 const faqItems = [
@@ -32,7 +33,7 @@ const faqItems = [
 	},
 ];
 
-export const FAQ = () => {
+export const Faq = () => {
 	// State to manage which FAQ item is currently open (stores the ID)
 	const [openId, setOpenId] = useState<number | null>(faqItems[0].id); // Item 1 is open by default, matching the image
 	// State to manage the visible number of FAQ items before the "Load More" button

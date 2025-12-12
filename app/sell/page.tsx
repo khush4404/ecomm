@@ -1,4 +1,4 @@
-import { FAQ } from "@/components/Sell/Faq";
+import { Faq } from "@/components/Sell/Faq";
 import { Hero } from "@/components/Sell/Hero";
 import { MarketplaceLayout } from "@/components/Sell/MarketplaceLayout";
 import { Steps } from "@/components/Sell/Steps";
@@ -11,7 +11,7 @@ const SellPage = () => {
 			<Steps />
 			<Testimonials />
 			<MarketplaceLayout />
-			<FAQ />
+			<Faq />
 		</>
 	);
 };
