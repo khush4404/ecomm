@@ -1,8 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import {
 	Play,
 	FileText,
-	Store,
 	Users,
 	BarChart3,
 	Truck,
@@ -11,7 +11,6 @@ import {
 	Box,
 	UserCheck,
 	Wrench,
-	UserPlus,
 	DollarSign,
 	Sprout,
 } from "lucide-react";
@@ -35,7 +34,7 @@ export const Steps = () => {
 			actionText: "Read More",
 			actionIcon: <FileText size={14} />,
 			bgColor: "bg-[#FFF8E1]", // Light Yellow
-			icon: <Store size={48} className="text-yellow-600" />,
+			icon: <Image src="/images/sell/supermarket.png" alt="sell" width={48} height={48} className="object-contain" />,
 		},
 		{
 			title: "Earn",
@@ -62,22 +61,22 @@ export const Steps = () => {
 		{
 			title: "100,000 Monthly reach",
 			desc: "Show your products to 100,000+ monthly active buyers and industry decision makers.",
-			icon: <Store className="text-gray-700" />,
+			icon: <Image src="/images/sell/supermarket.png" alt="store" width={48} height={48} className="object-contain" />,
 		},
 		{
 			title: "3000+ B2B members",
 			desc: "Build partnerships within our verified network of 3,000+ B2B cannabis operators.",
-			icon: <Users className="text-gray-700" />,
+			icon: <Image src="/images/sell/group.png" width={48} height={48} className="object-contain" alt="group" />,
 		},
 		{
 			title: "$10M+ in sales",
 			desc: "Scale your revenue in our 10 million in annual sales wholesale marketplace.",
-			icon: <BarChart3 className="text-gray-700" />,
+			icon: <Image src="/images/sell/bar-graph.png" width={48} height={48} className="object-contain" alt="chart" />,
 		},
 		{
 			title: "12k+ deliveries",
 			desc: "Successfully delivered over 12000+ deliveries across US and now entering Thailand market.",
-			icon: <Truck className="text-gray-700" />,
+			icon: <Image src="/images/sell/deliver-man.png" width={48} height={48} className="object-contain" alt="truck" />,
 		},
 	];
 
@@ -86,27 +85,27 @@ export const Steps = () => {
 		{
 			title: "0% Marketplace Fee",
 			desc: "Sell freely with full revenue retention. For new sellers we charge zero commission fees on all your sales in our marketplace.",
-			icon: <Percent className="text-blue-500" />,
+			icon: <Image src="/images/sell/commission.png" width={48} height={48} className="object-contain" alt="percent" />,
 		},
 		{
 			title: "Free shoutouts to our community",
 			desc: "Receive complimentary promotion for your brand to our entire network of verified cannabis business professionals.",
-			icon: <Megaphone className="text-orange-500" />,
+			icon: <Image src="/images/sell/corporation.png" width={48} height={48} className="object-contain" alt="megaphone" />,
 		},
 		{
 			title: "Up to 70% Discount on Logistics for New sellers",
 			desc: "Launch with major savings. New sellers receives a discount of up to 70%.",
-			icon: <Box className="text-purple-500" />,
+			icon: <Image src="/images/sell/team.png" width={48} height={48} className="object-contain" alt="box" />,
 		},
 		{
 			title: "Dedicated Account Manager After 10 Orders",
 			desc: "Unlock personalized guidance. A dedicated expert manages your account and audit your store after ten successful orders.",
-			icon: <UserCheck className="text-teal-500" />,
+			icon: <Image src="/images/sell/document.png" width={48} height={48} className="object-contain" alt="user-check" />,
 		},
 		{
 			title: "Access to our business Tools",
 			desc: "Complimentary access to our full platform of professional cannabis business management resources for new users.",
-			icon: <Wrench className="text-indigo-500" />,
+			icon: <Image src="/images/sell/premium.png" width={48} height={48} className="object-contain" alt="wrench" />,
 		},
 	];
 
@@ -131,8 +130,8 @@ export const Steps = () => {
 							{/* Illustration Placeholder (floating top) */}
 							<div className="absolute md:-top-28 -top-22 md:w-[207px] w-[163px] md:h-[207px]  flex items-center justify-center">
 								{/* In a real app, use <Image /> here */}
-
-								<img src="/images/sell/register.png" />
+	
+								<Image src="/images/sell/register.png" width={207} height={207} alt="register" />
 							</div>
 
 							<h3 className="md:text-[28px] text-xl  text-[#1D1D1D] font-bold mb-4 mt-2">
