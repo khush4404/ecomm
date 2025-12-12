@@ -82,9 +82,9 @@ export const Hero = () => {
 					{/* Grid Container */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 						{/* -- Left Sub-Column of Grid -- */}
-						<div className="flex flex-col gap-4">
+						<div className="flex flex-col gap-5">
 							{/* Card 1: 5K+ Stats */}
-							<div className="bg-[#121214] p-6 border-l border-amber-400 rounded-3xl text-white shadow-xl h-48 flex flex-col justify-between relative overflow-hidden group">
+							<div className="bg-[#121214] w-[232px] p-6 border-l border-amber-400 rounded-3xl text-white shadow-xl h-48 flex flex-col justify-between relative overflow-hidden group">
 								{/* Avatar Group Placeholder */}
 								<div className="flex -space-x-3">
 									{[1, 2, 3].map((i) => (
@@ -121,7 +121,7 @@ export const Hero = () => {
 							</div>
 
 							{/* Card 2: Growth Chart (The one highlighted in your image) */}
-							<div className="bg-[#121214] p-6 rounded-3xl text-white shadow-xl h-40 flex flex-row items-end justify-between relative">
+							<div className="bg-[#121214] w-[227px] p-6 rounded-3xl text-white shadow-xl h-40 flex flex-row items-end justify-between relative">
 								<div className="mb-2">
 									<p className="text-gray-400 text-sm">
 										Successful
@@ -165,7 +165,7 @@ export const Hero = () => {
 						{/* -- Right Sub-Column of Grid -- */}
 						<div className="relative">
 							{/* Card 3: Tall Man Image */}
-							<div className="h-[394px] w-full rounded-3xl overflow-hidden relative shadow-2xl">
+							<div className="h-[394px] w-[302px] rounded-3xl overflow-hidden relative shadow-2xl">
 								<img
 									src="/images/sell/Bussiness.jpg"
 									alt="men"
@@ -195,7 +195,7 @@ export const Hero = () => {
 
 						{/* -- Bottom Full Width Card -- */}
 						<div className="md:col-span-2 relative mt-4">
-							<div className="h-[265px] w-full rounded-3xl overflow-hidden relative shadow-lg">
+							<div className="h-[265px] w-[558px] rounded-[30px] overflow-hidden relative shadow-lg">
 								<img src="/images/sell/meet.jpg" alt="men" />
 							</div>
 
