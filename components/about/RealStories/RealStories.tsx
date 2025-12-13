@@ -78,18 +78,14 @@ export const RealStories = () => {
 
 								{/* Social Header (Top Left) */}
 								<div className="absolute top-6 left-6 flex  items-center  gap-3">
-									<div className="w-12 h-12  rounded-full border-2  bg-black flex items-center justify-center overflow-hidden">
-										<Crown
-											size={18}
-											className="text-yellow-400"
-										/>
-										{/* <Image
-											src="/images/about/passionlogo.png"
-											alt={`Story by ${story.username}`}
-											fill
-											className="size-1 h-40 w-40"
-										/> */}
-									</div>
+									<div className="w-12 h-12 rounded-full border-2 bg-black flex items-center justify-center overflow-hidden relative">
+											<Image
+												src="/images/about/passionlogo.png"
+												alt={`Logo for ${story.username}`}
+												fill
+												className="object-contain p-1"
+											/>
+										</div>
 									<div className="text-white">
 										<p className="font-bold text-sm md:text-base tracking-wide shadow-sm">
 											{story.username}
