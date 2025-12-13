@@ -9,13 +9,17 @@ import { WeDesigned } from "@/components/about/WeDesigned";
 export default function AboutPage() {
 	return (
 		<>
-			<Hero />
-			<IntegratedCannabis />
-			<Supporting />
-			<WeDesigned />
-			<RealStories />
-			<TheMinds />
-			<LetsGrow />
+			<div className="bg-[#FFFBF4] py-20 px-6">
+				<Hero />
+			</div>
+			<div className="container mx-auto px-4 py-16">
+				<IntegratedCannabis />
+				<Supporting />
+				<WeDesigned />
+				<RealStories />
+				<TheMinds />
+				<LetsGrow />
+			</div>
 		</>
 	);
 }

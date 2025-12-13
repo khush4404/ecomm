@@ -3,7 +3,7 @@ import { Users } from "lucide-react";
 
 export const WeDesigned = () => {
 	return (
-		<section className="bg-white py-16 md:py-24 px-6 font-sans text-[#1A1A1A]">
+		<section className="bg-white py-16 md:py-24 font-sans text-[#1A1A1A]">
 			<div className="max-w-7xl mx-auto">
 				{/* --- Section Header --- */}
 				<div className="text-center mb-16">

@@ -1,6 +1,4 @@
-import React from "react";
 import Image from "next/image";
-import { Crown } from "lucide-react"; // Placeholder for the logo icon
 
 const stories = [
 	{
@@ -45,7 +43,7 @@ export const RealStories = () => {
 					{/* Gold Underline */}
 					<div className="h-1 w-20 bg-yellow-400 mx-auto rounded-full mb-6"></div>
 
-					<p className="text-[#000000] text-sm md:text-base leading-relaxed">
+					<p className="text-black text-sm md:text-base leading-relaxed">
 						Dont just take our word for it. Hear how our members
 						leverage the Passion Farms ecosystem to build trust,
 						streamline operations, and achieve their goals. This is
@@ -74,18 +72,18 @@ export const RealStories = () => {
 								/>
 
 								{/* Overlay Gradient for Text Visibility */}
-								<div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/60 to-transparent pointer-events-none"></div>
+								<div className="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-black/60 to-transparent pointer-events-none"></div>
 
 								{/* Social Header (Top Left) */}
 								<div className="absolute top-6 left-6 flex  items-center  gap-3">
 									<div className="w-12 h-12 rounded-full border-2 bg-black flex items-center justify-center overflow-hidden relative">
-											<Image
-												src="/images/about/passionlogo.png"
-												alt={`Logo for ${story.username}`}
-												fill
-												className="object-contain p-1"
-											/>
-										</div>
+										<Image
+											src="/images/about/passionlogo.png"
+											alt={`Logo for ${story.username}`}
+											fill
+											className="object-contain p-1"
+										/>
+									</div>
 									<div className="text-white">
 										<p className="font-bold text-sm md:text-base tracking-wide shadow-sm">
 											{story.username}
@@ -115,7 +113,7 @@ export const RealStories = () => {
 									<h3 className="font-extrabold md:text-2xl text-xl text-[#1D1D1D] tracking-tight uppercase">
 										{story.productName}
 									</h3>
-									<p className="text-xs text-[#878787] uppercase tracking-widest mt-1">
+									<p className="text-xs text-text-gray uppercase tracking-widest mt-1">
 										Powered by Passion Farms
 									</p>
 								</div>

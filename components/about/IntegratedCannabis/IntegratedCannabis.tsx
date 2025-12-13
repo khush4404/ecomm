@@ -26,7 +26,7 @@ export const IntegratedCannabis = () => {
 	];
 
 	return (
-		<section className="container mx-auto px-6 py-12 lg:py-20 font-sans">
+		<section className="container mx-auto py-12 lg:py-20 font-sans">
 			{/* Main Dark Container */}
 			<div className="bg-[#121214] rounded-[30px] md:rounded-[50px] p-6 md:p-12 lg:p-16 border border-gray-800 relative overflow-hidden shadow-2xl">
 				{/* --- Top Section: Text & Map --- */}
