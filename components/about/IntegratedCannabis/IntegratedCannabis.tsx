@@ -1,13 +1,37 @@
 import Image from "next/image";
 
 export const IntegratedCannabis = () => {
+	const featureCards = [
+		{
+			id: 1,
+			title: "Compliance Support",
+			description:
+				"We help vendors remain legally protected with licensing guidance, document support, compliance monitoring, and industry specific operational standards.",
+			icon: "/images/about/customercare.png",
+		},
+		{
+			id: 2,
+			title: "Help You Scale",
+			description:
+				"Our ecosystem unlocks multi-state sourcing, intelligent data insights, and structured systems that help partners expand profitably and sustainably.",
+			icon: "/images/about/scale.png",
+		},
+		{
+			id: 3,
+			title: "Safe & Reliable Logistics Systems",
+			description:
+				"Through verified logistics partners, we ensure every order is transported securely, discreetly, and in full compliance from pick up to delivery.",
+			icon: "/images/about/right.png",
+		},
+	];
+
 	return (
 		<section className="container mx-auto px-6 py-12 lg:py-20 font-sans">
 			{/* Main Dark Container */}
 			<div className="bg-[#121214] rounded-[30px] md:rounded-[50px] p-6 md:p-12 lg:p-16 border border-gray-800 relative overflow-hidden shadow-2xl">
 				{/* --- Top Section: Text & Map --- */}
 				{/* 👇 CHANGE: Removed 'order' classes so text comes first naturally */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-20 lg:mb-6 items-center">
+				<div className="flex flex-col lg:flex-row gap-3 lg:gap-20 lg:mb-6 items-center">
 					{/* Left Column: Typography */}
 					<div className="flex flex-col justify-center">
 						{/* Rating Badge */}
@@ -61,74 +85,33 @@ export const IntegratedCannabis = () => {
 
 				{/* --- Bottom Section: 3 Feature Cards --- */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 lg:mt-0">
-					{/* Card 1: Compliance */}
-					<div className="bg-[#1A1A1A] sm:p-6 p-4 rounded-[15px] border border-[#4C4744] transition-colors duration-300">
-						<div className="flex items-center gap-4 mb-5">
-							<div className="p-2.5 rounded-full border-2 border-[#F0BA43] flex items-center justify-center">
-								<Image
-									src="/images/about/customercare.png"
-									alt="Compliance Icon"
-									width={24}
-									height={24}
-								/>
-							</div>
-						<h3 className="text-white font-semibold text-sm sm:text-[16px] leading-5 sm:leading-6">
-								Compliance Support
-							</h3>
-						</div>
-						<p className="text-[#9CA3AF] sm:text-sm text-[12px] sm:leading-relaxed leading-4">
-							We help vendors remain legally protected with
-							licensing guidance, document support, compliance
-							monitoring, and industry specific operational
-							standards.
-						</p>
-					</div>
+					{featureCards.map((card) => (
+						<div
+							key={card.id}
+							className="bg-[#1A1A1A] sm:p-6 p-4 rounded-[15px] border border-[#4C4744] transition-colors duration-300"
+						>
+							<div className="flex items-center gap-4 mb-5">
+								<div className="p-2.5 rounded-full border-2 border-[#F0BA43] flex items-center justify-center">
+									<Image
+										src={card.icon}
+										alt={card.title}
+										width={24}
+										height={24}
+									/>
+								</div>
 
-					{/* Card 2: Scale */}
-					<div className="bg-[#1A1A1A] sm:p-6 p-4 rounded-[15px] border border-[#4C4744] transition-colors duration-300">
-						<div className="flex items-center gap-4 mb-5">
-							<div className="p-2.5 rounded-full border-2 border-[#F0BA43] flex items-center justify-center">
-								<Image
-									src="/images/about/scale.png"
-									alt="Scale Icon"
-									width={24}
-									height={24}
-								/>
+								<h3 className="text-white font-semibold text-sm sm:text-[16px] leading-5 sm:leading-6">
+									{card.title}
+								</h3>
 							</div>
-						<h3 className="text-white font-semibold text-sm sm:text-[16px] leading-5 sm:leading-6">
-								Help You Scale
-							</h3>
-						</div>
-						<p className="text-[#9CA3AF] text-sm leading-relaxed">
-							Our ecosystem unlocks multi-state sourcing,
-							intelligent data insights, and structured systems
-							that help partners expand profitably and
-							sustainably.
-						</p>
-					</div>
 
-					{/* Card 3: Logistics */}
-					<div className="bg-[#1A1A1A] sm:p-6 p-4 rounded-[15px] border border-[#4C4744] transition-colors duration-300">
-						<div className="flex items-center gap-4 mb-5">
-							<div className="p-2.5 rounded-full border-2 border-[#F0BA43] flex items-center justify-center">
-								<Image
-									src="/images/about/right.png"
-									alt="Logistics Icon"
-									width={24}
-									height={24}
-								/>
-							</div>
-						<h3 className="text-white font-semibold text-sm sm:text-[16px] leading-5 sm:leading-6">
-								Safe & Reliable Logistics Systems
-							</h3>
+							<p className="text-white sm:text-sm text-[12px] sm:leading-relaxed leading-4">
+								{card.description}
+							</p>
 						</div>
-						<p className="text-[#9CA3AF] text-sm leading-relaxed">
-							Through verified logistics partners, we ensure every
-							order is transported securely, discreetly, and in
-							full compliance from pick up to delivery.
-						</p>
-					</div>
+					))}
 				</div>
+
 			</div>
 		</section>
 	);

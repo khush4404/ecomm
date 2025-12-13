@@ -8,7 +8,7 @@ import { WeDesigned } from "@/components/about/WeDesigned";
 
 export default function AboutPage() {
 	return (
-		<div className="container   mx-auto px-4 py-16">
+		<>
 			<Hero />
 			<IntegratedCannabis />
 			<Supporting />
@@ -16,6 +16,6 @@ export default function AboutPage() {
 			<RealStories />
 			<TheMinds />
 			<LetsGrow />
-		</div>
+		</>
 	);
 }

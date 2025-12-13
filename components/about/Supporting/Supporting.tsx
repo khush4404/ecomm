@@ -2,6 +2,42 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const Supporting = () => {
+	const cardsData = [
+		{
+			id: 1,
+			title: "Market Entry",
+			description:
+				"Our platform makes entering the cannabis industry simple, offering seamless access to verified suppliers, buyers, community support, and essential business tools.",
+			bg: "bg-white",
+			border: "border border-gray-200",
+			buttonBg: "bg-[#F0BA43] hover:bg-[#dca335]",
+			buttonText: "text-white",
+			buttonLabel: "Explore Marketplace",
+		},
+		{
+			id: 2,
+			title: "Storefront Support",
+			description:
+				"At Passionfarms, we empower sellers to launch compliant storefronts effortlessly with guided onboarding, marketplace setup, visibility tools, and long term operational support.",
+			bg: "bg-[#EAB345]",
+			border: "",
+			buttonBg: "bg-white hover:bg-gray-50",
+			buttonText: "text-[#1D1D1D]",
+			buttonLabel: "Join the Community",
+		},
+		{
+			id: 3,
+			title: "Connect You With the Right Leads",
+			description:
+				"Grow faster through our verified lead network that matches sellers with real, high intent buyers seeking premium, compliant cannabis products.",
+			bg: "bg-white",
+			border: "border border-gray-200",
+			buttonBg: "bg-[#F0BA43] hover:bg-[#dca335]",
+			buttonText: "text-white",
+			buttonLabel: "Start Automating",
+		},
+	];
+
 	return (
 		<section className="bg-white py-12 lg:py-24 font-sans">
 			{/* 👇 CHANGE: Used 'container' class here */}
@@ -9,7 +45,7 @@ export const Supporting = () => {
 				{/* --- Header Section --- */}
 				<div className="flex flex-col lg:flex-row gap-4 lg:gap-20 mb-8 lg:mb-20">
 					<div className="lg:w-1/2">
-						<h2 className="text-[20px] hidden md:block text-center sm:text-[42px] sm:leading-15 leading-7 items-center justify-center  font-bold text-[#1D1D1D]">
+						<h2 className="text-[20px] hidden md:block lg:text-start text-center sm:text-[42px] sm:leading-15 leading-7 items-center justify-center  font-bold text-[#1D1D1D]">
 							We are Supporting <br />
 							Cannabis Sellers at
 							<br />
@@ -36,99 +72,44 @@ export const Supporting = () => {
 
 				{/* --- Cards Grid --- */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 items-stretch">
-					{/* Card 1: Market Entry */}
-					<div className="bg-white border border-gray-200 rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full">
-						<div className="relative z-10">
-							<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
-								Market Entry
-							</h3>
-							<p className="text-[#1D1D1D] leading-[26px] mb-6 text-xs md:text-base">
-								Our platform makes entering the cannabis
-								industry simple, offering seamless access to
-								verified suppliers, buyers, community support,
-								and essential business tools.
-							</p>
-						</div>
-						<div className="relative z-10">
-							<button className="bg-[#F0BA43] hover:bg-[#dca335] text-[#1D1D1D] md:text-base text-xs font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
-								Explore Marketplace <ArrowRight size={18} />
-							</button>
-						</div>
+					{cardsData.map((card) => (
+						<div
+							key={card.id}
+							className={`${card.bg} ${card.border} rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full`}
+						>
+							<div className="relative z-10">
+								<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
+									{card.title}
+								</h3>
 
-						{/* Flower Watermark Image */}
-						<div className="absolute -bottom-11 -right-8 w-48 h-48 opacity-[0.15] pointer-events-none">
-							<Image
-								src="/images/about/Flowerimage.png" // Replace with your flower image path
-								alt="Cannabis Leaf"
-								width={177}
-								height={160}
-								className="object-contain"
-							/>
-						</div>
-					</div>
+								<p className="text-[#1D1D1D] leading-[26px] mb-6 md:text-base text-xs">
+									{card.description}
+								</p>
+							</div>
 
-					{/* Card 2: Storefront Support (Yellow) */}
-					<div className="bg-[#EAB345] rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full">
-						<div className="relative z-10">
-							<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
-								Storefront Support
-							</h3>
-							<p className="text-[#1D1D1D] leading-[26px] mb-6 md:text-base text-xs">
-								At Passionfarms, we empower sellers to launch
-								compliant storefronts effortlessly with guided
-								onboarding, marketplace setup, visibility tools,
-								and long term operational support.
-							</p>
-						</div>
-						<div className="relative z-10">
-							<button className="bg-white hover:bg-gray-50 md:text-base text-xs text-[#1D1D1D]  font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
-								Join the Community <ArrowRight size={18} />
-							</button>
-						</div>
+							<div className="relative z-10">
+								<button
+									className={`${card.buttonBg} ${card.buttonText} md:text-base text-xs font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all`}
+								>
+									{card.buttonLabel}
+									<ArrowRight size={18} />
+								</button>
+							</div>
 
-						{/* Flower Watermark Image (Darker blend for yellow bg) */}
-						<div className="absolute -bottom-11 -right-8 w-48 h-48 opacity-[0.15] pointer-events-none">
-							<Image
-								src="/images/about/Flowerimage.png" // Replace with your flower image path
-								alt="Cannabis Leaf"
-								width={177}
-								height={160}
-								className="object-contain"
-							/>
+							{/* Watermark Image */}
+							<div className="absolute -bottom-11 -right-8 w-48 h-48 opacity-[0.15] pointer-events-none">
+								<Image
+									src="/images/about/Flowerimage.png"
+									alt="Cannabis Leaf"
+									width={177}
+									height={160}
+									className="object-contain"
+								/>
+							</div>
 						</div>
-					</div>
-
-					{/* Card 3: Right Leads */}
-					<div className="bg-white border border-gray-200 rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full">
-						<div className="relative z-10">
-							<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
-								Connect You With the Right Leads
-							</h3>
-							<p className="text-[#1D1D1D] leading-[26px] mb-6 md:text-base text-xs ">
-								Grow faster through our verified lead network
-								that matches sellers with real, high intent
-								buyers seeking premium, compliant cannabis
-								products.
-							</p>
-						</div>
-						<div className="relative z-10">
-							<button className="bg-[#F0BA43] md:text-base text-xs hover:bg-[#dca335] text-[#1D1D1D] font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
-								Start Automating <ArrowRight size={18} />
-							</button>
-						</div>
-
-						{/* Flower Watermark Image */}
-						<div className="absolute -bottom-11 -right-8 w-48 h-48 opacity-[0.15] pointer-events-none">
-							<Image
-								src="/images/about/Flowerimage.png" // Replace with your flower image path
-								alt="Cannabis Leaf"
-								width={177}
-								height={160}
-								className="object-contain"
-							/>
-						</div>
-					</div>
+					))}
 				</div>
+
 			</div>
 		</section>
 	);

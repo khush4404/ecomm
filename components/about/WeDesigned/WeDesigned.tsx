@@ -135,7 +135,7 @@ export const WeDesigned = () => {
 
 						{/* Bottom Text Area */}
 						<div className="bg-white p-6 flex-1 border-t border-gray-50 flex flex-col justify-start h-full grow">
-							<p className="text-[#1D1D1D] text-base leading-6 font-medium">From POS, CRM to Marketing. Our Smart backend solutions, analytics dashboards, and automation tools that simplify operations and amplify your revenue potential.
+							<p className="text-[#1D1D1D] text-base leading-6 font-medium">From POS, CRM to Marketing. Our Smart backend solutions, analytics dashboards, and automation tools that simplify operations.
 							</p>
 						</div>
 					</div>
