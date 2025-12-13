@@ -3,16 +3,6 @@ import Image from "next/image";
 import {
 	Play,
 	FileText,
-	Users,
-	BarChart3,
-	Truck,
-	Percent,
-	Megaphone,
-	Box,
-	UserCheck,
-	Wrench,
-	DollarSign,
-	Sprout,
 } from "lucide-react";
 
 export const Steps = () => {
@@ -146,49 +136,51 @@ export const Steps = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-white font-sans  p-6 md:p-12 lg:p-20">
+		<div className="min-h-screen bg-white font-sans  p-6 md:p-12 lg:p-20 lg:pt-0">
 			<div className="max-w-7xl mx-auto">
-				{/* === SECTION 1: REGISTRATION STEPS === */}
-				<div className="text-center mb-18">
-					<h2 className="md:text-[28px] text-xl text=[#1D1D1D] font-bold inline-block relative sm:mb-14 mb-0">
-						Registration Steps
-						{/* Yellow underline effect */}
-						<span className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-50 h-[2px] bg-[#F0BA43] rounded-full"></span>
-					</h2>
-				</div>
+				<div className="flex flex-col gap-30">
+					{/* === SECTION 1: REGISTRATION STEPS === */}
+					<div className="text-center">
+						<h2 className="md:text-[28px] text-xl text=[#1D1D1D] font-bold inline-block relative sm:mb-14 mb-0">
+							Registration Steps
+							{/* Yellow underline effect */}
+							<span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-50 h-0.5 bg-[#F0BA43] rounded-full"></span>
+						</h2>
+					</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 w-full gap-5 md:gap-0 mb-24">
-					{steps.map((step, index) => (
-						<div
-							key={index}
-							className={`${step.bgColor} p-8 md:pt-24 pt-12 md:h-[400px] h-[303px] relative flex flex-col items-center text-center  first:rounded-l-2xl last:rounded-r-2xl md:first:rounded-tr-none md:last:rounded-bl-none rounded-none`}
-						>
-							{/* Illustration Placeholder (floating top) */}
-							<div className="absolute md:-top-28 -top-22 md:w-[207px] w-[163px] md:h-[207px]  flex items-center justify-center">
-								{/* In a real app, use <Image /> here */}
-								<Image
-									src={step.icon}
-									width={207}
-									height={207}
-									alt="register"
-								/>
-							</div>
-
-							<h3 className="md:text-[28px] text-xl  text-[#1D1D1D] font-bold mb-4 mt-2">
-								{step.title}
-							</h3>
-							<p className="md:text-base text-sm text-[#1D1D1D] leading-relaxed mb-8 flex-grow">
-								{step.description}
-							</p>
-
-							<button
-								className={`${step.bgborder} bg-white text-[#000000] text-base font-semibold py-2.5 px-6 rounded-[30px]  border  flex items-center gap-2 transition-colors`}
+					<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 w-full gap-29 md:gap-0 mb-24">
+						{steps.map((step, index) => (
+							<div
+								key={index}
+								className={`${step.bgColor} p-8 md:pt-24 pt-12  relative flex flex-col items-center text-center  first:rounded-l-[10px] last:rounded-r-[10px] md:first:rounded-tr-none md:last:rounded-bl-none md:rounded-none rounded-[10px]`}
 							>
-								{step.actionIcon}
-								{step.actionText}
-							</button>
-						</div>
-					))}
+								{/* Illustration Placeholder (floating top) */}
+								<div className="absolute md:-top-28 -top-22 md:w-[207px] w-[163px] md:h-[207px]  flex items-center justify-center">
+									{/* In a real app, use <Image /> here */}
+									<Image
+										src={step.icon}
+										width={207}
+										height={207}
+										alt="register"
+									/>
+								</div>
+
+								<h3 className="md:text-[28px] text-xl  text-[#1D1D1D] font-bold mb-4 mt-2">
+									{step.title}
+								</h3>
+								<p className="md:text-base text-sm text-[#1D1D1D] leading-relaxed mb-8 grow">
+									{step.description}
+								</p>
+
+								<button
+									className={`${step.bgborder} bg-white text-black text-base font-semibold py-2.5 px-6 rounded-[30px]  border  flex items-center gap-2 transition-colors`}
+								>
+									{step.actionIcon}
+									{step.actionText}
+								</button>
+							</div>
+						))}
+					</div>
 				</div>
 
 				{/* === SECTION 2: WHY CREATE ACCOUNT === */}
