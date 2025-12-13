@@ -5,18 +5,24 @@ export const Supporting = () => {
 	return (
 		<section className="bg-white py-12 lg:py-24 font-sans">
 			{/* 👇 CHANGE: Used 'container' class here */}
-			<div className="container mx-auto px-6">
+			<div className="container mx-auto md:px-6">
 				{/* --- Header Section --- */}
-				<div className="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-12 lg:mb-20">
+				<div className="flex flex-col lg:flex-row gap-4 lg:gap-20 mb-8 lg:mb-20">
 					<div className="lg:w-1/2">
-						<h2 className="text[20px] sm:text-[42px] sm:leading-15 leading-7 items-center justify-center  font-bold text-[#1D1D1D]">
-							<span className="block">We are Supporting </span>
-							<span className="block">Cannabis Sellers at</span>
-							<span className="block">Every Stage of Growth</span>
+						<h2 className="text-[20px] hidden md:block text-center sm:text-[42px] sm:leading-15 leading-7 items-center justify-center  font-bold text-[#1D1D1D]">
+							We are Supporting <br />
+							Cannabis Sellers at
+							<br />
+							Every Stage of Growth
+							<br />
+						</h2>
+						<h2 className="text-[20px] block md:hidden text-center items-center justify-center  font-bold text-[#1D1D1D]">
+							We are Supporting Cannabis <br /> Sellers at Every
+							Stage of Growth
 						</h2>
 					</div>
 					<div className="lg:w-1/2">
-						<p className="text-[#6B7280] text-[12px] md:text-lg sm:leading-8  leading-5">
+						<p className="text-[#6B7280] text-center md:text-start text-[12px] md:text-lg sm:leading-8  leading-5">
 							Every feature in our ecosystem is designed to solve
 							a seller’s problem, ensure compliance, and unlock
 							new levels of profitability. We simplify your
@@ -31,12 +37,12 @@ export const Supporting = () => {
 				{/* --- Cards Grid --- */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 items-stretch">
 					{/* Card 1: Market Entry */}
-					<div className="bg-white border border-gray-200 rounded-[20px] p-8 shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden flex flex-col justify-between h-full">
+					<div className="bg-white border border-gray-200 rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full">
 						<div className="relative z-10">
-							<h3 className="text-2xl font-bold text-[#1D1D1D] leading-10 mb-8">
+							<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
 								Market Entry
 							</h3>
-							<p className="text-[#1D1D1D] leading-[26px] mb-6 text-[16px]">
+							<p className="text-[#1D1D1D] leading-[26px] mb-6 text-xs md:text-base">
 								Our platform makes entering the cannabis
 								industry simple, offering seamless access to
 								verified suppliers, buyers, community support,
@@ -44,7 +50,7 @@ export const Supporting = () => {
 							</p>
 						</div>
 						<div className="relative z-10">
-							<button className="bg-[#F0BA43] hover:bg-[#dca335] text-[#1D1D1D] font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
+							<button className="bg-[#F0BA43] hover:bg-[#dca335] text-[#1D1D1D] md:text-base text-xs font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
 								Explore Marketplace <ArrowRight size={18} />
 							</button>
 						</div>
@@ -62,12 +68,12 @@ export const Supporting = () => {
 					</div>
 
 					{/* Card 2: Storefront Support (Yellow) */}
-					<div className="bg-[#EAB345] rounded-[20px] p-8 shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden flex flex-col justify-between h-full">
+					<div className="bg-[#EAB345] rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full">
 						<div className="relative z-10">
-							<h3 className="text-2xl font-bold text-[#1D1D1D] leading-10 mb-8">
+							<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
 								Storefront Support
 							</h3>
-							<p className="text-[#1D1D1D] leading-[26px] mb-6 text-[16px]">
+							<p className="text-[#1D1D1D] leading-[26px] mb-6 md:text-base text-xs">
 								At Passionfarms, we empower sellers to launch
 								compliant storefronts effortlessly with guided
 								onboarding, marketplace setup, visibility tools,
@@ -75,7 +81,7 @@ export const Supporting = () => {
 							</p>
 						</div>
 						<div className="relative z-10">
-							<button className="bg-white hover:bg-gray-50 text-[#1D1D1D] font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
+							<button className="bg-white hover:bg-gray-50 md:text-base text-xs text-[#1D1D1D]  font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
 								Join the Community <ArrowRight size={18} />
 							</button>
 						</div>
@@ -93,12 +99,12 @@ export const Supporting = () => {
 					</div>
 
 					{/* Card 3: Right Leads */}
-					<div className="bg-white border border-gray-200 rounded-[20px] p-8 shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden flex flex-col justify-between h-full">
+					<div className="bg-white border border-gray-200 rounded-[20px] md:p-8 p-7 relative overflow-hidden flex flex-col justify-between h-full">
 						<div className="relative z-10">
-							<h3 className="text-2xl font-bold text-[#1D1D1D] leading-10 mb-8">
+							<h3 className="md:text-2xl text-xl font-bold text-[#1D1D1D] leading-10 md:mb-8 mb-4">
 								Connect You With the Right Leads
 							</h3>
-							<p className="text-[#1D1D1D] leading-[26px] mb-6 text-[16px]">
+							<p className="text-[#1D1D1D] leading-[26px] mb-6 md:text-base text-xs ">
 								Grow faster through our verified lead network
 								that matches sellers with real, high intent
 								buyers seeking premium, compliant cannabis
@@ -106,7 +112,7 @@ export const Supporting = () => {
 							</p>
 						</div>
 						<div className="relative z-10">
-							<button className="bg-[#F0BA43] hover:bg-[#dca335] text-[#1D1D1D] font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
+							<button className="bg-[#F0BA43] md:text-base text-xs hover:bg-[#dca335] text-[#1D1D1D] font-semibold py-3 px-6 rounded-full inline-flex items-center gap-2 transition-all">
 								Start Automating <ArrowRight size={18} />
 							</button>
 						</div>
