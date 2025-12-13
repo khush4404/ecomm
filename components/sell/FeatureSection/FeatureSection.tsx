@@ -30,7 +30,7 @@ export const features = [
 export const FeatureSection = () => {
 	return (
 		<div className="w-full max-w-7xl my-11 md:my-22 mx-auto">
-			<div className="grid grid-cols-1 mx-6 md:grid-cols-2 gap-6">
+			<div className="grid grid-cols-1 mx-6 md:grid-cols-2 gap-4 md:gap-5">
 				{features.map((feature, index) => (
 					<div
 						key={index}

@@ -103,7 +103,7 @@ export const Faq = () => {
 						>
 							{/* Question/Toggle Button */}
 							<button
-								className="w-full text-left py-5 flex justify-between items-start focus:outline-none"
+								className="w-full text-left px-0 md:px-5 py-5 flex justify-between items-start focus:outline-none"
 								onClick={() => toggleFAQ(item.id)}
 							>
 								<span className="md:text-base text-sm font-semibold text-[#1D1D1D] pr-4">
@@ -114,7 +114,7 @@ export const Faq = () => {
 
 							{/* Answer Content (Collapsible) */}
 							{openId === item.id && (
-								<div className="pb-6 text-sm md:text-base text-[#878787] leading-relaxed pr-8 transition-opacity duration-300">
+								<div className="pb-6 text-sm md:text-base text-text-gray leading-relaxed px-5 transition-opacity duration-300">
 									{item.answer}
 								</div>
 							)}

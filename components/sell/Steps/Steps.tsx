@@ -148,11 +148,11 @@ export const Steps = () => {
 						</h2>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 w-full gap-29 md:gap-0 mb-24">
+					<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 w-full gap-29 md:gap-0 mb-10 md:mb-24">
 						{steps.map((step, index) => (
 							<div
 								key={index}
-								className={`${step.bgColor} p-8 md:pt-24 pt-12  relative flex flex-col items-center text-center  first:rounded-l-[10px] last:rounded-r-[10px] md:first:rounded-tr-none md:last:rounded-bl-none md:rounded-none rounded-[10px]`}
+								className={`${step.bgColor} p-8 md:pt-24 pt-20  relative flex flex-col items-center text-center  first:rounded-l-[10px] last:rounded-r-[10px] md:first:rounded-tr-none md:last:rounded-bl-none md:rounded-none rounded-[10px] md:border-r md:border-[#bbbbbb] md:last:border-none`}
 							>
 								{/* Illustration Placeholder (floating top) */}
 								<div className="absolute md:-top-28 -top-22 md:w-[207px] w-[163px] md:h-[207px]  flex items-center justify-center">
@@ -186,7 +186,7 @@ export const Steps = () => {
 				{/* === SECTION 2: WHY CREATE ACCOUNT === */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
 					{/* Left Column (Beige Background) */}
-					<div className="bg-[#FFF6E5] p-2 md:p-[30] rounded-3xl border border-[#BBBBBB]">
+					<div className="bg-[#FFF6E5] p-4 md:p-[30] rounded-[10px] border border-[#BBBBBB]">
 						<h2 className=" text-xl md:text-4xl font-bold md:mb-4 mb-2.5 text-[#1D1D1D]">
 							Why Create a Passion Farms Account?
 						</h2>
@@ -201,7 +201,7 @@ export const Steps = () => {
 									key={idx}
 									className="flex gap-4 items-start"
 								>
-									<div className="mt-1 p-2 bg-orange-100 rounded-lg shrink-0">
+									<div className="mt-1 p-2 shrink-0">
 										{React.cloneElement(
 											item.icon as React.ReactElement
 										)}
@@ -220,7 +220,7 @@ export const Steps = () => {
 					</div>
 
 					{/* Right Column (White Background with Border) */}
-					<div className="bg-white p-2 md:p-12 rounded-3xl border border-[#BBBBBB]">
+					<div className="bg-white p-4 md:p-12 rounded-[10px] border border-[#BBBBBB]">
 						<div className="md:space-y-5 space-y-4 h-full flex flex-col justify-center">
 							{rightFeatures.map((item, idx) => (
 								<div
@@ -228,7 +228,7 @@ export const Steps = () => {
 									className="flex gap-4  items-start"
 								>
 									<div className="mt-1 shrink-0">
-										<div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center">
+										<div className="w-10 h-10 flex items-center justify-center">
 											{/* {React.cloneElement(
 												item.icon as React.ReactElement
 											)} */}

@@ -12,8 +12,8 @@ const SellPage = () => {
 			<FeatureSection />
 			<Steps />
 			<Testimonials />
-			<MarketplaceLayout />
 			<Faq />
+			<MarketplaceLayout />
 		</>
 	);
 };

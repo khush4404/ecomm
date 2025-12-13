@@ -274,7 +274,7 @@ export const Hero = () => {
 										98%
 									</p>
 								</div>
-								<div className="hidden md:block absolute -right-2.5md:-right-20 -bottom-5 md:-bottom-[65px] bg-[#121214] text-white pl-4 md:pl-7 pb-1.5 pr-4 md:pr-7 pt-2 md:pt-4 rounded-[10px] shadow-xl w-32 md:w-40 z-30 border border-gray-800 scale-75 md:scale-100 origin-right">
+								<div className="hidden md:block absolute -right-2.5 md:-right-20 -bottom-5 md:-bottom-[65px] bg-[#121214] text-white pl-4 md:pl-7 pb-1.5 pr-4 md:pr-7 pt-2 md:pt-4 rounded-[10px] shadow-xl w-32 md:w-40 z-30 border border-gray-800 scale-75 md:scale-100 origin-right">
 									<p className="text-[12px] md:text-[16px] font-medium leading-5">
 										Successful Deliveries
 									</p>
