@@ -3,7 +3,7 @@ import { Play, ArrowUpRight } from "lucide-react";
 
 export const Hero = () => {
 	return (
-		<div className="min-h-screen bg-[#FFF9F0] text-[#1A1A1A] font-sans overflow-x-hidden selection:bg-orange-200">
+		<div className="min-h-screen bg-[#FFF9F0] text-[#1A1A1A] font-sans selection:bg-orange-200">
 			{/* ... (Navigation stays the same) ... */}
 			<nav className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center md:justify-between md:gap-8">
 				<div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-center md:text-left">
@@ -11,7 +11,7 @@ export const Hero = () => {
 						Sell with Passionfarms
 					</div>
 					{/* ... (Nav text) ... */}
-					<div className="text-[#878787] hidden md:block text-sm md:text-base">
+					<div className="text-text-gray hidden md:block text-sm md:text-base">
 						Get{" "}
 						<span className="font-bold text-[#1D1D1D]">
 							10% back
@@ -22,7 +22,7 @@ export const Hero = () => {
 						</span>{" "}
 						cannabis product sales.
 					</div>
-					<div className="text-[#878787] md:hidden sm:text-sm text-[12px]">
+					<div className="text-text-gray md:hidden sm:text-sm text-[12px]">
 						Get{" "}
 						<span className="font-bold text-[#1D1D1D]">
 							10% back
@@ -43,7 +43,7 @@ export const Hero = () => {
 			</nav>
 
 			{/* --- Main Content Grid --- */}
-			<main className="max-w-7xl mx-auto px-6 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
+			<main className="max-w-6xl mx-auto px-6 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative">
 				{/* ... (Left Main Column Typography stays the same) ... */}
 				<div className="lg:col-span-5 flex flex-col gap-6 lg:gap-[25px] z-10 order-1 lg:order-1 text-center lg:text-left">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[65px] text-[#1D1D1D] leading-tight lg:leading-[1.1] font-bold tracking-tight">
@@ -53,9 +53,9 @@ export const Hero = () => {
 					{/* ... (Rest of left text content) ... */}
 					<div className="flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 text-sm sm:text-base md:text-lg lg:text-2xl font-medium text-[#15141A]">
 						<span>Sell</span>
-						<div className="h-6 w-[2px] bg-black"></div>
+						<div className="h-6 w-0.5 bg-black"></div>
 						<span>Scale</span>
-						<div className="h-6 w-[2px] bg-black"></div>
+						<div className="h-6 w-0.5 bg-black"></div>
 						<span>Connect</span>
 					</div>
 					<div className="flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-3 sm:gap-4 mt-6 lg:mt-[71px]">
@@ -63,10 +63,9 @@ export const Hero = () => {
 							Start Selling
 						</button>
 						<div className="flex flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
-							<button className="flex items-center justify-center w-14 h-14 bg-[#F0BA43] hover:bg-[#dca335] rounded-full text-white shadow-lg transition-all duration-300">
+							<button className="flex items-center justify-center md:size-14 size-8 bg-[#F0BA43] hover:bg-[#dca335] rounded-full text-white shadow-lg transition-all duration-300">
 								<ArrowUpRight
-									size={24}
-									className="text-black"
+									className="md:size-6 size-4"
 								/>
 							</button>
 							<a
@@ -82,10 +81,10 @@ export const Hero = () => {
 				{/* === RIGHT COLUMN: Bento Grid Visuals === */}
 				<div className="lg:col-span-7 relative flex justify-center lg:justify-end order-2 lg:order-2 mt-8 lg:mt-0">
 					{/* ... (Desktop Play Button stays the same) ... */}
-					<div className="hidden lg:flex absolute left-[130px] top-[196px] -translate-x-1/2 -translate-y-1/2 z-30">
+					<div className="hidden lg:flex absolute left-[95px] top-[196px] -translate-x-1/2 -translate-y-1/2 z-30">
 						{/* ... Play button code ... */}
 						<div className="relative group cursor-pointer">
-							<div className="w-28 h-28 bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10 border-[12px] border-[#FFF9F0]">
+							<div className="w-28 h-28 bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10 border-12 border-[#FFF9F0]">
 								<div className="border border-gray-600 rounded-full w-20 h-20 flex items-center justify-center">
 									<Play
 										className="fill-[#EAB345] text-[#EAB345] ml-1"
@@ -119,12 +118,12 @@ export const Hero = () => {
 					{/* Main Flex Wrapper */}
 					<div className="flex flex-col gap-1.5 sm:gap-5 w-full max-w-[542px] relative">
 						{/* --- TOP ROW (Stats + Tall Image) --- */}
-						<div className="flex flex-row gap-2 md:gap-6 w-full h-[360px] relative">
+						<div className="flex flex-row gap-2 md:gap-6 w-full md:h-[360px] relative">
 							{/* ... (Mobile Play Button stays the same) ... */}
 							<div className="lg:hidden absolute left-[50%] top-[px] -translate-x-1/2 -translate-y-1/2 z-40 scale-50 sm:scale-75">
 								{/* ... Play button code ... */}
 								<div className="relative group cursor-pointer">
-									<div className="w-28 h-28 bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10 border-[12px] border-[#FFF9F0]">
+									<div className="w-28 h-28 bg-[#1A1A1A] rounded-full flex items-center justify-center relative z-10 border-12 border-[#FFF9F0]">
 										<div className="border border-gray-600 rounded-full w-20 h-20 flex items-center justify-center">
 											<Play
 												className="fill-[#EAB345] text-[#EAB345] ml-1"
@@ -157,7 +156,7 @@ export const Hero = () => {
 							</div>
 
 							{/* A. Left Sub-Column (2 Cards) */}
-							<div className="flex flex-col gap-2 flex-1 md:w-[232px] md:flex-none shrink-0 relative">
+							<div className="flex flex-col gap-2 flex-1 md:w-[232px] md:flex-none shrink-0 relative self-stretch">
 								{/* Card 1: 5K+ Stats (Previous changes maintained) */}
 								<div className="bg-[#121214] w-full h-auto md:h-60 p-3 md:p-6 border-l border-amber-400 rounded-3xl text-white shadow-xl flex flex-col justify-start gap-1 md:gap-0 md:justify-between relative overflow-hidden group">
 									<div className="flex -space-x-2 md:-space-x-3 pl-4 md:pl-8 pt-1 md:pt-0">
@@ -189,7 +188,7 @@ export const Hero = () => {
 											has joined us recently.
 										</div>
 									</div>
-									<div className="absolute top-4 left-3 h-[80px] md:top-6 md:left-7 md:h-[150px] w-1 bg-[#F0BA43] rounded-full opacity-80"></div>
+									<div className="absolute top-4 left-3 h-20 md:top-6 md:left-7 md:h-[150px] w-1 bg-[#F0BA43] rounded-full opacity-80"></div>
 								</div>
 
 								{/* 👇 CHANGE: Card 2 (Growth) Updated for Mobile Layout */}
@@ -230,7 +229,7 @@ export const Hero = () => {
 										/>
 										<svg
 											className="absolute bottom-0 left-0 pointer-events-none"
-										
+
 											viewBox="0 0 100 100"
 											preserveAspectRatio="none"
 										>
@@ -255,7 +254,7 @@ export const Hero = () => {
 							</div>
 
 							{/* B. Right Sub-Column (Tall Image) */}
-							<div className="relative w-[163px] h-[212px] md:w-[302px] md:h-[360px] shrink-0 rounded-3xl overflow-visible shadow-2xl">
+							<div className="relative w-[163px] self-stretch md:w-[302px] md:h-[360px] shrink-0 rounded-3xl overflow-visible shadow-2xl">
 								<div className="h-full w-full rounded-3xl overflow-hidden relative">
 									<Image
 										src="/images/sell/Bussiness.jpg"
@@ -267,7 +266,7 @@ export const Hero = () => {
 								</div>
 
 								{/* Floating Badges (Desktop Only) */}
-								<div className="hidden md:block absolute right-[-10px] md:-right-20 bottom-[85px] bg-[#121214] text-white pl-4 md:pl-7 pb-1.5 pr-4 md:pr-7 pt-2 md:pt-4 rounded-[10px] shadow-xl w-32 md:w-40 z-20 border border-gray-800 scale-75 md:scale-100 origin-right">
+								<div className="hidden md:block absolute -right-2.5 md:-right-20 bottom-[85px] bg-[#121214] text-white pl-4 md:pl-7 pb-1.5 pr-4 md:pr-7 pt-2 md:pt-4 rounded-[10px] shadow-xl w-32 md:w-40 z-20 border border-gray-800 scale-75 md:scale-100 origin-right">
 									<p className="text-[12px] md:text-[16px] font-medium leading-5">
 										Satisfied rate
 									</p>
@@ -275,7 +274,7 @@ export const Hero = () => {
 										98%
 									</p>
 								</div>
-								<div className="hidden md:block absolute right-[-10px] md:-right-20 -bottom-[20px] md:-bottom-[65px] bg-[#121214] text-white pl-4 md:pl-7 pb-1.5 pr-4 md:pr-7 pt-2 md:pt-4 rounded-[10px] shadow-xl w-32 md:w-40 z-30 border border-gray-800 scale-75 md:scale-100 origin-right">
+								<div className="hidden md:block absolute -right-2.5md:-right-20 -bottom-5 md:-bottom-[65px] bg-[#121214] text-white pl-4 md:pl-7 pb-1.5 pr-4 md:pr-7 pt-2 md:pt-4 rounded-[10px] shadow-xl w-32 md:w-40 z-30 border border-gray-800 scale-75 md:scale-100 origin-right">
 									<p className="text-[12px] md:text-[16px] font-medium leading-5">
 										Successful Deliveries
 									</p>
@@ -311,7 +310,7 @@ export const Hero = () => {
 							{/* --- Mobile Only Stats Row --- */}
 							<div className="absolute bottom-0 left-0 right-0 translate-y-1/2 z-20 px-4 md:hidden">
 								<div className="grid grid-cols-3 gap-2 w-full">
-									<div className="bg-[#121214] text-white pl-3 pt-2 pr-4 pb-2.5 rounded-xl shadow-lg flex flex-col justify-center border border-gray-800 h-[80px]">
+									<div className="bg-[#121214] text-white pl-3 pt-2 pr-4 pb-2.5 rounded-xl shadow-lg flex flex-col justify-center border border-gray-800 h-20">
 										<p className="text-[10px] text-gray-300 font-medium leading-3 ">
 											Satisfied rate
 										</p>
@@ -319,7 +318,7 @@ export const Hero = () => {
 											98%
 										</p>
 									</div>
-									<div className="bg-[#121214] text-white p-3 rounded-[12px] shadow-lg flex flex-col justify-center border border-gray-800 h-[80px]">
+									<div className="bg-[#121214] text-white p-3 rounded-xl shadow-lg flex flex-col justify-center border border-gray-800 h-20">
 										<p className="text-[10px] text-gray-300 font-medium leading-3 ">
 											Community members
 										</p>
@@ -327,7 +326,7 @@ export const Hero = () => {
 											5.4K
 										</p>
 									</div>
-									<div className="bg-[#121214] text-white p-3 rounded-[12px] shadow-lg flex flex-col justify-center border border-gray-800 h-[80px]">
+									<div className="bg-[#121214] text-white p-3 rounded-xl shadow-lg flex flex-col justify-center border border-gray-800 h-20">
 										<p className="text-[10px] text-gray-300 font-medium leading-3 ">
 											Successful Deliveries
 										</p>
