@@ -150,7 +150,7 @@ export const Steps = () => {
 			<div className="max-w-7xl mx-auto">
 				{/* === SECTION 1: REGISTRATION STEPS === */}
 				<div className="text-center mb-18">
-					<h2 className="md:text-[28px] text-xl text=[#1D1D1D] font-bold inline-block relative">
+					<h2 className="md:text-[28px] text-xl text=[#1D1D1D] font-bold inline-block relative sm:mb-14 mb-0">
 						Registration Steps
 						{/* Yellow underline effect */}
 						<span className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-50 h-[2px] bg-[#F0BA43] rounded-full"></span>

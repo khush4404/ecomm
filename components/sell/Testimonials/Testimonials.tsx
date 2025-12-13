@@ -15,7 +15,7 @@ const awardData = [
 	},
 	{
 		id: 2,
-		logoPath: "/public/images/sell/kushable.png", // NOTE: This path looks like it should be an image of the logo, not text.
+		logoPath: "/images/sell/Kushable.png", // NOTE: This path looks like it should be an image of the logo, not text.
 		title: "Excellent Strains",
 		description: "Best Formulations companies in Canada 2023.",
 		logoAlt: "Kushable Logo",
