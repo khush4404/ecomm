@@ -5,7 +5,7 @@ const stories = [
 		id: 1,
 		username: "houston_passionfarms",
 		handle: "passion farms",
-		image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop", // Man portrait
+		image: "/images/about/realimg.png", // Man portrait
 		productName: "DISPOSABLES",
 		productImage: "/images/about/real.png", // Blue box placeholder
 		productAlt: "Blue disposable vape box",
@@ -14,7 +14,7 @@ const stories = [
 		id: 2,
 		username: "houston_passionfarms",
 		handle: "passion farms",
-		image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop", // Man selfie
+		image: "/images/about/realimg2.png", // Man selfie
 		productName: "GUMMIES",
 		productImage: "/images/about/real2.png", // Orange bag placeholder
 		productAlt: "Orange gummy bag",
@@ -23,7 +23,7 @@ const stories = [
 		id: 3,
 		username: "houston_passionfarms",
 		handle: "passion farms",
-		image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop", // Woman portrait
+		image: "/images/about/realimg3.png", // Woman portrait
 		productName: "FLOWERS",
 		productImage: "/images/about/real3.png", // Green nug placeholder
 		productAlt: "Cannabis flower",
